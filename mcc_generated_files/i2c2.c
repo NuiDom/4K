@@ -757,10 +757,12 @@ void readByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte)
     
     I2C2CONLbits.RCEN = 1;          //sets receive enable bit
     while(I2C2CONLbits.RCEN){}
-    
+//    
+////    SPI2CON1Lbits.CKP = 1;
+////    dataByte = I2C2RCV;
     I2C2CONLbits.ACKEN = 1;
     I2C2CONLbits.ACKDT = 1;
-    dataByte = I2C2RCV;
+    while(I2C2CONLbits.ACKEN);
     
     I2C2CONLbits.PEN = 1;       //generates stop bit
 

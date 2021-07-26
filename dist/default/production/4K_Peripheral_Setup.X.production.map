@@ -87,11 +87,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x7a4           0xb76  (2934)
 .const                       0x9a4                0xb0           0x108  (264)
-.text                        0xa54              0x2596          0x3861  (14433)
-.dinit                      0x2fea                0x7c            0xba  (186)
-.text                       0x3066               0x13c           0x1da  (474)
+.text                        0xa54              0x259a          0x3867  (14439)
+.dinit                      0x2fee                0x7c            0xba  (186)
+.text                       0x306a               0x13c           0x1da  (474)
 
-                 Total "program" memory used (bytes):         0x4773  (18291) 13%
+                 Total "program" memory used (bytes):         0x4779  (18297) 13%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -373,25 +373,25 @@ External Symbols in Program Memory (by address):
                   0x002b90                  _I2C2_MasterQueueIsFull
                   0x002ba6                  _writeByte
                   0x002c04                  _readByte
-                  0x002c82                  _USBSleepOnSuspend
-                  0x002ca6                  _USBRemoteWakeupAssertBlocking
-                  0x002d20                  _USBVBUSSessionValidStateGet
-                  0x002daa                  _USBMaskAllUSBInterrupts
-                  0x002dc4                  _USBRestoreUSBInterrupts
-                  0x002e9e                  _PIN_MANAGER_Initialize
-                  0x002f4e                  _INTERRUPT_Initialize
-                  0x003066                  _main
-                  0x0030a8                  _CREATE_BUFFER
-                  0x0030ca                  _USER_USB_CALLBACK_EVENT_HANDLER
-                  0x00311e                  _CLOCK_Initialize
-                  0x003170                  _SYSTEM_Initialize
+                  0x002c86                  _USBSleepOnSuspend
+                  0x002caa                  _USBRemoteWakeupAssertBlocking
+                  0x002d24                  _USBVBUSSessionValidStateGet
+                  0x002dae                  _USBMaskAllUSBInterrupts
+                  0x002dc8                  _USBRestoreUSBInterrupts
+                  0x002ea2                  _PIN_MANAGER_Initialize
+                  0x002f52                  _INTERRUPT_Initialize
+                  0x00306a                  _main
+                  0x0030ac                  _CREATE_BUFFER
+                  0x0030ce                  _USER_USB_CALLBACK_EVENT_HANDLER
+                  0x003122                  _CLOCK_Initialize
+                  0x003174                  _SYSTEM_Initialize
 
 External Symbols in Program Memory (by name):
 
                   0x001aec                  _CDCInitEP
                   0x001c8c                  _CDCTxService
-                  0x00311e                  _CLOCK_Initialize
-                  0x0030a8                  _CREATE_BUFFER
+                  0x003122                  _CLOCK_Initialize
+                  0x0030ac                  _CREATE_BUFFER
                   0x002080                  _CamUART_Disable
                   0x002076                  _CamUART_Enable
                   0x001d6e                  _CamUART_Initialize
@@ -458,8 +458,8 @@ External Symbols in Program Memory (by name):
                   0x002aae                  _I2C2_MasterTRBInsert
                   0x002a4a                  _I2C2_MasterWrite
                   0x002b56                  _I2C2_MasterWriteTRBBuild
-                  0x002f4e                  _INTERRUPT_Initialize
-                  0x002e9e                  _PIN_MANAGER_Initialize
+                  0x002f52                  _INTERRUPT_Initialize
+                  0x002ea2                  _PIN_MANAGER_Initialize
                   0x00239c                  _RingLightUART_Disable
                   0x002392                  _RingLightUART_Enable
                   0x00208a                  _RingLightUART_Initialize
@@ -479,7 +479,7 @@ External Symbols in Program Memory (by name):
                   0x002336                  _RingLightUART_TransmitBufferSizeGet
                   0x002132                  _RingLightUART_Write
                   0x002270                  _RingLightUART_WriteBuffer
-                  0x003170                  _SYSTEM_Initialize
+                  0x003174                  _SYSTEM_Initialize
                   0x001b2a                  _USBCDCEventHandler
                   0x000e44                  _USBCancelIO
                   0x0019e2                  _USBCheckCDCRequest
@@ -492,16 +492,16 @@ External Symbols in Program Memory (by name):
                   0x000cca                  _USBEnableEndpoint
                   0x0019c8                  _USBGet1msTickCount
                   0x00199e                  _USBIncrement1msInternalTimers
-                  0x002daa                  _USBMaskAllUSBInterrupts
-                  0x002ca6                  _USBRemoteWakeupAssertBlocking
-                  0x002dc4                  _USBRestoreUSBInterrupts
-                  0x002c82                  _USBSleepOnSuspend
+                  0x002dae                  _USBMaskAllUSBInterrupts
+                  0x002caa                  _USBRemoteWakeupAssertBlocking
+                  0x002dc8                  _USBRestoreUSBInterrupts
+                  0x002c86                  _USBSleepOnSuspend
                   0x000daa                  _USBStallEndpoint
                   0x000d04                  _USBTransferOnePacket
-                  0x002d20                  _USBVBUSSessionValidStateGet
+                  0x002d24                  _USBVBUSSessionValidStateGet
                   0x000a4c                  _USB_CD_Ptr
                   0x000a4e                  _USB_SD_Ptr
-                  0x0030ca                  _USER_USB_CALLBACK_EVENT_HANDLER
+                  0x0030ce                  _USER_USB_CALLBACK_EVENT_HANDLER
                   0x000392                  __AddressError
                   0x000982                  __DefaultInterrupt
                   0x000732                  __MI2C2Interrupt
@@ -528,7 +528,7 @@ External Symbols in Program Memory (by name):
                   0x0009b6                  _configDescriptor1
                   0x0009a4                  _device_dsc
                   0x001b62                  _getsUSBUSART
-                  0x003066                  _main
+                  0x00306a                  _main
                   0x000988                  _memcpy
                   0x000996                  _memset
                   0x001bc4                  _putUSBUSART
@@ -2576,7 +2576,7 @@ _0x7f3de7b68b4060f6b102
                     0x8a4c                  _USB_CD_Ptr
                     0x8a4e                  _USB_SD_Ptr
 
-.text             0x000a54       0x2596
+.text             0x000a54       0x259a
  .text            0x000a54        0xf8e build/default/production/mcc_generated_files/usb/usb_device.o
                   0x000a54                  _USBDeviceInit
                   0x000b44                  _USBDeviceTasks
@@ -2687,7 +2687,7 @@ _0x7f3de7b68b4060f6b102
                   0x002988                  _FTDIUART_ReceiveBufferSizeGet
                   0x0029b6                  _FTDIUART_Enable
                   0x0029c0                  _FTDIUART_Disable
- .text            0x0029ca        0x2b8 build/default/production/mcc_generated_files/i2c2.o
+ .text            0x0029ca        0x2bc build/default/production/mcc_generated_files/i2c2.o
                   0x0029ca                  _I2C2_Initialize
                   0x002a00                  _I2C2_ErrorCountGet
                   0x002a4a                  _I2C2_MasterWrite
@@ -2699,29 +2699,29 @@ _0x7f3de7b68b4060f6b102
                   0x002b90                  _I2C2_MasterQueueIsFull
                   0x002ba6                  _writeByte
                   0x002c04                  _readByte
- .text            0x002c82        0x21c build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
-                  0x002c82                  _USBSleepOnSuspend
-                  0x002ca6                  _USBRemoteWakeupAssertBlocking
-                  0x002d20                  _USBVBUSSessionValidStateGet
-                  0x002daa                  _USBMaskAllUSBInterrupts
-                  0x002dc4                  _USBRestoreUSBInterrupts
- .text            0x002e9e         0xb0 build/default/production/mcc_generated_files/pin_manager.o
-                  0x002e9e                  _PIN_MANAGER_Initialize
- .text            0x002f4e         0x9c build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x002f4e                  _INTERRUPT_Initialize
+ .text            0x002c86        0x21c build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
+                  0x002c86                  _USBSleepOnSuspend
+                  0x002caa                  _USBRemoteWakeupAssertBlocking
+                  0x002d24                  _USBVBUSSessionValidStateGet
+                  0x002dae                  _USBMaskAllUSBInterrupts
+                  0x002dc8                  _USBRestoreUSBInterrupts
+ .text            0x002ea2         0xb0 build/default/production/mcc_generated_files/pin_manager.o
+                  0x002ea2                  _PIN_MANAGER_Initialize
+ .text            0x002f52         0x9c build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x002f52                  _INTERRUPT_Initialize
 
-.dinit            0x002fea         0x7c
- .dinit           0x002fea         0x7c data_init
+.dinit            0x002fee         0x7c
+ .dinit           0x002fee         0x7c data_init
 
-.text             0x003066        0x13c
- .text            0x003066         0x64 build/default/production/main.o
-                  0x003066                  _main
-                  0x0030a8                  _CREATE_BUFFER
- .text            0x0030ca         0x54 build/default/production/mcc_generated_files/usb/usb_device_events.o
-                  0x0030ca                  _USER_USB_CALLBACK_EVENT_HANDLER
- .text            0x00311e         0x52 build/default/production/mcc_generated_files/clock.o
-                  0x00311e                  _CLOCK_Initialize
- .text            0x003170         0x1a build/default/production/mcc_generated_files/system.o
-                  0x003170                  _SYSTEM_Initialize
- .text            0x00318a         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x00318a                  _TRAPS_halt_on_error
+.text             0x00306a        0x13c
+ .text            0x00306a         0x64 build/default/production/main.o
+                  0x00306a                  _main
+                  0x0030ac                  _CREATE_BUFFER
+ .text            0x0030ce         0x54 build/default/production/mcc_generated_files/usb/usb_device_events.o
+                  0x0030ce                  _USER_USB_CALLBACK_EVENT_HANDLER
+ .text            0x003122         0x52 build/default/production/mcc_generated_files/clock.o
+                  0x003122                  _CLOCK_Initialize
+ .text            0x003174         0x1a build/default/production/mcc_generated_files/system.o
+                  0x003174                  _SYSTEM_Initialize
+ .text            0x00318e         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x00318e                  _TRAPS_halt_on_error
