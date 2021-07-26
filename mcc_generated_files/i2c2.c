@@ -737,11 +737,11 @@ void writeByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte)
 
 void readByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte)
 {
-    I2C2CONLbits.SEN = 1;
-    while(I2C2CONLbits.SEN){}
+    I2C2CONLbits.SEN = 1;           //generates start bit
+    while(I2C2CONLbits.SEN){}       //waits for start to change back to 0 indicating success of start bit
     
-    I2C2TRN = 0b10100000;
-    while(I2C2STATbits.TRSTAT){}
+    I2C2TRN = 0b10100000;           //fills transmit reg with eeprom address and write bit
+    while(I2C2STATbits.TRSTAT){}    //waits for data to be sent
     
     I2C2TRN = highByte;
     while(I2C2STATbits.TRSTAT){}
@@ -749,14 +749,20 @@ void readByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte)
     I2C2TRN = lowByte;
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2CONLbits.RSEN = 1;
+    I2C2CONLbits.RSEN = 1;          //generates restart bit
     while(I2C2CONLbits.RSEN){}
     
-    I2C2TRN = 0b10100001;
+    I2C2TRN = 0b10100001;           //fills transmit reg with eeprom address and read bit
     while(I2C2STATbits.TRSTAT){}
     
+    I2C2CONLbits.RCEN = 1;          //sets receive enable bit
+    while(I2C2CONLbits.RCEN){}
     
-    I2C2CONLbits.PEN = 1;
+    I2C2CONLbits.ACKEN = 1;
+    I2C2CONLbits.ACKDT = 1;
+    dataByte = I2C2RCV;
+    
+    I2C2CONLbits.PEN = 1;       //generates stop bit
 
 }
 /**
