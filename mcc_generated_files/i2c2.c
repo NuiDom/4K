@@ -605,7 +605,7 @@ void I2C2_MasterWrite(
     {
         *pstatus = I2C2_MESSAGE_FAIL;
     }
-
+    
 }                           
 
 void I2C2_MasterRead(
@@ -627,8 +627,8 @@ void I2C2_MasterRead(
     {
         *pstatus = I2C2_MESSAGE_FAIL;
     }
-
-}       
+    
+    }
 
 void I2C2_MasterTRBInsert(
                                 uint8_t count,
@@ -714,6 +714,51 @@ bool I2C2_MasterQueueIsFull(void)
     return((bool)i2c2_object.trStatus.s.full);
 }
 
+void writeByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte)
+{
+    I2C2CONLbits.SEN = 1;
+    while(I2C2CONLbits.SEN){}
+    
+    I2C2TRN = 0b10100000;
+    while(I2C2STATbits.TRSTAT){}
+    
+    I2C2TRN = highByte;
+    while(I2C2STATbits.TRSTAT){}
+    
+    I2C2TRN = lowByte;
+    while(I2C2STATbits.TRSTAT){}
+    
+    I2C2TRN = dataByte;
+    while(I2C2STATbits.TRSTAT){}
+    
+    I2C2CONLbits.PEN = 1;
+
+}
+
+void readByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte)
+{
+    I2C2CONLbits.SEN = 1;
+    while(I2C2CONLbits.SEN){}
+    
+    I2C2TRN = 0b10100000;
+    while(I2C2STATbits.TRSTAT){}
+    
+    I2C2TRN = highByte;
+    while(I2C2STATbits.TRSTAT){}
+    
+    I2C2TRN = lowByte;
+    while(I2C2STATbits.TRSTAT){}
+    
+    I2C2CONLbits.RSEN = 1;
+    while(I2C2CONLbits.RSEN){}
+    
+    I2C2TRN = 0b10100001;
+    while(I2C2STATbits.TRSTAT){}
+    
+    
+    I2C2CONLbits.PEN = 1;
+
+}
 /**
  End of File
 */

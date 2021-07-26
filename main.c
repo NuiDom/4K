@@ -194,23 +194,31 @@ int main(void)
 //                return(1);
 //
 //            }
-    CREATE_BUFFER(0xFF00, 0xA3);
-    uint8_t *pData = &writeBuffer[0];
-    uint8_t     *pD;
-    uint8_t sendData = &pD;
-    I2C2_MESSAGE_STATUS status;
     
-    I2C2_MasterWrite(pData, 3, 0x50, &status);
+    
+    
+//    CREATE_BUFFER(0xFF00, 0xA3);
+//    uint8_t *pData = &writeBuffer[0];
+//    uint8_t     *pD;
+//    I2C2_MESSAGE_STATUS status = I2C2_DATA_NO_ACK;
+//    
+//    I2C2_MasterWrite(pData, 3, 0x50, &status);
+//    int x=0;
+//    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
+//    
+//    I2C2_MasterWrite(pData, 2, 0x50, &status);
+////    I2C2CONLbits.RSEN = 1;   //sets restart condition enabled
+////    I2C2CONLbits.PEN = 0;     //sets stop bit condition disabled 
+//    I2C2_MasterRead(pD, 1, 0x50, &status);
+////    I2C2CONLbits.RSEN = 0;    //setting them back to original state, I have another sensor that needs the
+////    I2C2CONLbits.PEN = 1;      //stop condition or it won't work.
+//    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
+////    I2C1CON1bits.SCLREL = 1; // release clock
+//    CamUART_Write((uint8_t)pD);
+    writeByte(0xFF, 0x00, 0xA3);
     int x=0;
-    for(x=0;x<4800;x++){int y=0; for(y=0;y<2000;y++){;}}
-    I2C2_MasterWrite(pData, 2, 0x50, &status);
-//    for(x=0;x<4800;x++){int y=0; for(y=0;y<2000;y++){;}}
-    I2C2_MasterRead(pD, 0, 0x50, &status);
-    
-    for(x=0;x<4800;x++){int y=0; for(y=0;y<2000;y++){;}}
-    I2C1CON1bits.SCLREL = 1; // release clock 
-    CamUART_Write((uint8_t)pD);
-
+    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
+    readByte(0xFF, 0x00, 0x00);
     while (1)
     {
 //        CamUART_Write('d');
