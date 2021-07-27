@@ -737,8 +737,9 @@ bool I2C2_MasterQueueIsEmpty(void);
 
 bool I2C2_MasterQueueIsFull(void);             
 
-void writeByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte);
+void maxWriteByte(uint8_t lowByte, uint8_t dataByte);
 void readByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte);
+void epromWriteByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte);
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }

@@ -215,7 +215,7 @@ int main(void)
 //    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
 ////    I2C1CON1bits.SCLREL = 1; // release clock
 //    CamUART_Write((uint8_t)pD);
-    writeByte(0xFF, 0x00, 0xA3);
+    maxWriteByte(0x00, 0xA3);
     int x=0;
     for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
     readByte(0xFF, 0x00, 0x00);
