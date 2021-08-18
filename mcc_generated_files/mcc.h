@@ -57,7 +57,7 @@
 #include "traps.h"
 #include "uart2.h"
 #include "uart3.h"
-#include "uart1.h"
+#include "uart.h"
 #include "uart4.h"
 
 #warning "This file will be removed in future MCC releases. Use system.h instead."

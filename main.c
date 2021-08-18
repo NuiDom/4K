@@ -46,10 +46,7 @@
   Section: Included Files
 */
 #include "mcc_generated_files/system.h"
-#include "mcc_generated_files/uart1.h"
-#include "mcc_generated_files/uart2.h"
-#include "mcc_generated_files/uart3.h"
-#include "mcc_generated_files/uart4.h"
+#include "mcc_generated_files/uart.h"
 #include "mcc_generated_files/i2c2.h"
 
 #define SLAVE_I2C_GENERIC_RETRY_MAX           100
@@ -65,7 +62,7 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-    
+//    RingLightUART_Write('z');
 //         #define MCHP24AA512_RETRY_MAX       100  // define the retry count
 //            #define MCHP24AA512_ADDRESS         0x50 // slave device address
 //            #define MCHP24AA512_DEVICE_TIMEOUT  50   // define slave timeout 
@@ -215,15 +212,16 @@ int main(void)
 //    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
 ////    I2C1CON1bits.SCLREL = 1; // release clock
 //    CamUART_Write((uint8_t)pD);
-    maxWriteByte(0x00, 0xA3);
-    int x=0;
-    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
-    readByte(0xFF, 0x00, 0x00);
-    while (1)
-    {
-//        CamUART_Write('d');
-    }
     
+//    maxWriteByte(0x00, 0xA3);
+//    int x=0;
+//    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
+//    readByte(0xFF, 0x00, 0x00);
+//    while (1)
+//    {
+////        CamUART_Write('d');
+//    }
+//    
     return 1;
 }
 

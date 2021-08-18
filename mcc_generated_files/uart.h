@@ -691,3 +691,233 @@ unsigned int __attribute__((deprecated)) CamUART_TransmitBufferSizeGet(void);
 #endif
     
 #endif  // _CamUART_H
+    
+
+#ifndef _RingLightUART_H
+#define _RingLightUART_H
+
+#include <stdbool.h>
+#include <stdint.h>
+
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+
+void RingLightUART_Initialize(void);
+uint8_t RingLightUART_Read( void);
+void RingLightUART_Write( uint8_t byte);
+bool RingLightUART_IsRxReady(void);
+bool RingLightUART_IsTxReady(void);
+bool RingLightUART_IsTxDone(void);
+void RingLightUART_SetTxInterruptHandler(void (* interruptHandler)(void));
+void RingLightUART_Transmit_CallBack(void);
+void RingLightUART_SetRxInterruptHandler(void (* interruptHandler)(void));
+void RingLightUART_Receive_CallBack(void);
+
+typedef enum
+{
+    /* Indicates that Receive buffer has data, at least one more character can be read */
+    RingLightUART_RX_DATA_AVAILABLE = (1 << 0),
+    /* Indicates that Receive buffer has overflowed */
+    RingLightUART_RX_OVERRUN_ERROR = (1 << 1),
+    /* Indicates that Framing error has been detected for the current character */
+    RingLightUART_FRAMING_ERROR = (1 << 2),
+    /* Indicates that Parity error has been detected for the current character */
+    RingLightUART_PARITY_ERROR = (1 << 3),
+    /* Indicates that Receiver is Idle */
+    RingLightUART_RECEIVER_IDLE = (1 << 4),
+    /* Indicates that the last transmission has completed */
+    RingLightUART_TX_COMPLETE = (1 << 8),
+    /* Indicates that Transmit buffer is full */
+    RingLightUART_TX_FULL = (1 << 9) 
+}RingLightUART_STATUS;
+
+typedef enum
+{
+    /* Indicates that the core driver buffer is full */
+    RingLightUART_TRANSFER_STATUS_RX_FULL = (1 << 0) ,
+    /* Indicates that at least one byte of Data has been received */
+    RingLightUART_TRANSFER_STATUS_RX_DATA_PRESENT = (1 << 1) ,
+    /* Indicates that the core driver receiver buffer is empty */
+    RingLightUART_TRANSFER_STATUS_RX_EMPTY = (1 << 2) ,
+    /* Indicates that the core driver transmitter buffer is full */
+    RingLightUART_TRANSFER_STATUS_TX_FULL = (1 << 3) ,
+    /* Indicates that the core driver transmitter buffer is empty */
+    RingLightUART_TRANSFER_STATUS_TX_EMPTY = (1 << 4) 
+} RingLightUART_TRANSFER_STATUS;
+
+unsigned int __attribute__((deprecated)) RingLightUART_ReadBuffer( uint8_t *buffer ,  unsigned int numbytes);
+unsigned int __attribute__((deprecated)) RingLightUART_WriteBuffer( uint8_t *buffer , unsigned int numbytes );
+
+RingLightUART_TRANSFER_STATUS __attribute__((deprecated)) RingLightUART_TransferStatusGet (void );
+uint8_t __attribute__((deprecated)) RingLightUART_Peek(uint16_t offset);
+bool __attribute__((deprecated)) RingLightUART_ReceiveBufferIsEmpty (void);
+bool __attribute__((deprecated)) RingLightUART_TransmitBufferIsFull (void);
+uint16_t __attribute__((deprecated)) RingLightUART_StatusGet (void );
+void __attribute__((deprecated)) RingLightUART_Enable(void);
+void __attribute__((deprecated)) RingLightUART_Disable(void);
+unsigned int __attribute__((deprecated)) RingLightUART_ReceiveBufferSizeGet(void);
+unsigned int __attribute__((deprecated)) RingLightUART_TransmitBufferSizeGet(void);
+
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    }
+
+#endif
+    
+#endif  // _RingLightUART_H
+    
+    
+#ifndef _FrontFaceUART_H
+#define _FrontFaceUART_H
+
+#include <stdbool.h>
+#include <stdint.h>
+
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+
+void FrontFaceUART_Initialize(void);
+uint8_t FrontFaceUART_Read( void);
+void FrontFaceUART_Write( uint8_t byte);
+bool FrontFaceUART_IsRxReady(void);
+bool FrontFaceUART_IsTxReady(void);
+bool FrontFaceUART_IsTxDone(void);
+void FrontFaceUART_SetTxInterruptHandler(void (* interruptHandler)(void));
+void FrontFaceUART_Transmit_CallBack(void);
+void FrontFaceUART_SetRxInterruptHandler(void (* interruptHandler)(void));
+void FrontFaceUART_Receive_CallBack(void);
+
+typedef enum
+{
+    /* Indicates that Receive buffer has data, at least one more character can be read */
+    FrontFaceUART_RX_DATA_AVAILABLE = (1 << 0),
+    /* Indicates that Receive buffer has overflowed */
+    FrontFaceUART_RX_OVERRUN_ERROR = (1 << 1),
+    /* Indicates that Framing error has been detected for the current character */
+    FrontFaceUART_FRAMING_ERROR = (1 << 2),
+    /* Indicates that Parity error has been detected for the current character */
+    FrontFaceUART_PARITY_ERROR = (1 << 3),
+    /* Indicates that Receiver is Idle */
+    FrontFaceUART_RECEIVER_IDLE = (1 << 4),
+    /* Indicates that the last transmission has completed */
+    FrontFaceUART_TX_COMPLETE = (1 << 8),
+    /* Indicates that Transmit buffer is full */
+    FrontFaceUART_TX_FULL = (1 << 9) 
+}FrontFaceUART_STATUS;
+
+typedef enum
+{
+    /* Indicates that the core driver buffer is full */
+    FrontFaceUART_TRANSFER_STATUS_RX_FULL = (1 << 0) ,
+    /* Indicates that at least one byte of Data has been received */
+    FrontFaceUART_TRANSFER_STATUS_RX_DATA_PRESENT = (1 << 1) ,
+    /* Indicates that the core driver receiver buffer is empty */
+    FrontFaceUART_TRANSFER_STATUS_RX_EMPTY = (1 << 2) ,
+    /* Indicates that the core driver transmitter buffer is full */
+    FrontFaceUART_TRANSFER_STATUS_TX_FULL = (1 << 3) ,
+    /* Indicates that the core driver transmitter buffer is empty */
+    FrontFaceUART_TRANSFER_STATUS_TX_EMPTY = (1 << 4) 
+} FrontFaceUART_TRANSFER_STATUS;
+
+unsigned int __attribute__((deprecated)) FrontFaceUART_ReadBuffer( uint8_t *buffer ,  unsigned int numbytes);
+unsigned int __attribute__((deprecated)) FrontFaceUART_WriteBuffer( uint8_t *buffer , unsigned int numbytes );
+FrontFaceUART_TRANSFER_STATUS __attribute__((deprecated)) FrontFaceUART_TransferStatusGet (void );
+uint8_t __attribute__((deprecated)) FrontFaceUART_Peek(uint16_t offset);
+bool __attribute__((deprecated)) FrontFaceUART_ReceiveBufferIsEmpty (void);
+bool __attribute__((deprecated)) FrontFaceUART_TransmitBufferIsFull (void);
+uint16_t __attribute__((deprecated)) FrontFaceUART_StatusGet (void );
+void __attribute__((deprecated)) FrontFaceUART_Enable(void);
+void __attribute__((deprecated)) FrontFaceUART_Disable(void);
+unsigned int __attribute__((deprecated)) FrontFaceUART_ReceiveBufferSizeGet(void);
+unsigned int __attribute__((deprecated)) FrontFaceUART_TransmitBufferSizeGet(void);
+
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    }
+
+#endif
+    
+#endif  // _FrontFaceUART_H
+    
+    
+#ifndef _FTDIUART_H
+#define _FTDIUART_H
+
+#include <stdbool.h>
+#include <stdint.h>
+
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+        
+void FTDIUART_Initialize(void);
+uint8_t FTDIUART_Read( void);
+void FTDIUART_Write( uint8_t byte);
+bool FTDIUART_IsRxReady(void);
+bool FTDIUART_IsTxReady(void);
+bool FTDIUART_IsTxDone(void);
+void FTDIUART_SetTxInterruptHandler(void (* interruptHandler)(void));
+void FTDIUART_Transmit_CallBack(void);
+void FTDIUART_SetRxInterruptHandler(void (* interruptHandler)(void));
+void FTDIUART_Receive_CallBack(void);
+
+typedef enum
+{
+    /* Indicates that Receive buffer has data, at least one more character can be read */
+    FTDIUART_RX_DATA_AVAILABLE = (1 << 0),
+    /* Indicates that Receive buffer has overflowed */
+    FTDIUART_RX_OVERRUN_ERROR = (1 << 1),
+    /* Indicates that Framing error has been detected for the current character */
+    FTDIUART_FRAMING_ERROR = (1 << 2),
+    /* Indicates that Parity error has been detected for the current character */
+    FTDIUART_PARITY_ERROR = (1 << 3),
+    /* Indicates that Receiver is Idle */
+    FTDIUART_RECEIVER_IDLE = (1 << 4),
+    /* Indicates that the last transmission has completed */
+    FTDIUART_TX_COMPLETE = (1 << 8),
+    /* Indicates that Transmit buffer is full */
+    FTDIUART_TX_FULL = (1 << 9) 
+}FTDIUART_STATUS;
+
+typedef enum
+{
+    /* Indicates that the core driver buffer is full */
+    FTDIUART_TRANSFER_STATUS_RX_FULL = (1 << 0) ,
+    /* Indicates that at least one byte of Data has been received */
+    FTDIUART_TRANSFER_STATUS_RX_DATA_PRESENT = (1 << 1) ,
+    /* Indicates that the core driver receiver buffer is empty */
+    FTDIUART_TRANSFER_STATUS_RX_EMPTY = (1 << 2) ,
+    /* Indicates that the core driver transmitter buffer is full */
+    FTDIUART_TRANSFER_STATUS_TX_FULL = (1 << 3) ,
+    /* Indicates that the core driver transmitter buffer is empty */
+    FTDIUART_TRANSFER_STATUS_TX_EMPTY = (1 << 4) 
+} FTDIUART_TRANSFER_STATUS;
+
+unsigned int __attribute__((deprecated)) FTDIUART_ReadBuffer( uint8_t *buffer ,  unsigned int numbytes);
+unsigned int __attribute__((deprecated)) FTDIUART_WriteBuffer( uint8_t *buffer , unsigned int numbytes );
+
+FTDIUART_TRANSFER_STATUS __attribute__((deprecated)) FTDIUART_TransferStatusGet (void );
+uint8_t __attribute__((deprecated)) FTDIUART_Peek(uint16_t offset);
+bool __attribute__((deprecated)) FTDIUART_ReceiveBufferIsEmpty (void);
+bool __attribute__((deprecated)) FTDIUART_TransmitBufferIsFull (void);
+uint16_t __attribute__((deprecated)) FTDIUART_StatusGet (void );
+void __attribute__((deprecated)) FTDIUART_Enable(void);
+void __attribute__((deprecated)) FTDIUART_Disable(void);
+unsigned int __attribute__((deprecated)) FTDIUART_ReceiveBufferSizeGet(void);
+unsigned int __attribute__((deprecated)) FTDIUART_TransmitBufferSizeGet(void);
+
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    }
+
+#endif
+    
+#endif  // _FTDIUART_H    
