@@ -213,15 +213,18 @@ int main(void)
 ////    I2C1CON1bits.SCLREL = 1; // release clock
 //    CamUART_Write((uint8_t)pD);
     
-//    maxWriteByte(0x00, 0xA3);
-//    int x=0;
-//    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
-//    readByte(0xFF, 0x00, 0x00);
-//    while (1)
-//    {
-////        CamUART_Write('d');
-//    }
-//    
+    maxWriteByte(0xD8, 0x1A, 0x02);
+    int x=0;
+    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
+    readByte(0xD8, 0xD9, 0x1A, 0x00);
+    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
+    readByte(0xB8, 0xB9, 0x1A, 0x00);
+//    CamUART_Write('d');
+    while (1)
+    {
+//        CamUART_Write('d');
+    }
+    
     return 1;
 }
 
@@ -242,3 +245,7 @@ void CREATE_BUFFER(uint16_t dataAddress, uint8_t data)
  End of File
 */
 
+void MAX_Initialize()
+{
+    
+}
