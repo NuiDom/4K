@@ -79,163 +79,18 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     MAX_Initialize();
-//    RingLightUART_Write('z');
-//         #define MCHP24AA512_RETRY_MAX       100  // define the retry count
-//            #define MCHP24AA512_ADDRESS         0x50 // slave device address
-//            #define MCHP24AA512_DEVICE_TIMEOUT  50   // define slave timeout 
-//
-//
-//            uint8_t MCHP24AA512_Read(
-//                                            uint16_t address,
-//                                            uint8_t *pData,
-//                                            uint16_t nCount)
-//            {
-//                I2C2_MESSAGE_STATUS status;
-//                uint8_t     writeBuffer[3];
-//                uint16_t    retryTimeOut, slaveTimeOut;
-//                uint16_t    counter;
-//                uint8_t     *pD;
-//
-//                pD = pData;
-//
-//                for (counter = 0; counter < nCount; counter++)
-//                {
-//
-//                    // build the write buffer first
-//                    // starting address of the EEPROM memory
-//                    writeBuffer[0] = (address >> 8);                // high address
-//                    writeBuffer[1] = (uint8_t)(address);            // low low address
-//
-//                    // Now it is possible that the slave device will be slow.
-//                    // As a work around on these slaves, the application can
-//                    // retry sending the transaction
-//                    retryTimeOut = 0;
-//                    slaveTimeOut = 0;
-//
-//                    while(status != I2C2_MESSAGE_FAIL)
-//                    {
-//                        // write one byte to EEPROM (2 is the count of bytes to write)
-//                        I2C2_MasterWrite(    writeBuffer,
-//                                                2,
-//                                                MCHP24AA512_ADDRESS,
-//                                                &status);
-//
-//                        // wait for the message to be sent or status has changed.
-//                        while(status == I2C2_MESSAGE_PENDING)
-//                        {
-//                            // add some delay here
-//
-//                            // timeout checking
-//                            // check for max retry and skip this byte
-//                            if (slaveTimeOut == MCHP24AA512_DEVICE_TIMEOUT)
-//                                return (0);
-//                            else
-//                                slaveTimeOut++;
-//                        }
-//
-//                        if (status == I2C2_MESSAGE_COMPLETE)
-//                            break;
-//
-//                        // if status is  I2C2_MESSAGE_ADDRESS_NO_ACK,
-//                        //               or I2C2_DATA_NO_ACK,
-//                        // The device may be busy and needs more time for the last
-//                        // write so we can retry writing the data, this is why we
-//                        // use a while loop here
-//
-//                        // check for max retry and skip this byte
-//                        if (retryTimeOut == MCHP24AA512_RETRY_MAX)
-//                            break;
-//                        else
-//                            retryTimeOut++;
-//                    }
-//
-//                    if (status == I2C2_MESSAGE_COMPLETE)
-//                    {
-//
-//                        // this portion will read the byte from the memory location.
-//                        retryTimeOut = 0;
-//                        slaveTimeOut = 0;
-//
-//                        while(status != I2C2_MESSAGE_FAIL)
-//                        {
-//                            // write one byte to EEPROM (2 is the count of bytes to write)
-//                            I2C2_MasterRead(     pD,
-//                                                    1,
-//                                                    MCHP24AA512_ADDRESS,
-//                                                    &status);
-//
-//                            // wait for the message to be sent or status has changed.
-//                            while(status == I2C2_MESSAGE_PENDING)
-//                            {
-//                                // add some delay here
-//
-//                                // timeout checking
-//                                // check for max retry and skip this byte
-//                                if (slaveTimeOut == MCHP24AA512_DEVICE_TIMEOUT)
-//                                    return (0);
-//                                else
-//                                    slaveTimeOut++;
-//                            }
-//
-//                            if (status == I2C2_MESSAGE_COMPLETE)
-//                                break;
-//
-//                            // if status is  I2C2_MESSAGE_ADDRESS_NO_ACK,
-//                            //               or I2C2_DATA_NO_ACK,
-//                            // The device may be busy and needs more time for the last
-//                            // write so we can retry writing the data, this is why we
-//                            // use a while loop here
-//
-//                            // check for max retry and skip this byte
-//                            if (retryTimeOut == MCHP24AA512_RETRY_MAX)
-//                                break;
-//                            else
-//                                retryTimeOut++;
-//                        }
-//                    }
-//
-//                    // exit if the last transaction failed
-//                    if (status == I2C2_MESSAGE_FAIL)
-//                    {
-//                        return(0);
-//                        break;
-//                    }
-//
-//                    pD++;
-//                    address++;
-//
-//                }
-//                return(1);
-//
-//            }
     
-    
-    
-//    CREATE_BUFFER(0xFF00, 0xA3);
-//    uint8_t *pData = &writeBuffer[0];
-//    uint8_t     *pD;
-//    I2C2_MESSAGE_STATUS status = I2C2_DATA_NO_ACK;
-//    
-//    I2C2_MasterWrite(pData, 3, 0x50, &status);
-//    int x=0;
-//    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
-//    
-//    I2C2_MasterWrite(pData, 2, 0x50, &status);
-////    I2C2CONLbits.RSEN = 1;   //sets restart condition enabled
-////    I2C2CONLbits.PEN = 0;     //sets stop bit condition disabled 
-//    I2C2_MasterRead(pD, 1, 0x50, &status);
-////    I2C2CONLbits.RSEN = 0;    //setting them back to original state, I have another sensor that needs the
-////    I2C2CONLbits.PEN = 1;      //stop condition or it won't work.
-//    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
-////    I2C1CON1bits.SCLREL = 1; // release clock
-//    CamUART_Write((uint8_t)pD);
-    
-//    maxWriteByte(0xD8, 0x1A, 0x02);
     int x=0;
     for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
-    maxWriteByte(MAX_UART0_WRITE, 0x00, 0x1A);
-//    for(x=0;x<2000;x++){int y=0; for(y=0;y<2000;y++){;}}
-//    maxReadByte(0xB8, 0xB9, 0x1A);
+    maxWriteByte(MAX_UART0_WRITE, 0x10, 0xFF);
+    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
+    int y=0;
+    for(y=0; y<=130;y++){
+    maxWriteByte(MAX_UART0_WRITE, 0x00, 0x41);
+    for(x=0;x<500;x++){int y=0; for(y=0;y<500;y++){;}}
+    }
+//    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
+//    maxReadByte(MAX_UART0_WRITE, MAX_UART0_READ, 0x09);
 //    CamUART_Write('d');
     while (1)
     {
