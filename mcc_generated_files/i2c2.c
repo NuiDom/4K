@@ -714,18 +714,15 @@ bool I2C2_MasterQueueIsFull(void)
     return((bool)i2c2_object.trStatus.s.full);
 }
 
-void maxWriteByte(uint8_t slaveAddress, uint8_t lowByte, uint8_t dataByte)
+void maxWriteByte(uint8_t slaveAddressW, uint8_t reg, uint8_t dataByte)
 {
     I2C2CONLbits.SEN = 1;
     while(I2C2CONLbits.SEN){}
     
-    I2C2TRN = slaveAddress;//0b10110000;
+    I2C2TRN = slaveAddressW;
     while(I2C2STATbits.TRSTAT){}
     
-//    I2C2TRN = highByte;
-//    while(I2C2STATbits.TRSTAT){}
-    
-    I2C2TRN = lowByte;
+    I2C2TRN = reg;
     while(I2C2STATbits.TRSTAT){}
     
     I2C2TRN = dataByte;
@@ -756,7 +753,7 @@ void epromWriteByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte)
 
 }
 
-void readByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t lowByte, uint8_t dataByte)
+void maxReadByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t reg)
 {
     I2C2CONLbits.SEN = 1;           //generates start bit
     while(I2C2CONLbits.SEN){}       //waits for start to change back to 0 indicating success of start bit
@@ -764,10 +761,7 @@ void readByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t lowByte, uin
     I2C2TRN = slaveAddressW;           //fills transmit reg with eeprom address and write bit
     while(I2C2STATbits.TRSTAT){}    //waits for data to be sent
     
-//    I2C2TRN = highByte;
-//    while(I2C2STATbits.TRSTAT){}
-    
-    I2C2TRN = lowByte;
+    I2C2TRN = reg;
     while(I2C2STATbits.TRSTAT){}
     
     I2C2CONLbits.RSEN = 1;          //generates restart bit
@@ -778,9 +772,7 @@ void readByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t lowByte, uin
     
     I2C2CONLbits.RCEN = 1;          //sets receive enable bit
     while(I2C2CONLbits.RCEN){}
-//    
-////    SPI2CON1Lbits.CKP = 1;
-////    dataByte = I2C2RCV;
+    
     I2C2CONLbits.ACKEN = 1;
     I2C2CONLbits.ACKDT = 1;
     while(I2C2CONLbits.ACKEN);
