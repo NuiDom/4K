@@ -47,28 +47,12 @@
 */
 #include "mcc_generated_files/system.h"
 #include "mcc_generated_files/uart.h"
-#include "mcc_generated_files/i2c2.h"
+#include "max14830.h"
 
 #define SLAVE_I2C_GENERIC_RETRY_MAX           100
 #define SLAVE_I2C_GENERIC_DEVICE_TIMEOUT      50   // define slave timeout 
 
-#define MAX_UART0_WRITE     0xD8
-#define MAX_UART0_READ      0xD9
-#define MAX_UART1_WRITE     0xB8
-#define MAX_UART1_READ      0xB9
-#define MAX_UART2_WRITE     0x58
-#define MAX_UART2_READ      0x59
-#define MAX_UART3_WRITE     0x38
-#define MAX_UART3_READ      0x39
-
-#define MAX_PLL_CONFIG_REG  0x1A
-#define MAX_BRG_CONFIG_REG  0x1B
-#define MAX_DIVLSB_REG      0x1C
-#define MAX_DIVMSB_REG     0x1D
-#define MAX_CLK_SOURCE_REG  0x1E
-
 void CREATE_BUFFER(uint16_t dataAddress, uint8_t data);
-void MAX_Initialize();
 
 uint8_t writeBuffer[3];
 /*
@@ -81,11 +65,8 @@ int main(void)
     MAX_Initialize();
     
     int x=0;
-    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
-    maxWriteByte(MAX_UART0_WRITE, 0x10, 0xFF);
-    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
-    int y=0;
-    for(y=0; y<=130;y++){
+    int z=0;
+    for(z=0; z<=130;z++){
     maxWriteByte(MAX_UART0_WRITE, 0x00, 0x41);
     for(x=0;x<500;x++){int y=0; for(y=0;y<500;y++){;}}
     }
@@ -117,16 +98,3 @@ void CREATE_BUFFER(uint16_t dataAddress, uint8_t data)
  End of File
 */
 
-void MAX_Initialize()
-{
-    maxWriteByte(MAX_UART0_WRITE, MAX_PLL_CONFIG_REG, 0x01);        //set MAX PllConfig reg
-    int x=0;
-    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
-    maxWriteByte(MAX_UART0_WRITE, MAX_BRG_CONFIG_REG, 0x00);        //set MAX BEGConfig reg
-    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
-    maxWriteByte(MAX_UART0_WRITE, MAX_DIVLSB_REG, 0x02);        //set MAX 
-    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
-    maxWriteByte(MAX_UART0_WRITE, MAX_DIVMSB_REG, 0x00);        //set MAX 
-    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
-    maxWriteByte(MAX_UART0_WRITE, MAX_CLK_SOURCE_REG, 0x08);        //set MAX CLKSource reg
-}

@@ -7,8 +7,10 @@
             <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/main.c</file>
             <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/mcc_generated_files/i2c2.h</file>
             <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/mcc_generated_files/uart.h</file>
+            <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/max14830.h</file>
             <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/mcc_generated_files/i2c2.c</file>
             <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/mcc_generated_files/system.c</file>
+            <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/max14830.c</file>
         </group>
     </open-files>
 </project-private>
