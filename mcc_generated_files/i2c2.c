@@ -716,68 +716,68 @@ bool I2C2_MasterQueueIsFull(void)
 
 void maxWriteByte(uint8_t slaveAddressW, uint8_t reg, uint8_t dataByte)
 {
-    I2C2CONLbits.SEN = 1;
-    while(I2C2CONLbits.SEN){}
+    I2C2_START_CONDITION_ENABLE_BIT = 1;
+    while(I2C2_START_CONDITION_ENABLE_BIT){}
     
-    I2C2TRN = slaveAddressW;
+    I2C2_TRANSMIT_REG = slaveAddressW;
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2TRN = reg;
+    I2C2_TRANSMIT_REG = reg;
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2TRN = dataByte;
+    I2C2_TRANSMIT_REG = dataByte;
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2CONLbits.PEN = 1;
+    I2C2_STOP_CONDITION_ENABLE_BIT = 1;
 
 }
 
 void epromWriteByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte)
 {
-    I2C2CONLbits.SEN = 1;
-    while(I2C2CONLbits.SEN){}
+    I2C2_START_CONDITION_ENABLE_BIT = 1;
+    while(I2C2_START_CONDITION_ENABLE_BIT){}
     
-    I2C2TRN = 0xD8;//0b10110000;
+    I2C2_TRANSMIT_REG = 0xD8;//0b10110000;
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2TRN = highByte;
+    I2C2_TRANSMIT_REG = highByte;
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2TRN = lowByte;
+    I2C2_TRANSMIT_REG = lowByte;
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2TRN = dataByte;
+    I2C2_TRANSMIT_REG = dataByte;
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2CONLbits.PEN = 1;
+    I2C2_STOP_CONDITION_ENABLE_BIT = 1;
 
 }
 
 void maxReadByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t reg)
 {
-    I2C2CONLbits.SEN = 1;           //generates start bit
-    while(I2C2CONLbits.SEN){}       //waits for start to change back to 0 indicating success of start bit
+    I2C2_START_CONDITION_ENABLE_BIT = 1;           //generates start bit
+    while(I2C2_START_CONDITION_ENABLE_BIT){}       //waits for start to change back to 0 indicating success of start bit
     
-    I2C2TRN = slaveAddressW;           //fills transmit reg with eeprom address and write bit
+    I2C2_TRANSMIT_REG = slaveAddressW;           //fills transmit reg with eeprom address and write bit
     while(I2C2STATbits.TRSTAT){}    //waits for data to be sent
     
-    I2C2TRN = reg;
+    I2C2_TRANSMIT_REG = reg;
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2CONLbits.RSEN = 1;          //generates restart bit
-    while(I2C2CONLbits.RSEN){}
+    I2C2_REPEAT_START_CONDITION_ENABLE_BIT = 1;          //generates restart bit
+    while(I2C2_REPEAT_START_CONDITION_ENABLE_BIT){}
     
-    I2C2TRN = slaveAddressR;           //fills transmit reg with eeprom address and read bit
+    I2C2_TRANSMIT_REG = slaveAddressR;           //fills transmit reg with eeprom address and read bit
     while(I2C2STATbits.TRSTAT){}
     
-    I2C2CONLbits.RCEN = 1;          //sets receive enable bit
-    while(I2C2CONLbits.RCEN){}
+    I2C2_RECEIVE_ENABLE_BIT = 1;          //sets receive enable bit
+    while(I2C2_RECEIVE_ENABLE_BIT){}
     
-    I2C2CONLbits.ACKEN = 1;
-    I2C2CONLbits.ACKDT = 1;
-    while(I2C2CONLbits.ACKEN);
+    I2C2_ACKNOWLEDGE_ENABLE_BIT = 1;
+    I2C2_ACKNOWLEDGE_DATA_BIT = 1;
+    while(I2C2_ACKNOWLEDGE_ENABLE_BIT);
     
-    I2C2CONLbits.PEN = 1;       //generates stop bit
+    I2C2_STOP_CONDITION_ENABLE_BIT = 1;       //generates stop bit
 
 }
 /**

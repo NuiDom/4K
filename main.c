@@ -62,14 +62,17 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-    MAX_Initialize();
+    MAX_Init();
     
     int x=0;
     int z=0;
-    for(z=0; z<=130;z++){
-    maxWriteByte(MAX_UART0_WRITE, 0x00, 0x41);
+//    for(z=0; z<=130;z++){
+    maxWriteByte(MAX_UART3_WRITE, MAX14830_THR, 0x41);
     for(x=0;x<500;x++){int y=0; for(y=0;y<500;y++){;}}
-    }
+    maxReadByte(MAX_UART3_WRITE, MAX_UART3_READ, MAX14830_RHR);
+    for(x=0;x<500;x++){int y=0; for(y=0;y<500;y++){;}}
+    maxWriteByte(MAX_UART1_WRITE, MAX14830_GPIODATA, 0x08);
+//    }
 //    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
 //    maxReadByte(MAX_UART0_WRITE, MAX_UART0_READ, 0x09);
 //    CamUART_Write('d');
