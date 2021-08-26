@@ -47,8 +47,8 @@
 #define MAX14830_XOFF1          0x16
 #define MAX14830_XOFF2          0x17
 //GPIOs
-#define MAX14830_GPIOCONFG      0x18
-#define MAX14830_GPIODATA       0x19
+#define MAX14830_GPIOCONFG      0x18//
+#define MAX14830_GPIODATA       0x19//
 //Clock Config
 #define MAX14830_PLLCONFIG      0x1A//
 #define MAX14830_BRGCONFIG      0x1B//
