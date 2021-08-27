@@ -48,13 +48,7 @@
 #include "mcc_generated_files/system.h"
 #include "mcc_generated_files/uart.h"
 #include "max14830.h"
-
-#define SYS_FREQ        16000000L
-#define FCY             (SYS_FREQ/2)
-#include <libpic30.h>  
-
-#define SLAVE_I2C_GENERIC_RETRY_MAX           100
-#define SLAVE_I2C_GENERIC_DEVICE_TIMEOUT      50   // define slave timeout 
+#include "timer.h"
 
 void CREATE_BUFFER(uint16_t dataAddress, uint8_t data);
 
@@ -67,20 +61,17 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     MAX_Init();
+    TMR1_Init();
     
-    int x=0;
-    int z=0;
-//    for(z=0; z<=130;z++){
     maxWriteByte(MAX_UART3_WRITE, MAX14830_THR, 0x41);
-    for(x=0;x<500;x++){int y=0; for(y=0;y<500;y++){;}}
+    delay(200);
+    maxWriteByte(MAX_UART3_WRITE, MAX14830_THR, 0x41);
+    delay(200);
     maxReadByte(MAX_UART3_WRITE, MAX_UART3_READ, MAX14830_RHR);
-    for(x=0;x<500;x++){int y=0; for(y=0;y<500;y++){;}}
+    delay(200);
     maxWriteByte(MAX_UART1_WRITE, MAX14830_GPIODATA, 0x08);
-    for(x=0;x<500;x++){int y=0; for(y=0;y<500;y++){;}}
-    maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIODATA, 0x03);
-//    }
-//    for(x=0;x<1000;x++){int y=0; for(y=0;y<500;y++){;}}
-//    maxReadByte(MAX_UART0_WRITE, MAX_UART0_READ, 0x09);
+    delay(200);
+    maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIODATA, 0x00);
 //    CamUART_Write('d');
     while (1)
     {
