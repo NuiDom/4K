@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=4K_Peripheral_Setup.X
+PROJECTNAME=4K
 
 # Active Configuration
 DEFAULTCONF=default

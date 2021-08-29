@@ -64,13 +64,13 @@ int main(void)
     TMR1_Init();
     
     maxWriteByte(MAX_UART3_WRITE, MAX14830_THR, 0x41);
-    delay(200);
+    delay_ms(200);
     maxWriteByte(MAX_UART3_WRITE, MAX14830_THR, 0x41);
-    delay(200);
+    delay_ms(200);
     maxReadByte(MAX_UART3_WRITE, MAX_UART3_READ, MAX14830_RHR);
-    delay(200);
+    delay_ms(200);
     maxWriteByte(MAX_UART1_WRITE, MAX14830_GPIODATA, 0x08);
-    delay(200);
+    delay_ms(200);
     maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIODATA, 0x00);
 //    CamUART_Write('d');
     while (1)
