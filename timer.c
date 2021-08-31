@@ -16,7 +16,7 @@ void TMR1_Init()
 //    IFS0bits.T1IF = 0;
 //    TMR1 = 0;
 //}
-void delay_ms(float delay)
+void delay_ms(int delay)
 {
     float tmp = delay/1000;
     while(TMR1<SEC*tmp){}
