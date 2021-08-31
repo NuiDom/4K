@@ -18,7 +18,7 @@ extern "C" {
 #endif
 
 void TMR1_Init();
-void delay_ms(float delay);
+void delay_ms(int delay);
 
 #ifdef	__cplusplus
 }
