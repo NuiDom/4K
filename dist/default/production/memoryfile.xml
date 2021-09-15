@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/production/4K.production.elf">
+  <executable name="dist/default/production/4K_Peripheral_Setup.X.production.elf">
     <memory name="data">
       <units>bytes</units>
       <length>8192</length>
@@ -11,8 +11,8 @@
     <memory name="program">
       <units>bytes</units>
       <length>131316</length>
-      <used>19626</used>
-      <free>111690</free>
+      <used>19575</used>
+      <free>111741</free>
     </memory>
   </executable>
 </project>

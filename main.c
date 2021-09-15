@@ -72,10 +72,26 @@ int main(void)
     maxWriteByte(MAX_UART1_WRITE, MAX14830_GPIODATA, 0x08);
     delay_ms(200);
     maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIODATA, 0x00);
-//    CamUART_Write('d');
+    char arr0[] = {0x81, 0x01, 0x04, 0x07, 0x34, 0xFF};
+    char arr1[] = {0x81, 0x01, 0x04, 0x07, 0x00, 0xFF};
+    
+    int i=0;
+            while(i<6){
+            CamUART_Write(arr0[i]);
+            delay_ms(200);
+            i++;
+        }
+        i=0;
+        delay_ms(1000);
+            while(i<6){
+            CamUART_Write(arr1[i]);
+            delay_ms(200);
+            i++;
+        }
+        i=0;
     while (1)
     {
-//        CamUART_Write('d');
+
     }
     
     return 1;

@@ -758,7 +758,7 @@ void maxReadByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t reg)
     I2C2_START_CONDITION_ENABLE_BIT = 1;           //generates start bit
     while(I2C2_START_CONDITION_ENABLE_BIT){}       //waits for start to change back to 0 indicating success of start bit
     
-    I2C2_TRANSMIT_REG = slaveAddressW;           //fills transmit reg with eeprom address and write bit
+    I2C2_TRANSMIT_REG = slaveAddressW;           //fills transmit reg with address and write bit
     while(I2C2STATbits.TRSTAT){}    //waits for data to be sent
     
     I2C2_TRANSMIT_REG = reg;

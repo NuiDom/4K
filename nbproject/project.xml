@@ -14,6 +14,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>mcc_generated_files</sourceRootElem>
+                <sourceRootElem>/home/dnutt/Source/InspexHDC/Source</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
