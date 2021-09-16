@@ -106,13 +106,14 @@ void CamUARTWriteString(char *szString)
 int     nCurrentChar=0;
 char	cChar;
 
-        for(nCurrentChar=0;nCurrentChar<6;nCurrentChar++)
+        for(nCurrentChar=0;nCurrentChar<20;nCurrentChar++)
         	{
         	cChar=szString[nCurrentChar];
           	CamUART_Write(cChar);
           	// Loop until the end of transmission
           	while(U1STAbits.TRMT==0);
-          	if(cChar==0xFF) break;
+            if((uint8_t)cChar==0xFF) break;
+          	
           	}
 }
 //

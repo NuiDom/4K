@@ -110,11 +110,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x974           0xe2e  (3630)
 .const                       0xb74                0xbc           0x11a  (282)
-.text                        0xc30              0x2770          0x3b28  (15144)
-.dinit                      0x33a0                0x58            0x84  (132)
-.text                       0x33f8               0x12e           0x1c5  (453)
+.text                        0xc30              0x277a          0x3b37  (15159)
+.dinit                      0x33aa                0x58            0x84  (132)
+.text                       0x3402               0x12e           0x1c5  (453)
 
-                 Total "program" memory used (bytes):         0x4cb9  (19641) 14%
+                 Total "program" memory used (bytes):         0x4cc8  (19656) 14%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -426,19 +426,19 @@ External Symbols in Program Memory (by address):
                   0x0032c4                  _main
                   0x003322                  _CREATE_BUFFER
                   0x003344                  _CamUARTWriteString
-                  0x003378                  _un8CameraStartTeleZoom
-                  0x0033f8                  _TMR1_Init
-                  0x003408                  _delay_ms
-                  0x00344e                  _USER_USB_CALLBACK_EVENT_HANDLER
-                  0x0034a2                  _CLOCK_Initialize
-                  0x0034f4                  _SYSTEM_Initialize
+                  0x003382                  _un8CameraStartTeleZoom
+                  0x003402                  _TMR1_Init
+                  0x003412                  _delay_ms
+                  0x003458                  _USER_USB_CALLBACK_EVENT_HANDLER
+                  0x0034ac                  _CLOCK_Initialize
+                  0x0034fe                  _SYSTEM_Initialize
 
 External Symbols in Program Memory (by name):
 
                   0x002924                  _CDCInitEP
                   0x002ac4                  _CDCTxService
                   0x0030ea                  _CLK_CONFIG_Init
-                  0x0034a2                  _CLOCK_Initialize
+                  0x0034ac                  _CLOCK_Initialize
                   0x003322                  _CREATE_BUFFER
                   0x003344                  _CamUARTWriteString
                   0x001ed0                  _CamUART_Disable
@@ -530,8 +530,8 @@ External Symbols in Program Memory (by name):
                   0x002186                  _RingLightUART_TransmitBufferSizeGet
                   0x001f82                  _RingLightUART_Write
                   0x0020c0                  _RingLightUART_WriteBuffer
-                  0x0034f4                  _SYSTEM_Initialize
-                  0x0033f8                  _TMR1_Init
+                  0x0034fe                  _SYSTEM_Initialize
+                  0x003402                  _TMR1_Init
                   0x00312e                  _UARTS_Mode_Init
                   0x002962                  _USBCDCEventHandler
                   0x001020                  _USBCancelIO
@@ -554,7 +554,7 @@ External Symbols in Program Memory (by name):
                   0x002f40                  _USBVBUSSessionValidStateGet
                   0x000c1c                  _USB_CD_Ptr
                   0x000c1e                  _USB_SD_Ptr
-                  0x00344e                  _USER_USB_CALLBACK_EVENT_HANDLER
+                  0x003458                  _USER_USB_CALLBACK_EVENT_HANDLER
                   0x000392                  __AddressError
                   0x000982                  __DefaultInterrupt
                   0x0003d2                  __MI2C2Interrupt
@@ -594,7 +594,7 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
                   0x000b86                  _configDescriptor1
-                  0x003408                  _delay_ms
+                  0x003412                  _delay_ms
                   0x000b74                  _device_dsc
                   0x002dd0                  _epromWriteByte
                   0x00299a                  _getsUSBUSART
@@ -609,7 +609,7 @@ External Symbols in Program Memory (by name):
                   0x000bca                  _sd000
                   0x000bce                  _sd001
                   0x000c02                  _sd002
-                  0x003378                  _un8CameraStartTeleZoom
+                  0x003382                  _un8CameraStartTeleZoom
 
 Memory Configuration
 
@@ -812,7 +812,7 @@ __CONFIG1
  .debug_abbrev    0x00124a        0x133 build/default/production/FCB-H11-dvr.o
  .debug_abbrev    0x00137d          0x1 build/default/production/camera.o
 
-.debug_line       0x000000       0x1958
+.debug_line       0x000000       0x195c
  *(.debug_line)
  .debug_line      0x000000         0xbb build/default/production/mcc_generated_files/usb/usb_descriptors.o
  .debug_line      0x0000bb        0x1a0 build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
@@ -830,8 +830,8 @@ __CONFIG1
  .debug_line      0x001614         0x8f build/default/production/main.o
  .debug_line      0x0016a3         0x9d build/default/production/max14830.o
  .debug_line      0x001740         0xf5 build/default/production/timer.o
- .debug_line      0x001835        0x109 build/default/production/FCB-H11-dvr.o
- .debug_line      0x00193e         0x1a build/default/production/camera.o
+ .debug_line      0x001835        0x10d build/default/production/FCB-H11-dvr.o
+ .debug_line      0x001942         0x1a build/default/production/camera.o
 
 .debug_frame      0x000000       0x160e
  *(.debug_frame)
@@ -2701,7 +2701,7 @@ _0x7fed825c8b40614327f8
                     0x8c1e                  _USB_SD_Ptr
  .const             0x8c24          0xc build/default/production/main.o
 
-.text             0x000c30       0x2770
+.text             0x000c30       0x277a
  .text            0x000c30        0xf8e build/default/production/mcc_generated_files/usb/usb_device.o
                   0x000c30                  _USBDeviceInit
                   0x000d20                  _USBDeviceTasks
@@ -2840,22 +2840,22 @@ _0x7fed825c8b40614327f8
  .text            0x0032c4         0x80 build/default/production/main.o
                   0x0032c4                  _main
                   0x003322                  _CREATE_BUFFER
- .text            0x003344         0x5c build/default/production/FCB-H11-dvr.o
+ .text            0x003344         0x66 build/default/production/FCB-H11-dvr.o
                   0x003344                  _CamUARTWriteString
-                  0x003378                  _un8CameraStartTeleZoom
+                  0x003382                  _un8CameraStartTeleZoom
 
-.dinit            0x0033a0         0x58
- .dinit           0x0033a0         0x58 data_init
+.dinit            0x0033aa         0x58
+ .dinit           0x0033aa         0x58 data_init
 
-.text             0x0033f8        0x12e
- .text            0x0033f8         0x56 build/default/production/timer.o
-                  0x0033f8                  _TMR1_Init
-                  0x003408                  _delay_ms
- .text            0x00344e         0x54 build/default/production/mcc_generated_files/usb/usb_device_events.o
-                  0x00344e                  _USER_USB_CALLBACK_EVENT_HANDLER
- .text            0x0034a2         0x52 build/default/production/mcc_generated_files/clock.o
-                  0x0034a2                  _CLOCK_Initialize
- .text            0x0034f4         0x1a build/default/production/mcc_generated_files/system.o
-                  0x0034f4                  _SYSTEM_Initialize
- .text            0x00350e         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x00350e                  _TRAPS_halt_on_error
+.text             0x003402        0x12e
+ .text            0x003402         0x56 build/default/production/timer.o
+                  0x003402                  _TMR1_Init
+                  0x003412                  _delay_ms
+ .text            0x003458         0x54 build/default/production/mcc_generated_files/usb/usb_device_events.o
+                  0x003458                  _USER_USB_CALLBACK_EVENT_HANDLER
+ .text            0x0034ac         0x52 build/default/production/mcc_generated_files/clock.o
+                  0x0034ac                  _CLOCK_Initialize
+ .text            0x0034fe         0x1a build/default/production/mcc_generated_files/system.o
+                  0x0034fe                  _SYSTEM_Initialize
+ .text            0x003518         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x003518                  _TRAPS_halt_on_error
