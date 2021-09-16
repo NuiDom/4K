@@ -72,9 +72,10 @@ int main(void)
     maxWriteByte(MAX_UART1_WRITE, MAX14830_GPIODATA, 0x08);
     delay_ms(200);
     maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIODATA, 0x00);
-    char arr0[] = {0x81, 0x01, 0x04, 0x07, 0x34, 0xFF};
+    char arr0[] = {0x81, 0x01, 0x04, 0x07, 0x36, 0xFF};
     char arr1[] = {0x81, 0x01, 0x04, 0x07, 0x00, 0xFF};
-    CamUARTWriteString(arr0);
+    un8CameraStartTeleZoom(7);
+//    CamUARTWriteString(arr0);
     delay_ms(1000);
     CamUARTWriteString(arr1);
     
