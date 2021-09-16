@@ -16,7 +16,7 @@
 #define CAMERA_FOCUS_AUTO				0x00
 #define CAMERA_FOCUS_MANUAL				0x01
 
-
+#include "stdint.h"
 /*
 struct CameraFCB_H11
 {
@@ -137,7 +137,7 @@ uint8_t		un8TestByte;
 
 
 void	CameraBufferReset(void);
-void    USARTWriteCamera(char *szString);
+void    CamUARTWriteString(char *szString);
 uint8_t	un8CameraAddressSet(void);
 uint8_t	un8CameraIFClear(void);
 uint8_t	un8CameraPowerOn(void);
@@ -223,3 +223,4 @@ uint8_t	CAM_LockProtection(void);
 uint8_t	CAM_QuitAdjustModeCMD(void);
 uint8_t	CAM_VersionInq(void);
 uint16_t Get_Camera_Type(void);
+

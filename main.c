@@ -49,7 +49,7 @@
 #include "mcc_generated_files/uart.h"
 #include "max14830.h"
 #include "timer.h"
-
+#include "FCB-H11-dvr.h"
 void CREATE_BUFFER(uint16_t dataAddress, uint8_t data);
 
 uint8_t writeBuffer[3];
@@ -74,21 +74,24 @@ int main(void)
     maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIODATA, 0x00);
     char arr0[] = {0x81, 0x01, 0x04, 0x07, 0x34, 0xFF};
     char arr1[] = {0x81, 0x01, 0x04, 0x07, 0x00, 0xFF};
+    CamUARTWriteString(arr0);
+    delay_ms(1000);
+    CamUARTWriteString(arr1);
     
-    int i=0;
-            while(i<6){
-            CamUART_Write(arr0[i]);
-            delay_ms(200);
-            i++;
-        }
-        i=0;
-        delay_ms(1000);
-            while(i<6){
-            CamUART_Write(arr1[i]);
-            delay_ms(200);
-            i++;
-        }
-        i=0;
+//    int i=0;
+//            while(i<6){
+//            CamUART_Write(arr0[i]);
+//            delay_ms(200);
+//            i++;
+//        }
+//        i=0;
+//        delay_ms(1000);
+//            while(i<6){
+//            CamUART_Write(arr1[i]);
+//            delay_ms(200);
+//            i++;
+//        }
+//        i=0;
     while (1)
     {
 

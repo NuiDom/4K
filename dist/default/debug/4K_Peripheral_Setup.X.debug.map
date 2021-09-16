@@ -1,42 +1,54 @@
 Microchip Technology Inc, v1.70 (B)
 
 Tool Name:
-  c:\program files\microchip\xc16\v1.70\bin\bin\..\bin/elf-ld.exe
+  /opt/microchip/xc16/v1.70/bin/bin/../bin/elf-ld
 
 Command:
+  -T/tmp/tmp001329b9.00 \
+  -T/tmp/tmp001329b9.01 \
+  -T/tmp/tmp001329b9.02 \
+  -T/tmp/tmp001329b9.03 \
+  -T/tmp/tmp001329b9.04 \
+  -T/tmp/tmp001329b9.05 \
+  -T/tmp/tmp001329b9.06 \
   -p24FJ128GB204 \
-  --mdfp=C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC24F-GA-GB_DFP/1.4.141/xc16 \
+  --mdfp=/opt/microchip/mplabx/v5.50/packs/Microchip/PIC24F-GA-GB_DFP/1.4.141/xc16 \
   -o \
-  dist/default/production/4K.production.elf \
-  -Lc:/program files/microchip/xc16/v1.70/bin/bin/.. \
-  -LC:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC24F-GA-GB_DFP/1.4.141/xc16/bin/../support/PIC24F/gld \
-  -Lc:/program files/microchip/xc16/v1.70/bin/bin/../../lib \
-  -Lc:/program files/microchip/xc16/v1.70/bin/bin/../../support/PIC24E/gld \
-  -Lc:/program files/microchip/xc16/v1.70/bin/bin/../../support/PIC24F/gld \
-  -Lc:/program files/microchip/xc16/v1.70/bin/bin/../../support/PIC24H/gld \
-  -Lc:/program files/microchip/xc16/v1.70/bin/bin/../../support/dsPIC30F/gld \
-  -Lc:/program files/microchip/xc16/v1.70/bin/bin/../../support/dsPIC33C/gld \
-  -Lc:/program files/microchip/xc16/v1.70/bin/bin/../../support/dsPIC33E/gld \
-  -Lc:/program files/microchip/xc16/v1.70/bin/bin/../../support/dsPIC33F/gld \
-  build/default/production/mcc_generated_files/usb/usb_descriptors.o \
-  build/default/production/mcc_generated_files/usb/usb_hal_16bit.o \
-  build/default/production/mcc_generated_files/usb/usb_device_cdc.o \
-  build/default/production/mcc_generated_files/usb/usb_device_events.o \
-  build/default/production/mcc_generated_files/usb/usb_device.o \
-  build/default/production/mcc_generated_files/mcc.o \
-  build/default/production/mcc_generated_files/traps.o \
-  build/default/production/mcc_generated_files/pin_manager.o \
-  build/default/production/mcc_generated_files/clock.o \
-  build/default/production/mcc_generated_files/interrupt_manager.o \
-  build/default/production/mcc_generated_files/system.o \
-  build/default/production/mcc_generated_files/i2c2.o \
-  build/default/production/mcc_generated_files/uart.o \
-  build/default/production/main.o \
-  build/default/production/max14830.o \
-  build/default/production/timer.o \
+  dist/default/debug/4K_Peripheral_Setup.X.debug.elf \
+  -L/opt/microchip/xc16/v1.70/bin/bin/.. \
+  -L/opt/microchip/mplabx/v5.50/packs/Microchip/PIC24F-GA-GB_DFP/1.4.141/xc16/bin/../support/PIC24F/gld \
+  -L/opt/microchip/xc16/v1.70/bin/bin/../../lib \
+  -L/opt/microchip/xc16/v1.70/bin/bin/../../support/PIC24E/gld \
+  -L/opt/microchip/xc16/v1.70/bin/bin/../../support/PIC24F/gld \
+  -L/opt/microchip/xc16/v1.70/bin/bin/../../support/PIC24H/gld \
+  -L/opt/microchip/xc16/v1.70/bin/bin/../../support/dsPIC30F/gld \
+  -L/opt/microchip/xc16/v1.70/bin/bin/../../support/dsPIC33C/gld \
+  -L/opt/microchip/xc16/v1.70/bin/bin/../../support/dsPIC33E/gld \
+  -L/opt/microchip/xc16/v1.70/bin/bin/../../support/dsPIC33F/gld \
+  build/default/debug/mcc_generated_files/usb/usb_descriptors.o \
+  build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o \
+  build/default/debug/mcc_generated_files/usb/usb_device_cdc.o \
+  build/default/debug/mcc_generated_files/usb/usb_device_events.o \
+  build/default/debug/mcc_generated_files/usb/usb_device.o \
+  build/default/debug/mcc_generated_files/mcc.o \
+  build/default/debug/mcc_generated_files/traps.o \
+  build/default/debug/mcc_generated_files/pin_manager.o \
+  build/default/debug/mcc_generated_files/clock.o \
+  build/default/debug/mcc_generated_files/interrupt_manager.o \
+  build/default/debug/mcc_generated_files/system.o \
+  build/default/debug/mcc_generated_files/i2c2.o \
+  build/default/debug/mcc_generated_files/uart.o \
+  build/default/debug/main.o \
+  build/default/debug/max14830.o \
+  build/default/debug/timer.o \
+  build/default/debug/FCB-H11-dvr.o \
+  build/default/debug/camera.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
-  -Tp24FJ128GB204.gld.00 \
+  --defsym=__MPLAB_DEBUG=1 \
+  --defsym=__DEBUG=1 \
+  --defsym=__MPLAB_DEBUGGER_PK3=1 \
+  -Tp24FJ128GB204.gld.07 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -48,10 +60,10 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/default/production/4K.production.map \
+  -Map=dist/default/debug/4K_Peripheral_Setup.X.debug.map \
   --report-mem \
   --memorysummary \
-  dist/default/production/memoryfile.xml \
+  dist/default/debug/memoryfile.xml \
   -start-group \
   --library=lega-pic30-elf \
   --library=m-elf \
@@ -62,36 +74,38 @@ Command:
 Optional library libpPIC24Fxxx.a not found
 Archive member included because of file (symbol)
 
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(crt0_extended24.o)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
                               (__resetPRI)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(data_init_24.o)
-                              c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(crt0_extended24.o) (__data_init_da)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normalda.Leo)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
+                              /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o) (__data_init_da)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt_start_mode_normalda.Leo)
                               (__crt_start_mode_normal)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(divsf3.daeo)
-                              build/default/production/timer.o (___divsf3)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(feqltle.daeo)
-                              build/default/production/timer.o (___ltsf2)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(floatunsisf.daeo)
-                              build/default/production/timer.o (___floatunsisf)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(fpack.daeo)
-                              c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(divsf3.daeo) (__fpack)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(funpack2.daeo)
-                              c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(divsf3.daeo) (__funpack2)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(futil.daeo)
-                              c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(divsf3.daeo) (__fPropagateNaN)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(mulsf3.daeo)
-                              build/default/production/timer.o (___mulsf3)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(fcompare.daeo)
-                              c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(feqltle.daeo) (__fcompare)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(floatundisf.daeo)
-                              c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(floatunsisf.daeo) (___floatundisf)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(funpack.daeo)
-                              c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(funpack2.daeo) (__funpack)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a(memcpy.DA_eo)
-                              build/default/production/mcc_generated_files/usb/usb_device.o (_memcpy)
-c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a(memset.DA_eo)
-                              build/default/production/mcc_generated_files/usb/usb_device.o (_memset)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(feqltle.daeo)
+                              build/default/debug/timer.o (___ltsf2)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatsisf.daeo)
+                              build/default/debug/timer.o (___floatsisf)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatunsisf.daeo)
+                              build/default/debug/timer.o (___floatunsisf)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(mulsf3.daeo)
+                              build/default/debug/timer.o (___mulsf3)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(fcompare.daeo)
+                              /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(feqltle.daeo) (__fcompare)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatdisf.daeo)
+                              /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatsisf.daeo) (___floatdisf)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatundisf.daeo)
+                              /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatunsisf.daeo) (___floatundisf)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(fpack.daeo)
+                              /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(mulsf3.daeo) (__fpack)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(funpack2.daeo)
+                              /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(mulsf3.daeo) (__funpack2)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(futil.daeo)
+                              /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(mulsf3.daeo) (__fPropagateNaN)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(funpack.daeo)
+                              /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(funpack2.daeo) (__funpack)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a(memcpy.DA_eo)
+                              build/default/debug/mcc_generated_files/usb/usb_device.o (_memcpy)
+/opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a(memset.DA_eo)
+                              build/default/debug/mcc_generated_files/usb/usb_device.o (_memset)
 
 
 xc16-ld 1.70 (B)
@@ -104,25 +118,32 @@ Default Scalar Model: Small
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200               0x9d2           0xebb  (3771)
-.const                       0xbd2                0xb0           0x108  (264)
-.text                        0xc82              0x2716          0x3aa1  (15009)
-.dinit                      0x3398                0x58            0x84  (132)
-.text                       0x33f0               0x12c           0x1c2  (450)
+.text                        0x200               0x974           0xe2e  (3630)
+.const                       0xb74                0xbc           0x11a  (282)
+.text                        0xc30              0x2770          0x3b28  (15144)
+.dinit                      0x33a0                0x58            0x84  (132)
+.text                       0x33f8               0x130           0x1c8  (456)
 
-                 Total "program" memory used (bytes):         0x4caa  (19626) 14%
+                 Total "program" memory used (bytes):         0x4cbc  (19644) 14%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0x6c  (108)
-.ndata                       0x86c                   0             0x2  (2)
-.bss                         0x86e                   0           0x122  (290)
-_0000000005D76B40612befcd     0xa00                   0            0x30  (48)
+reserve_data_0x800           0x800                0x1c            0x1c  (28)
+reserve_data_0x81c           0x81c                 0x2             0x2  (2)
+reserve_data_0x81e           0x81e                 0x2             0x2  (2)
+reserve_data_0x820           0x820                 0x2             0x2  (2)
+reserve_data_0x822           0x822                 0x2             0x2  (2)
+reserve_data_0x824           0x824                 0x4             0x4  (4)
+.ndata                       0x828                   0             0x2  (2)
+reserve_data_0x82a           0x82a                0x26            0x26  (38)
+.nbss                        0x850                   0            0x6c  (108)
+.bss                         0x8bc                   0           0x122  (290)
+_0x7f1a87742b4061432805      0xa00                   0            0x30  (48)
 
-                 Total "data" memory used (bytes):          0x1c0  (448) 5%
+                 Total "data" memory used (bytes):          0x20e  (526) 6%
 
 
 Dynamic Memory Usage
@@ -139,117 +160,117 @@ Info: Project is using a large data memory model when small data memory model is
 
 External Symbols in Data Memory (by address):
 
-                    0x0800                  _USBDeviceState
-                    0x0802                  _USBActiveConfiguration
-                    0x0804                  _pBDTEntryEP0OutCurrent
-                    0x0806                  _pBDTEntryEP0OutNext
-                    0x0808                  _shortPacketStatus
-                    0x0809                  _controlTransferState
-                    0x080a                  _pDst
-                    0x080c                  _RemoteWakeup
-                    0x080d                  _USBBusIsSuspended
-                    0x080e                  _USTATcopy
-                    0x080f                  _endpoint_number
-                    0x0810                  _BothEP0OutUOWNsSet
-                    0x0811                  _USBStatusStageTimeoutCounter
-                    0x0812                  _USBDeferStatusStagePacket
-                    0x0813                  _USBStatusStageEnabledFlag1
-                    0x0814                  _USBStatusStageEnabledFlag2
-                    0x0815                  _USBDeferINDataStagePackets
-                    0x0816                  _USBDeferOUTDataStagePackets
-                    0x0818                  _USB1msTickCount
-                    0x081c                  _USBTicksSinceSuspendEnd
-                    0x0828                  _CamUART_TxDefaultInterruptHandler
-                    0x082a                  _CamUART_RxDefaultInterruptHandler
-                    0x082c                  _RingLightUART_TxDefaultInterruptHandler
-                    0x082e                  _RingLightUART_RxDefaultInterruptHandler
-                    0x0830                  _FrontFaceUART_TxDefaultInterruptHandler
-                    0x0832                  _FrontFaceUART_RxDefaultInterruptHandler
-                    0x0834                  _FTDIUART_TxDefaultInterruptHandler
-                    0x0836                  _FTDIUART_RxDefaultInterruptHandler
-                    0x0850                  _cdc_rx_len
-                    0x0851                  _cdc_trf_state
-                    0x0852                  _pCDCSrc
-                    0x0854                  _pCDCDst
-                    0x0856                  _cdc_tx_len
-                    0x0857                  _cdc_mem_type
-                    0x0858                  _CDCDataOutHandle
-                    0x085a                  _CDCDataInHandle
-                    0x085c                  _control_signal_bitmap
-                    0x085e                  _BaudRateGen
-                    0x086e                  _cdc_data_tx
-                    0x08ae                  _cdc_data_rx
-                    0x08ee                  _line_coding
-                    0x08f6                  _cdc_notice
-                    0x0900                  _dummy_encapsulated_cmd_response
-                    0x0908                  _USBAlternateInterface
-                    0x090a                  _pBDTEntryOut
-                    0x0910                  _pBDTEntryIn
-                    0x0916                  _inPipes
-                    0x091c                  _outPipes
-                    0x0923                  _ep_data_in
-                    0x0926                  _ep_data_out
-                    0x0929                  _SetupPkt
-                    0x0931                  _CtrlTrfData
-                    0x098c                  _writeBuffer
+                    0x0850                  _USBDeviceState
+                    0x0852                  _USBActiveConfiguration
+                    0x0854                  _pBDTEntryEP0OutCurrent
+                    0x0856                  _pBDTEntryEP0OutNext
+                    0x0858                  _shortPacketStatus
+                    0x0859                  _controlTransferState
+                    0x085a                  _pDst
+                    0x085c                  _RemoteWakeup
+                    0x085d                  _USBBusIsSuspended
+                    0x085e                  _USTATcopy
+                    0x085f                  _endpoint_number
+                    0x0860                  _BothEP0OutUOWNsSet
+                    0x0861                  _USBStatusStageTimeoutCounter
+                    0x0862                  _USBDeferStatusStagePacket
+                    0x0863                  _USBStatusStageEnabledFlag1
+                    0x0864                  _USBStatusStageEnabledFlag2
+                    0x0865                  _USBDeferINDataStagePackets
+                    0x0866                  _USBDeferOUTDataStagePackets
+                    0x0868                  _USB1msTickCount
+                    0x086c                  _USBTicksSinceSuspendEnd
+                    0x0878                  _CamUART_TxDefaultInterruptHandler
+                    0x087a                  _CamUART_RxDefaultInterruptHandler
+                    0x087c                  _RingLightUART_TxDefaultInterruptHandler
+                    0x087e                  _RingLightUART_RxDefaultInterruptHandler
+                    0x0880                  _FrontFaceUART_TxDefaultInterruptHandler
+                    0x0882                  _FrontFaceUART_RxDefaultInterruptHandler
+                    0x0884                  _FTDIUART_TxDefaultInterruptHandler
+                    0x0886                  _FTDIUART_RxDefaultInterruptHandler
+                    0x08a0                  _cdc_rx_len
+                    0x08a1                  _cdc_trf_state
+                    0x08a2                  _pCDCSrc
+                    0x08a4                  _pCDCDst
+                    0x08a6                  _cdc_tx_len
+                    0x08a7                  _cdc_mem_type
+                    0x08a8                  _CDCDataOutHandle
+                    0x08aa                  _CDCDataInHandle
+                    0x08ac                  _control_signal_bitmap
+                    0x08ae                  _BaudRateGen
+                    0x08bc                  _cdc_data_tx
+                    0x08fc                  _cdc_data_rx
+                    0x093c                  _line_coding
+                    0x0944                  _cdc_notice
+                    0x094e                  _dummy_encapsulated_cmd_response
+                    0x0956                  _USBAlternateInterface
+                    0x0958                  _pBDTEntryOut
+                    0x095e                  _pBDTEntryIn
+                    0x0964                  _inPipes
+                    0x096a                  _outPipes
+                    0x0971                  _ep_data_in
+                    0x0974                  _ep_data_out
+                    0x0977                  _SetupPkt
+                    0x097f                  _CtrlTrfData
+                    0x09da                  _writeBuffer
                     0x0a00                  _BDT
 
 External Symbols in Data Memory (by name):
 
                     0x0a00                  _BDT
-                    0x085e                  _BaudRateGen
-                    0x0810                  _BothEP0OutUOWNsSet
-                    0x085a                  _CDCDataInHandle
-                    0x0858                  _CDCDataOutHandle
-                    0x082a                  _CamUART_RxDefaultInterruptHandler
-                    0x0828                  _CamUART_TxDefaultInterruptHandler
-                    0x0931                  _CtrlTrfData
-                    0x0836                  _FTDIUART_RxDefaultInterruptHandler
-                    0x0834                  _FTDIUART_TxDefaultInterruptHandler
-                    0x0832                  _FrontFaceUART_RxDefaultInterruptHandler
-                    0x0830                  _FrontFaceUART_TxDefaultInterruptHandler
-                    0x080c                  _RemoteWakeup
-                    0x082e                  _RingLightUART_RxDefaultInterruptHandler
-                    0x082c                  _RingLightUART_TxDefaultInterruptHandler
-                    0x0929                  _SetupPkt
-                    0x0818                  _USB1msTickCount
-                    0x0802                  _USBActiveConfiguration
-                    0x0908                  _USBAlternateInterface
-                    0x080d                  _USBBusIsSuspended
-                    0x0815                  _USBDeferINDataStagePackets
-                    0x0816                  _USBDeferOUTDataStagePackets
-                    0x0812                  _USBDeferStatusStagePacket
-                    0x0800                  _USBDeviceState
-                    0x0813                  _USBStatusStageEnabledFlag1
-                    0x0814                  _USBStatusStageEnabledFlag2
-                    0x0811                  _USBStatusStageTimeoutCounter
-                    0x081c                  _USBTicksSinceSuspendEnd
-                    0x080e                  _USTATcopy
-                    0x08ae                  _cdc_data_rx
-                    0x086e                  _cdc_data_tx
-                    0x0857                  _cdc_mem_type
-                    0x08f6                  _cdc_notice
-                    0x0850                  _cdc_rx_len
-                    0x0851                  _cdc_trf_state
-                    0x0856                  _cdc_tx_len
-                    0x0809                  _controlTransferState
-                    0x085c                  _control_signal_bitmap
-                    0x0900                  _dummy_encapsulated_cmd_response
-                    0x080f                  _endpoint_number
-                    0x0923                  _ep_data_in
-                    0x0926                  _ep_data_out
-                    0x0916                  _inPipes
-                    0x08ee                  _line_coding
-                    0x091c                  _outPipes
-                    0x0804                  _pBDTEntryEP0OutCurrent
-                    0x0806                  _pBDTEntryEP0OutNext
-                    0x0910                  _pBDTEntryIn
-                    0x090a                  _pBDTEntryOut
-                    0x0854                  _pCDCDst
-                    0x0852                  _pCDCSrc
-                    0x080a                  _pDst
-                    0x0808                  _shortPacketStatus
-                    0x098c                  _writeBuffer
+                    0x08ae                  _BaudRateGen
+                    0x0860                  _BothEP0OutUOWNsSet
+                    0x08aa                  _CDCDataInHandle
+                    0x08a8                  _CDCDataOutHandle
+                    0x087a                  _CamUART_RxDefaultInterruptHandler
+                    0x0878                  _CamUART_TxDefaultInterruptHandler
+                    0x097f                  _CtrlTrfData
+                    0x0886                  _FTDIUART_RxDefaultInterruptHandler
+                    0x0884                  _FTDIUART_TxDefaultInterruptHandler
+                    0x0882                  _FrontFaceUART_RxDefaultInterruptHandler
+                    0x0880                  _FrontFaceUART_TxDefaultInterruptHandler
+                    0x085c                  _RemoteWakeup
+                    0x087e                  _RingLightUART_RxDefaultInterruptHandler
+                    0x087c                  _RingLightUART_TxDefaultInterruptHandler
+                    0x0977                  _SetupPkt
+                    0x0868                  _USB1msTickCount
+                    0x0852                  _USBActiveConfiguration
+                    0x0956                  _USBAlternateInterface
+                    0x085d                  _USBBusIsSuspended
+                    0x0865                  _USBDeferINDataStagePackets
+                    0x0866                  _USBDeferOUTDataStagePackets
+                    0x0862                  _USBDeferStatusStagePacket
+                    0x0850                  _USBDeviceState
+                    0x0863                  _USBStatusStageEnabledFlag1
+                    0x0864                  _USBStatusStageEnabledFlag2
+                    0x0861                  _USBStatusStageTimeoutCounter
+                    0x086c                  _USBTicksSinceSuspendEnd
+                    0x085e                  _USTATcopy
+                    0x08fc                  _cdc_data_rx
+                    0x08bc                  _cdc_data_tx
+                    0x08a7                  _cdc_mem_type
+                    0x0944                  _cdc_notice
+                    0x08a0                  _cdc_rx_len
+                    0x08a1                  _cdc_trf_state
+                    0x08a6                  _cdc_tx_len
+                    0x0859                  _controlTransferState
+                    0x08ac                  _control_signal_bitmap
+                    0x094e                  _dummy_encapsulated_cmd_response
+                    0x085f                  _endpoint_number
+                    0x0971                  _ep_data_in
+                    0x0974                  _ep_data_out
+                    0x0964                  _inPipes
+                    0x093c                  _line_coding
+                    0x096a                  _outPipes
+                    0x0854                  _pBDTEntryEP0OutCurrent
+                    0x0856                  _pBDTEntryEP0OutNext
+                    0x095e                  _pBDTEntryIn
+                    0x0958                  _pBDTEntryOut
+                    0x08a4                  _pCDCDst
+                    0x08a2                  _pCDCSrc
+                    0x085a                  _pDst
+                    0x0858                  _shortPacketStatus
+                    0x09da                  _writeBuffer
 
 External Symbols in Program Memory (by address):
 
@@ -276,277 +297,281 @@ External Symbols in Program Memory (by address):
                   0x000906                  __U4RXInterrupt
                   0x00096c                  __U4ErrInterrupt
                   0x000982                  __DefaultInterrupt
-                  0x000988                  ___divsf3
-                  0x000a0c                  ___lesf2
-                  0x000a0c                  ___ltsf2
-                  0x000a0c                  ___eqsf2
-                  0x000a10                  ___floatunsisf
-                  0x000a14                  __fpack
-                  0x000a60                  __funpack2
-                  0x000a70                  __fPropagateNaN
-                  0x000a82                  __fbopExit
-                  0x000a8a                  __fbopReturnNaN
-                  0x000a90                  ___mulsf3
-                  0x000af8                  __fcompare
-                  0x000b2e                  ___floatundisf
-                  0x000b8c                  __funpack
-                  0x000bb6                  _memcpy
-                  0x000bc4                  _memset
-                  0x000bd2                  _device_dsc
-                  0x000be4                  _configDescriptor1
-                  0x000c28                  _sd000
-                  0x000c2c                  _sd001
-                  0x000c60                  _sd002
-                  0x000c7a                  _USB_CD_Ptr
-                  0x000c7c                  _USB_SD_Ptr
-                  0x000c82                  _USBDeviceInit
-                  0x000d72                  _USBDeviceTasks
-                  0x000ef8                  _USBEnableEndpoint
-                  0x000f32                  _USBTransferOnePacket
-                  0x000fd8                  _USBStallEndpoint
-                  0x001072                  _USBCancelIO
-                  0x001126                  _USBDeviceDetach
-                  0x001132                  _USBDeviceAttach
-                  0x001166                  _USBCtrlEPAllowStatusStage
-                  0x0011dc                  _USBCtrlEPAllowDataStage
-                  0x001bcc                  _USBIncrement1msInternalTimers
-                  0x001bf6                  _USBGet1msTickCount
-                  0x001c10                  _CamUART_Initialize
-                  0x001c50                  _CamUART_SetTxInterruptHandler
-                  0x001c6e                  _CamUART_SetRxInterruptHandler
-                  0x001c8c                  _CamUART_Read
-                  0x001cb8                  _CamUART_Write
-                  0x001ce2                  _CamUART_IsRxReady
-                  0x001cf8                  _CamUART_IsTxReady
-                  0x001d2c                  _CamUART_IsTxDone
-                  0x001dbc                  _CamUART_ReadBuffer
-                  0x001df6                  _CamUART_WriteBuffer
-                  0x001e30                  _CamUART_TransferStatusGet
-                  0x001e74                  _CamUART_Peek
-                  0x001e94                  _CamUART_ReceiveBufferIsEmpty
-                  0x001ea4                  _CamUART_TransmitBufferIsFull
-                  0x001eb4                  _CamUART_StatusGet
-                  0x001ebc                  _CamUART_TransmitBufferSizeGet
-                  0x001eea                  _CamUART_ReceiveBufferSizeGet
-                  0x001f18                  _CamUART_Enable
-                  0x001f22                  _CamUART_Disable
-                  0x001f2c                  _RingLightUART_Initialize
-                  0x001f6c                  _RingLightUART_SetTxInterruptHandler
-                  0x001f8a                  _RingLightUART_SetRxInterruptHandler
-                  0x001fa8                  _RingLightUART_Read
-                  0x001fd4                  _RingLightUART_Write
-                  0x001ffe                  _RingLightUART_IsRxReady
-                  0x002014                  _RingLightUART_IsTxReady
-                  0x002048                  _RingLightUART_IsTxDone
-                  0x0020d8                  _RingLightUART_ReadBuffer
-                  0x002112                  _RingLightUART_WriteBuffer
-                  0x00214c                  _RingLightUART_TransferStatusGet
-                  0x002190                  _RingLightUART_Peek
-                  0x0021b0                  _RingLightUART_ReceiveBufferIsEmpty
-                  0x0021c0                  _RingLightUART_TransmitBufferIsFull
-                  0x0021d0                  _RingLightUART_StatusGet
-                  0x0021d8                  _RingLightUART_TransmitBufferSizeGet
-                  0x002206                  _RingLightUART_ReceiveBufferSizeGet
-                  0x002234                  _RingLightUART_Enable
-                  0x00223e                  _RingLightUART_Disable
-                  0x002248                  _FrontFaceUART_Initialize
-                  0x00227e                  _FrontFaceUART_SetTxInterruptHandler
-                  0x00229c                  _FrontFaceUART_SetRxInterruptHandler
-                  0x0022ba                  _FrontFaceUART_Read
-                  0x0022e6                  _FrontFaceUART_Write
-                  0x002310                  _FrontFaceUART_IsRxReady
-                  0x002326                  _FrontFaceUART_IsTxReady
-                  0x00235a                  _FrontFaceUART_IsTxDone
-                  0x0023ea                  _FrontFaceUART_ReadBuffer
-                  0x002424                  _FrontFaceUART_WriteBuffer
-                  0x00245e                  _FrontFaceUART_TransferStatusGet
-                  0x0024a2                  _FrontFaceUART_Peek
-                  0x0024c2                  _FrontFaceUART_ReceiveBufferIsEmpty
-                  0x0024d2                  _FrontFaceUART_TransmitBufferIsFull
-                  0x0024e2                  _FrontFaceUART_StatusGet
-                  0x0024ea                  _FrontFaceUART_TransmitBufferSizeGet
-                  0x002518                  _FrontFaceUART_ReceiveBufferSizeGet
-                  0x002546                  _FrontFaceUART_Enable
-                  0x002550                  _FrontFaceUART_Disable
-                  0x00255a                  _FTDIUART_Initialize
-                  0x002590                  _FTDIUART_SetTxInterruptHandler
-                  0x0025ae                  _FTDIUART_SetRxInterruptHandler
-                  0x0025cc                  _FTDIUART_Read
-                  0x0025f8                  _FTDIUART_Write
-                  0x002622                  _FTDIUART_IsRxReady
-                  0x002638                  _FTDIUART_IsTxReady
-                  0x00266c                  _FTDIUART_IsTxDone
-                  0x0026fc                  _FTDIUART_ReadBuffer
-                  0x002736                  _FTDIUART_WriteBuffer
-                  0x002770                  _FTDIUART_TransferStatusGet
-                  0x0027b4                  _FTDIUART_Peek
-                  0x0027d4                  _FTDIUART_ReceiveBufferIsEmpty
-                  0x0027e4                  _FTDIUART_TransmitBufferIsFull
-                  0x0027f4                  _FTDIUART_StatusGet
-                  0x0027fc                  _FTDIUART_TransmitBufferSizeGet
-                  0x00282a                  _FTDIUART_ReceiveBufferSizeGet
-                  0x002858                  _FTDIUART_Enable
-                  0x002862                  _FTDIUART_Disable
-                  0x00286c                  _USBCheckCDCRequest
-                  0x002976                  _CDCInitEP
-                  0x0029b4                  _USBCDCEventHandler
-                  0x0029ec                  _getsUSBUSART
-                  0x002a4e                  _putUSBUSART
-                  0x002a74                  _putsUSBUSART
-                  0x002ac6                  _putrsUSBUSART
-                  0x002b16                  _CDCTxService
-                  0x002bf8                  _I2C2_Initialize
-                  0x002c2e                  _I2C2_ErrorCountGet
-                  0x002c78                  _I2C2_MasterWrite
-                  0x002caa                  _I2C2_MasterRead
-                  0x002cdc                  _I2C2_MasterTRBInsert
-                  0x002d54                  _I2C2_MasterReadTRBBuild
-                  0x002d84                  _I2C2_MasterWriteTRBBuild
-                  0x002da8                  _I2C2_MasterQueueIsEmpty
-                  0x002dbe                  _I2C2_MasterQueueIsFull
-                  0x002dd4                  _maxWriteByte
-                  0x002e22                  _epromWriteByte
-                  0x002e80                  _maxReadByte
-                  0x002ef4                  _USBSleepOnSuspend
-                  0x002f18                  _USBRemoteWakeupAssertBlocking
-                  0x002f92                  _USBVBUSSessionValidStateGet
-                  0x00301c                  _USBMaskAllUSBInterrupts
-                  0x003036                  _USBRestoreUSBInterrupts
-                  0x003110                  _MAX_Init
-                  0x00313e                  _CLK_CONFIG_Init
-                  0x00318c                  _UARTS_Mode_Init
-                  0x0031b0                  _GPIO_Init
-                  0x0031e0                  _PIN_MANAGER_Initialize
-                  0x003290                  _INTERRUPT_Initialize
-                  0x00332c                  _main
-                  0x003376                  _CREATE_BUFFER
-                  0x0033f0                  _USER_USB_CALLBACK_EVENT_HANDLER
-                  0x003444                  _TMR1_Init
-                  0x003454                  _delay_ms
-                  0x003498                  _CLOCK_Initialize
-                  0x0034ea                  _SYSTEM_Initialize
+                  0x000988                  ___lesf2
+                  0x000988                  ___eqsf2
+                  0x000988                  ___ltsf2
+                  0x00098c                  ___floatsisf
+                  0x000992                  ___floatunsisf
+                  0x000996                  ___mulsf3
+                  0x0009fe                  __fcompare
+                  0x000a34                  ___floatdisf
+                  0x000a54                  ___floatundisf
+                  0x000ab2                  __fpack
+                  0x000afe                  __funpack2
+                  0x000b0e                  __fPropagateNaN
+                  0x000b20                  __fbopExit
+                  0x000b28                  __fbopReturnNaN
+                  0x000b2e                  __funpack
+                  0x000b58                  _memcpy
+                  0x000b66                  _memset
+                  0x000b74                  _device_dsc
+                  0x000b86                  _configDescriptor1
+                  0x000bca                  _sd000
+                  0x000bce                  _sd001
+                  0x000c02                  _sd002
+                  0x000c1c                  _USB_CD_Ptr
+                  0x000c1e                  _USB_SD_Ptr
+                  0x000c30                  _USBDeviceInit
+                  0x000d20                  _USBDeviceTasks
+                  0x000ea6                  _USBEnableEndpoint
+                  0x000ee0                  _USBTransferOnePacket
+                  0x000f86                  _USBStallEndpoint
+                  0x001020                  _USBCancelIO
+                  0x0010d4                  _USBDeviceDetach
+                  0x0010e0                  _USBDeviceAttach
+                  0x001114                  _USBCtrlEPAllowStatusStage
+                  0x00118a                  _USBCtrlEPAllowDataStage
+                  0x001b7a                  _USBIncrement1msInternalTimers
+                  0x001ba4                  _USBGet1msTickCount
+                  0x001bbe                  _CamUART_Initialize
+                  0x001bfe                  _CamUART_SetTxInterruptHandler
+                  0x001c1c                  _CamUART_SetRxInterruptHandler
+                  0x001c3a                  _CamUART_Read
+                  0x001c66                  _CamUART_Write
+                  0x001c90                  _CamUART_IsRxReady
+                  0x001ca6                  _CamUART_IsTxReady
+                  0x001cda                  _CamUART_IsTxDone
+                  0x001d6a                  _CamUART_ReadBuffer
+                  0x001da4                  _CamUART_WriteBuffer
+                  0x001dde                  _CamUART_TransferStatusGet
+                  0x001e22                  _CamUART_Peek
+                  0x001e42                  _CamUART_ReceiveBufferIsEmpty
+                  0x001e52                  _CamUART_TransmitBufferIsFull
+                  0x001e62                  _CamUART_StatusGet
+                  0x001e6a                  _CamUART_TransmitBufferSizeGet
+                  0x001e98                  _CamUART_ReceiveBufferSizeGet
+                  0x001ec6                  _CamUART_Enable
+                  0x001ed0                  _CamUART_Disable
+                  0x001eda                  _RingLightUART_Initialize
+                  0x001f1a                  _RingLightUART_SetTxInterruptHandler
+                  0x001f38                  _RingLightUART_SetRxInterruptHandler
+                  0x001f56                  _RingLightUART_Read
+                  0x001f82                  _RingLightUART_Write
+                  0x001fac                  _RingLightUART_IsRxReady
+                  0x001fc2                  _RingLightUART_IsTxReady
+                  0x001ff6                  _RingLightUART_IsTxDone
+                  0x002086                  _RingLightUART_ReadBuffer
+                  0x0020c0                  _RingLightUART_WriteBuffer
+                  0x0020fa                  _RingLightUART_TransferStatusGet
+                  0x00213e                  _RingLightUART_Peek
+                  0x00215e                  _RingLightUART_ReceiveBufferIsEmpty
+                  0x00216e                  _RingLightUART_TransmitBufferIsFull
+                  0x00217e                  _RingLightUART_StatusGet
+                  0x002186                  _RingLightUART_TransmitBufferSizeGet
+                  0x0021b4                  _RingLightUART_ReceiveBufferSizeGet
+                  0x0021e2                  _RingLightUART_Enable
+                  0x0021ec                  _RingLightUART_Disable
+                  0x0021f6                  _FrontFaceUART_Initialize
+                  0x00222c                  _FrontFaceUART_SetTxInterruptHandler
+                  0x00224a                  _FrontFaceUART_SetRxInterruptHandler
+                  0x002268                  _FrontFaceUART_Read
+                  0x002294                  _FrontFaceUART_Write
+                  0x0022be                  _FrontFaceUART_IsRxReady
+                  0x0022d4                  _FrontFaceUART_IsTxReady
+                  0x002308                  _FrontFaceUART_IsTxDone
+                  0x002398                  _FrontFaceUART_ReadBuffer
+                  0x0023d2                  _FrontFaceUART_WriteBuffer
+                  0x00240c                  _FrontFaceUART_TransferStatusGet
+                  0x002450                  _FrontFaceUART_Peek
+                  0x002470                  _FrontFaceUART_ReceiveBufferIsEmpty
+                  0x002480                  _FrontFaceUART_TransmitBufferIsFull
+                  0x002490                  _FrontFaceUART_StatusGet
+                  0x002498                  _FrontFaceUART_TransmitBufferSizeGet
+                  0x0024c6                  _FrontFaceUART_ReceiveBufferSizeGet
+                  0x0024f4                  _FrontFaceUART_Enable
+                  0x0024fe                  _FrontFaceUART_Disable
+                  0x002508                  _FTDIUART_Initialize
+                  0x00253e                  _FTDIUART_SetTxInterruptHandler
+                  0x00255c                  _FTDIUART_SetRxInterruptHandler
+                  0x00257a                  _FTDIUART_Read
+                  0x0025a6                  _FTDIUART_Write
+                  0x0025d0                  _FTDIUART_IsRxReady
+                  0x0025e6                  _FTDIUART_IsTxReady
+                  0x00261a                  _FTDIUART_IsTxDone
+                  0x0026aa                  _FTDIUART_ReadBuffer
+                  0x0026e4                  _FTDIUART_WriteBuffer
+                  0x00271e                  _FTDIUART_TransferStatusGet
+                  0x002762                  _FTDIUART_Peek
+                  0x002782                  _FTDIUART_ReceiveBufferIsEmpty
+                  0x002792                  _FTDIUART_TransmitBufferIsFull
+                  0x0027a2                  _FTDIUART_StatusGet
+                  0x0027aa                  _FTDIUART_TransmitBufferSizeGet
+                  0x0027d8                  _FTDIUART_ReceiveBufferSizeGet
+                  0x002806                  _FTDIUART_Enable
+                  0x002810                  _FTDIUART_Disable
+                  0x00281a                  _USBCheckCDCRequest
+                  0x002924                  _CDCInitEP
+                  0x002962                  _USBCDCEventHandler
+                  0x00299a                  _getsUSBUSART
+                  0x0029fc                  _putUSBUSART
+                  0x002a22                  _putsUSBUSART
+                  0x002a74                  _putrsUSBUSART
+                  0x002ac4                  _CDCTxService
+                  0x002ba6                  _I2C2_Initialize
+                  0x002bdc                  _I2C2_ErrorCountGet
+                  0x002c26                  _I2C2_MasterWrite
+                  0x002c58                  _I2C2_MasterRead
+                  0x002c8a                  _I2C2_MasterTRBInsert
+                  0x002d02                  _I2C2_MasterReadTRBBuild
+                  0x002d32                  _I2C2_MasterWriteTRBBuild
+                  0x002d56                  _I2C2_MasterQueueIsEmpty
+                  0x002d6c                  _I2C2_MasterQueueIsFull
+                  0x002d82                  _maxWriteByte
+                  0x002dd0                  _epromWriteByte
+                  0x002e2e                  _maxReadByte
+                  0x002ea2                  _USBSleepOnSuspend
+                  0x002ec6                  _USBRemoteWakeupAssertBlocking
+                  0x002f40                  _USBVBUSSessionValidStateGet
+                  0x002fca                  _USBMaskAllUSBInterrupts
+                  0x002fe4                  _USBRestoreUSBInterrupts
+                  0x0030be                  _MAX_Init
+                  0x0030ea                  _CLK_CONFIG_Init
+                  0x00312e                  _UARTS_Mode_Init
+                  0x00314e                  _GPIO_Init
+                  0x003178                  _PIN_MANAGER_Initialize
+                  0x003228                  _INTERRUPT_Initialize
+                  0x0032c4                  _main
+                  0x003322                  _CREATE_BUFFER
+                  0x003344                  _CamUART_Write_String
+                  0x003378                  _un8CameraStartTeleZoom
+                  0x0033f8                  _TMR1_Init
+                  0x003408                  _delay_ms
+                  0x00344e                  _USER_USB_CALLBACK_EVENT_HANDLER
+                  0x0034a2                  _CLOCK_Initialize
+                  0x00350e                  _SYSTEM_Initialize
 
 External Symbols in Program Memory (by name):
 
-                  0x002976                  _CDCInitEP
-                  0x002b16                  _CDCTxService
-                  0x00313e                  _CLK_CONFIG_Init
-                  0x003498                  _CLOCK_Initialize
-                  0x003376                  _CREATE_BUFFER
-                  0x001f22                  _CamUART_Disable
-                  0x001f18                  _CamUART_Enable
-                  0x001c10                  _CamUART_Initialize
-                  0x001ce2                  _CamUART_IsRxReady
-                  0x001d2c                  _CamUART_IsTxDone
-                  0x001cf8                  _CamUART_IsTxReady
-                  0x001e74                  _CamUART_Peek
-                  0x001c8c                  _CamUART_Read
-                  0x001dbc                  _CamUART_ReadBuffer
-                  0x001e94                  _CamUART_ReceiveBufferIsEmpty
-                  0x001eea                  _CamUART_ReceiveBufferSizeGet
-                  0x001c6e                  _CamUART_SetRxInterruptHandler
-                  0x001c50                  _CamUART_SetTxInterruptHandler
-                  0x001eb4                  _CamUART_StatusGet
-                  0x001e30                  _CamUART_TransferStatusGet
-                  0x001ea4                  _CamUART_TransmitBufferIsFull
-                  0x001ebc                  _CamUART_TransmitBufferSizeGet
-                  0x001cb8                  _CamUART_Write
-                  0x001df6                  _CamUART_WriteBuffer
-                  0x002862                  _FTDIUART_Disable
-                  0x002858                  _FTDIUART_Enable
-                  0x00255a                  _FTDIUART_Initialize
-                  0x002622                  _FTDIUART_IsRxReady
-                  0x00266c                  _FTDIUART_IsTxDone
-                  0x002638                  _FTDIUART_IsTxReady
-                  0x0027b4                  _FTDIUART_Peek
-                  0x0025cc                  _FTDIUART_Read
-                  0x0026fc                  _FTDIUART_ReadBuffer
-                  0x0027d4                  _FTDIUART_ReceiveBufferIsEmpty
-                  0x00282a                  _FTDIUART_ReceiveBufferSizeGet
-                  0x0025ae                  _FTDIUART_SetRxInterruptHandler
-                  0x002590                  _FTDIUART_SetTxInterruptHandler
-                  0x0027f4                  _FTDIUART_StatusGet
-                  0x002770                  _FTDIUART_TransferStatusGet
-                  0x0027e4                  _FTDIUART_TransmitBufferIsFull
-                  0x0027fc                  _FTDIUART_TransmitBufferSizeGet
-                  0x0025f8                  _FTDIUART_Write
-                  0x002736                  _FTDIUART_WriteBuffer
-                  0x002550                  _FrontFaceUART_Disable
-                  0x002546                  _FrontFaceUART_Enable
-                  0x002248                  _FrontFaceUART_Initialize
-                  0x002310                  _FrontFaceUART_IsRxReady
-                  0x00235a                  _FrontFaceUART_IsTxDone
-                  0x002326                  _FrontFaceUART_IsTxReady
-                  0x0024a2                  _FrontFaceUART_Peek
-                  0x0022ba                  _FrontFaceUART_Read
-                  0x0023ea                  _FrontFaceUART_ReadBuffer
-                  0x0024c2                  _FrontFaceUART_ReceiveBufferIsEmpty
-                  0x002518                  _FrontFaceUART_ReceiveBufferSizeGet
-                  0x00229c                  _FrontFaceUART_SetRxInterruptHandler
-                  0x00227e                  _FrontFaceUART_SetTxInterruptHandler
-                  0x0024e2                  _FrontFaceUART_StatusGet
-                  0x00245e                  _FrontFaceUART_TransferStatusGet
-                  0x0024d2                  _FrontFaceUART_TransmitBufferIsFull
-                  0x0024ea                  _FrontFaceUART_TransmitBufferSizeGet
-                  0x0022e6                  _FrontFaceUART_Write
-                  0x002424                  _FrontFaceUART_WriteBuffer
-                  0x0031b0                  _GPIO_Init
-                  0x002c2e                  _I2C2_ErrorCountGet
-                  0x002bf8                  _I2C2_Initialize
-                  0x002da8                  _I2C2_MasterQueueIsEmpty
-                  0x002dbe                  _I2C2_MasterQueueIsFull
-                  0x002caa                  _I2C2_MasterRead
-                  0x002d54                  _I2C2_MasterReadTRBBuild
-                  0x002cdc                  _I2C2_MasterTRBInsert
-                  0x002c78                  _I2C2_MasterWrite
-                  0x002d84                  _I2C2_MasterWriteTRBBuild
-                  0x003290                  _INTERRUPT_Initialize
-                  0x003110                  _MAX_Init
-                  0x0031e0                  _PIN_MANAGER_Initialize
-                  0x00223e                  _RingLightUART_Disable
-                  0x002234                  _RingLightUART_Enable
-                  0x001f2c                  _RingLightUART_Initialize
-                  0x001ffe                  _RingLightUART_IsRxReady
-                  0x002048                  _RingLightUART_IsTxDone
-                  0x002014                  _RingLightUART_IsTxReady
-                  0x002190                  _RingLightUART_Peek
-                  0x001fa8                  _RingLightUART_Read
-                  0x0020d8                  _RingLightUART_ReadBuffer
-                  0x0021b0                  _RingLightUART_ReceiveBufferIsEmpty
-                  0x002206                  _RingLightUART_ReceiveBufferSizeGet
-                  0x001f8a                  _RingLightUART_SetRxInterruptHandler
-                  0x001f6c                  _RingLightUART_SetTxInterruptHandler
-                  0x0021d0                  _RingLightUART_StatusGet
-                  0x00214c                  _RingLightUART_TransferStatusGet
-                  0x0021c0                  _RingLightUART_TransmitBufferIsFull
-                  0x0021d8                  _RingLightUART_TransmitBufferSizeGet
-                  0x001fd4                  _RingLightUART_Write
-                  0x002112                  _RingLightUART_WriteBuffer
-                  0x0034ea                  _SYSTEM_Initialize
-                  0x003444                  _TMR1_Init
-                  0x00318c                  _UARTS_Mode_Init
-                  0x0029b4                  _USBCDCEventHandler
-                  0x001072                  _USBCancelIO
-                  0x00286c                  _USBCheckCDCRequest
-                  0x0011dc                  _USBCtrlEPAllowDataStage
-                  0x001166                  _USBCtrlEPAllowStatusStage
-                  0x001132                  _USBDeviceAttach
-                  0x001126                  _USBDeviceDetach
-                  0x000c82                  _USBDeviceInit
-                  0x000d72                  _USBDeviceTasks
-                  0x000ef8                  _USBEnableEndpoint
-                  0x001bf6                  _USBGet1msTickCount
-                  0x001bcc                  _USBIncrement1msInternalTimers
-                  0x00301c                  _USBMaskAllUSBInterrupts
-                  0x002f18                  _USBRemoteWakeupAssertBlocking
-                  0x003036                  _USBRestoreUSBInterrupts
-                  0x002ef4                  _USBSleepOnSuspend
-                  0x000fd8                  _USBStallEndpoint
-                  0x000f32                  _USBTransferOnePacket
-                  0x002f92                  _USBVBUSSessionValidStateGet
-                  0x000c7a                  _USB_CD_Ptr
-                  0x000c7c                  _USB_SD_Ptr
-                  0x0033f0                  _USER_USB_CALLBACK_EVENT_HANDLER
+                  0x002924                  _CDCInitEP
+                  0x002ac4                  _CDCTxService
+                  0x0030ea                  _CLK_CONFIG_Init
+                  0x0034a2                  _CLOCK_Initialize
+                  0x003322                  _CREATE_BUFFER
+                  0x001ed0                  _CamUART_Disable
+                  0x001ec6                  _CamUART_Enable
+                  0x001bbe                  _CamUART_Initialize
+                  0x001c90                  _CamUART_IsRxReady
+                  0x001cda                  _CamUART_IsTxDone
+                  0x001ca6                  _CamUART_IsTxReady
+                  0x001e22                  _CamUART_Peek
+                  0x001c3a                  _CamUART_Read
+                  0x001d6a                  _CamUART_ReadBuffer
+                  0x001e42                  _CamUART_ReceiveBufferIsEmpty
+                  0x001e98                  _CamUART_ReceiveBufferSizeGet
+                  0x001c1c                  _CamUART_SetRxInterruptHandler
+                  0x001bfe                  _CamUART_SetTxInterruptHandler
+                  0x001e62                  _CamUART_StatusGet
+                  0x001dde                  _CamUART_TransferStatusGet
+                  0x001e52                  _CamUART_TransmitBufferIsFull
+                  0x001e6a                  _CamUART_TransmitBufferSizeGet
+                  0x001c66                  _CamUART_Write
+                  0x001da4                  _CamUART_WriteBuffer
+                  0x003344                  _CamUART_Write_String
+                  0x002810                  _FTDIUART_Disable
+                  0x002806                  _FTDIUART_Enable
+                  0x002508                  _FTDIUART_Initialize
+                  0x0025d0                  _FTDIUART_IsRxReady
+                  0x00261a                  _FTDIUART_IsTxDone
+                  0x0025e6                  _FTDIUART_IsTxReady
+                  0x002762                  _FTDIUART_Peek
+                  0x00257a                  _FTDIUART_Read
+                  0x0026aa                  _FTDIUART_ReadBuffer
+                  0x002782                  _FTDIUART_ReceiveBufferIsEmpty
+                  0x0027d8                  _FTDIUART_ReceiveBufferSizeGet
+                  0x00255c                  _FTDIUART_SetRxInterruptHandler
+                  0x00253e                  _FTDIUART_SetTxInterruptHandler
+                  0x0027a2                  _FTDIUART_StatusGet
+                  0x00271e                  _FTDIUART_TransferStatusGet
+                  0x002792                  _FTDIUART_TransmitBufferIsFull
+                  0x0027aa                  _FTDIUART_TransmitBufferSizeGet
+                  0x0025a6                  _FTDIUART_Write
+                  0x0026e4                  _FTDIUART_WriteBuffer
+                  0x0024fe                  _FrontFaceUART_Disable
+                  0x0024f4                  _FrontFaceUART_Enable
+                  0x0021f6                  _FrontFaceUART_Initialize
+                  0x0022be                  _FrontFaceUART_IsRxReady
+                  0x002308                  _FrontFaceUART_IsTxDone
+                  0x0022d4                  _FrontFaceUART_IsTxReady
+                  0x002450                  _FrontFaceUART_Peek
+                  0x002268                  _FrontFaceUART_Read
+                  0x002398                  _FrontFaceUART_ReadBuffer
+                  0x002470                  _FrontFaceUART_ReceiveBufferIsEmpty
+                  0x0024c6                  _FrontFaceUART_ReceiveBufferSizeGet
+                  0x00224a                  _FrontFaceUART_SetRxInterruptHandler
+                  0x00222c                  _FrontFaceUART_SetTxInterruptHandler
+                  0x002490                  _FrontFaceUART_StatusGet
+                  0x00240c                  _FrontFaceUART_TransferStatusGet
+                  0x002480                  _FrontFaceUART_TransmitBufferIsFull
+                  0x002498                  _FrontFaceUART_TransmitBufferSizeGet
+                  0x002294                  _FrontFaceUART_Write
+                  0x0023d2                  _FrontFaceUART_WriteBuffer
+                  0x00314e                  _GPIO_Init
+                  0x002bdc                  _I2C2_ErrorCountGet
+                  0x002ba6                  _I2C2_Initialize
+                  0x002d56                  _I2C2_MasterQueueIsEmpty
+                  0x002d6c                  _I2C2_MasterQueueIsFull
+                  0x002c58                  _I2C2_MasterRead
+                  0x002d02                  _I2C2_MasterReadTRBBuild
+                  0x002c8a                  _I2C2_MasterTRBInsert
+                  0x002c26                  _I2C2_MasterWrite
+                  0x002d32                  _I2C2_MasterWriteTRBBuild
+                  0x003228                  _INTERRUPT_Initialize
+                  0x0030be                  _MAX_Init
+                  0x003178                  _PIN_MANAGER_Initialize
+                  0x0021ec                  _RingLightUART_Disable
+                  0x0021e2                  _RingLightUART_Enable
+                  0x001eda                  _RingLightUART_Initialize
+                  0x001fac                  _RingLightUART_IsRxReady
+                  0x001ff6                  _RingLightUART_IsTxDone
+                  0x001fc2                  _RingLightUART_IsTxReady
+                  0x00213e                  _RingLightUART_Peek
+                  0x001f56                  _RingLightUART_Read
+                  0x002086                  _RingLightUART_ReadBuffer
+                  0x00215e                  _RingLightUART_ReceiveBufferIsEmpty
+                  0x0021b4                  _RingLightUART_ReceiveBufferSizeGet
+                  0x001f38                  _RingLightUART_SetRxInterruptHandler
+                  0x001f1a                  _RingLightUART_SetTxInterruptHandler
+                  0x00217e                  _RingLightUART_StatusGet
+                  0x0020fa                  _RingLightUART_TransferStatusGet
+                  0x00216e                  _RingLightUART_TransmitBufferIsFull
+                  0x002186                  _RingLightUART_TransmitBufferSizeGet
+                  0x001f82                  _RingLightUART_Write
+                  0x0020c0                  _RingLightUART_WriteBuffer
+                  0x00350e                  _SYSTEM_Initialize
+                  0x0033f8                  _TMR1_Init
+                  0x00312e                  _UARTS_Mode_Init
+                  0x002962                  _USBCDCEventHandler
+                  0x001020                  _USBCancelIO
+                  0x00281a                  _USBCheckCDCRequest
+                  0x00118a                  _USBCtrlEPAllowDataStage
+                  0x001114                  _USBCtrlEPAllowStatusStage
+                  0x0010e0                  _USBDeviceAttach
+                  0x0010d4                  _USBDeviceDetach
+                  0x000c30                  _USBDeviceInit
+                  0x000d20                  _USBDeviceTasks
+                  0x000ea6                  _USBEnableEndpoint
+                  0x001ba4                  _USBGet1msTickCount
+                  0x001b7a                  _USBIncrement1msInternalTimers
+                  0x002fca                  _USBMaskAllUSBInterrupts
+                  0x002ec6                  _USBRemoteWakeupAssertBlocking
+                  0x002fe4                  _USBRestoreUSBInterrupts
+                  0x002ea2                  _USBSleepOnSuspend
+                  0x000f86                  _USBStallEndpoint
+                  0x000ee0                  _USBTransferOnePacket
+                  0x002f40                  _USBVBUSSessionValidStateGet
+                  0x000c1c                  _USB_CD_Ptr
+                  0x000c1e                  _USB_SD_Ptr
+                  0x00344e                  _USER_USB_CALLBACK_EVENT_HANDLER
                   0x000392                  __AddressError
                   0x000982                  __DefaultInterrupt
                   0x0003d2                  __MI2C2Interrupt
@@ -566,40 +591,42 @@ External Symbols in Program Memory (by name):
                   0x000906                  __U4RXInterrupt
                   0x0008aa                  __U4TXInterrupt
                   0x000324                  __USB1Interrupt
-                  0x000988                  ___divsf3
-                  0x000a0c                  ___eqsf2
-                  0x000b2e                  ___floatundisf
-                  0x000a10                  ___floatunsisf
-                  0x000a0c                  ___lesf2
-                  0x000a0c                  ___ltsf2
-                  0x000a90                  ___mulsf3
+                  0x000988                  ___eqsf2
+                  0x000a34                  ___floatdisf
+                  0x00098c                  ___floatsisf
+                  0x000a54                  ___floatundisf
+                  0x000992                  ___floatunsisf
+                  0x000988                  ___lesf2
+                  0x000988                  ___ltsf2
+                  0x000996                  ___mulsf3
                   0x000252                  __data_init
                   0x000252                  __data_init_da
-                  0x000a70                  __fPropagateNaN
-                  0x000a82                  __fbopExit
-                  0x000a8a                  __fbopReturnNaN
-                  0x000af8                  __fcompare
-                  0x000a14                  __fpack
-                  0x000b8c                  __funpack
-                  0x000a60                  __funpack2
+                  0x000b0e                  __fPropagateNaN
+                  0x000b20                  __fbopExit
+                  0x000b28                  __fbopReturnNaN
+                  0x0009fe                  __fcompare
+                  0x000ab2                  __fpack
+                  0x000b2e                  __funpack
+                  0x000afe                  __funpack2
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x000be4                  _configDescriptor1
-                  0x003454                  _delay_ms
-                  0x000bd2                  _device_dsc
-                  0x002e22                  _epromWriteByte
-                  0x0029ec                  _getsUSBUSART
-                  0x00332c                  _main
-                  0x002e80                  _maxReadByte
-                  0x002dd4                  _maxWriteByte
-                  0x000bb6                  _memcpy
-                  0x000bc4                  _memset
-                  0x002a4e                  _putUSBUSART
-                  0x002ac6                  _putrsUSBUSART
-                  0x002a74                  _putsUSBUSART
-                  0x000c28                  _sd000
-                  0x000c2c                  _sd001
-                  0x000c60                  _sd002
+                  0x000b86                  _configDescriptor1
+                  0x003408                  _delay_ms
+                  0x000b74                  _device_dsc
+                  0x002dd0                  _epromWriteByte
+                  0x00299a                  _getsUSBUSART
+                  0x0032c4                  _main
+                  0x002e2e                  _maxReadByte
+                  0x002d82                  _maxWriteByte
+                  0x000b58                  _memcpy
+                  0x000b66                  _memset
+                  0x0029fc                  _putUSBUSART
+                  0x002a74                  _putrsUSBUSART
+                  0x002a22                  _putsUSBUSART
+                  0x000bca                  _sd000
+                  0x000bce                  _sd001
+                  0x000c02                  _sd002
+                  0x003378                  _un8CameraStartTeleZoom
 
 Memory Configuration
 
@@ -614,29 +641,69 @@ CONFIG4          0x0157f8           0x000002
 CONFIG3          0x0157fa           0x000002  
 CONFIG2          0x0157fc           0x000002  
 CONFIG1          0x0157fe           0x000002  
-*default*        0x000000           0xffffffff  
+*default*        0x000000           0xffffffffffffffff  
 
 Linker script and memory map
 
-LOAD build/default/production/mcc_generated_files/usb/usb_descriptors.o
-LOAD build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
-LOAD build/default/production/mcc_generated_files/usb/usb_device_cdc.o
-LOAD build/default/production/mcc_generated_files/usb/usb_device_events.o
-LOAD build/default/production/mcc_generated_files/usb/usb_device.o
-LOAD build/default/production/mcc_generated_files/mcc.o
-LOAD build/default/production/mcc_generated_files/traps.o
-LOAD build/default/production/mcc_generated_files/pin_manager.o
-LOAD build/default/production/mcc_generated_files/clock.o
-LOAD build/default/production/mcc_generated_files/interrupt_manager.o
-LOAD build/default/production/mcc_generated_files/system.o
-LOAD build/default/production/mcc_generated_files/i2c2.o
-LOAD build/default/production/mcc_generated_files/uart.o
-LOAD build/default/production/main.o
-LOAD build/default/production/max14830.o
-LOAD build/default/production/timer.o
+
+reserve_data_0x800
+                    0x0800         0x1c
+                    0x081c                  . = 0x1c
+ *fill*             0x0800         0x1c00
+
+reserve_data_0x81c
+                    0x081c          0x2
+                    0x081e                  . = 0x2
+ *fill*             0x081c          0x200
+
+reserve_data_0x81e
+                    0x081e          0x2
+                    0x0820                  . = 0x2
+ *fill*             0x081e          0x200
+
+reserve_data_0x820
+                    0x0820          0x2
+                    0x0822                  . = 0x2
+ *fill*             0x0820          0x200
+
+reserve_data_0x822
+                    0x0822          0x2
+                    0x0824                  . = 0x2
+ *fill*             0x0822          0x200
+
+reserve_data_0x824
+                    0x0824          0x4
+                    0x0828                  . = 0x4
+ *fill*             0x0824          0x400
+
+reserve_data_0x82a
+                    0x082a         0x26
+                    0x0850                  . = 0x26
+ *fill*             0x082a         0x2600
+LOAD build/default/debug/mcc_generated_files/usb/usb_descriptors.o
+LOAD build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
+LOAD build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
+LOAD build/default/debug/mcc_generated_files/usb/usb_device_events.o
+LOAD build/default/debug/mcc_generated_files/usb/usb_device.o
+LOAD build/default/debug/mcc_generated_files/mcc.o
+LOAD build/default/debug/mcc_generated_files/traps.o
+LOAD build/default/debug/mcc_generated_files/pin_manager.o
+LOAD build/default/debug/mcc_generated_files/clock.o
+LOAD build/default/debug/mcc_generated_files/interrupt_manager.o
+LOAD build/default/debug/mcc_generated_files/system.o
+LOAD build/default/debug/mcc_generated_files/i2c2.o
+LOAD build/default/debug/mcc_generated_files/uart.o
+LOAD build/default/debug/main.o
+LOAD build/default/debug/max14830.o
+LOAD build/default/debug/timer.o
+LOAD build/default/debug/FCB-H11-dvr.o
+LOAD build/default/debug/camera.o
                     0x0001                  __MPLAB_BUILD = 0x1
+                    0x0001                  __MPLAB_DEBUG = 0x1
+                    0x0001                  __DEBUG = 0x1
+                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
 LOAD pPIC24Fxxx
-LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libfx-elf.a
+LOAD /opt/microchip/xc16/v1.70/bin/bin/../../lib/libfx-elf.a
                     0x157f8                  __CONFIG4 = 0x157f8
                     0x157fa                  __CONFIG3 = 0x157fa
                     0x157fc                  __CONFIG2 = 0x157fc
@@ -654,29 +721,29 @@ LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200        0x9d2
+.text             0x000200        0x974
  *(.init)
- .init            0x000200         0x4c c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(crt0_extended24.o)
-                  0x000200                  __resetPRI
+ .init            0x000200         0x4c /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
                   0x000200                  __reset
+                  0x000200                  __resetPRI
                   0x00023c                  __psv_init
- .init            0x00024c         0xb8 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(data_init_24.o)
-                  0x000252                  __data_init
+ .init            0x00024c         0xb8 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
                   0x000252                  __data_init_da
+                  0x000252                  __data_init
  *(.user_init)
  *(.handle)
  .handle          0x000304         0x20 jump_table
  *(.isr*)
- .isr.text        0x000324         0x2c build/default/production/mcc_generated_files/usb/usb_device_events.o
+ .isr.text        0x000324         0x2c build/default/debug/mcc_generated_files/usb/usb_device_events.o
                   0x000324                  __USB1Interrupt
- .isr.text        0x000350         0x82 build/default/production/mcc_generated_files/traps.o
+ .isr.text        0x000350         0x82 build/default/debug/mcc_generated_files/traps.o
                   0x000350                  __OscillatorFail
                   0x000370                  __StackError
                   0x000392                  __AddressError
                   0x0003b2                  __MathError
- .isr.text        0x0003d2        0x250 build/default/production/mcc_generated_files/i2c2.o
+ .isr.text        0x0003d2        0x250 build/default/debug/mcc_generated_files/i2c2.o
                   0x0003d2                  __MI2C2Interrupt
- .isr.text        0x000622        0x360 build/default/production/mcc_generated_files/uart.o
+ .isr.text        0x000622        0x360 build/default/debug/mcc_generated_files/uart.o
                   0x000622                  __U1TXInterrupt
                   0x00067e                  __U1RXInterrupt
                   0x0006e4                  __U1ErrInterrupt
@@ -696,46 +763,50 @@ LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libfx-elf.a
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x000986          0x2 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normalda.Leo)
-                  0x000986                  __crt_start_mode
+                  0x000986          0x2 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt_start_mode_normalda.Leo)
                   0x000986                  __crt_start_mode_normal
- .libm.divfs3     0x000988         0x84 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(divsf3.daeo)
-                  0x000988                  ___divsf3
- .libm.eqsf2      0x000a0c          0x4 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(feqltle.daeo)
-                  0x000a0c                  ___eqsf2
-                  0x000a0c                  ___ltsf2
-                  0x000a0c                  ___lesf2
+                  0x000986                  __crt_start_mode
+ .libm.eqsf2      0x000988          0x4 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(feqltle.daeo)
+                  0x000988                  ___lesf2
+                  0x000988                  ___eqsf2
+                  0x000988                  ___ltsf2
+ .libm.floatsisf
+                  0x00098c          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatsisf.daeo)
+                  0x00098c                  ___floatsisf
  .libm.floatunsisf
-                  0x000a10          0x4 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(floatunsisf.daeo)
-                  0x000a10                  ___floatunsisf
- .libm.fpack      0x000a14         0x4c c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(fpack.daeo)
-                  0x000a14                  __fpack
- .libm.funpack2
-                  0x000a60         0x10 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(funpack2.daeo)
-                  0x000a60                  __funpack2
- .libm.fPropagateNaN
-                  0x000a70         0x12 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(futil.daeo)
-                  0x000a70                  __fPropagateNaN
- .libm.fbobExit
-                  0x000a82          0x8 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(futil.daeo)
-                  0x000a82                  __fbopExit
- .libm.fbopReturnNaN
-                  0x000a8a          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(futil.daeo)
-                  0x000a8a                  __fbopReturnNaN
- .libm.mulsf3     0x000a90         0x68 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(mulsf3.daeo)
-                  0x000a90                  ___mulsf3
+                  0x000992          0x4 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatunsisf.daeo)
+                  0x000992                  ___floatunsisf
+ .libm.mulsf3     0x000996         0x68 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(mulsf3.daeo)
+                  0x000996                  ___mulsf3
  .libm.fcompare
-                  0x000af8         0x36 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(fcompare.daeo)
-                  0x000af8                  __fcompare
+                  0x0009fe         0x36 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(fcompare.daeo)
+                  0x0009fe                  __fcompare
+ .libm.floatdisf
+                  0x000a34         0x20 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatdisf.daeo)
+                  0x000a34                  ___floatdisf
  .libm.floatundisf
-                  0x000b2e         0x5e c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(floatundisf.daeo)
-                  0x000b2e                  ___floatundisf
- .libm.funpack    0x000b8c         0x2a c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(funpack.daeo)
-                  0x000b8c                  __funpack
- .libc.memcpy     0x000bb6          0xe c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a(memcpy.DA_eo)
-                  0x000bb6                  _memcpy
- .libc.memset     0x000bc4          0xe c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a(memset.DA_eo)
-                  0x000bc4                  _memset
+                  0x000a54         0x5e /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatundisf.daeo)
+                  0x000a54                  ___floatundisf
+ .libm.fpack      0x000ab2         0x4c /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(fpack.daeo)
+                  0x000ab2                  __fpack
+ .libm.funpack2
+                  0x000afe         0x10 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(funpack2.daeo)
+                  0x000afe                  __funpack2
+ .libm.fPropagateNaN
+                  0x000b0e         0x12 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(futil.daeo)
+                  0x000b0e                  __fPropagateNaN
+ .libm.fbobExit
+                  0x000b20          0x8 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(futil.daeo)
+                  0x000b20                  __fbopExit
+ .libm.fbopReturnNaN
+                  0x000b28          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(futil.daeo)
+                  0x000b28                  __fbopReturnNaN
+ .libm.funpack    0x000b2e         0x2a /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(funpack.daeo)
+                  0x000b2e                  __funpack
+ .libc.memcpy     0x000b58          0xe /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a(memcpy.DA_eo)
+                  0x000b58                  _memcpy
+ .libc.memset     0x000b66          0xe /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a(memset.DA_eo)
+                  0x000b66                  _memset
 
 usercode
  *(usercode)
@@ -755,94 +826,101 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0xd898
+.debug_info       0x000000       0xde2b
  *(.debug_info)
- .debug_info      0x000000        0x816 build/default/production/mcc_generated_files/usb/usb_descriptors.o
- .debug_info      0x000816       0x1300 build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
- .debug_info      0x001b16       0x1604 build/default/production/mcc_generated_files/usb/usb_device_cdc.o
- .debug_info      0x00311a        0x589 build/default/production/mcc_generated_files/usb/usb_device_events.o
- .debug_info      0x0036a3       0x288e build/default/production/mcc_generated_files/usb/usb_device.o
- .debug_info      0x005f31        0x377 build/default/production/mcc_generated_files/traps.o
- .debug_info      0x0062a8       0x1014 build/default/production/mcc_generated_files/pin_manager.o
- .debug_info      0x0072bc        0x467 build/default/production/mcc_generated_files/clock.o
- .debug_info      0x007723        0xe95 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_info      0x0085b8        0x32d build/default/production/mcc_generated_files/system.o
- .debug_info      0x0088e5       0x1136 build/default/production/mcc_generated_files/i2c2.o
- .debug_info      0x009a1b       0x3939 build/default/production/mcc_generated_files/uart.o
- .debug_info      0x00d354        0x1c0 build/default/production/main.o
- .debug_info      0x00d514        0x1bb build/default/production/max14830.o
- .debug_info      0x00d6cf        0x1c9 build/default/production/timer.o
+ .debug_info      0x000000        0x828 build/default/debug/mcc_generated_files/usb/usb_descriptors.o
+ .debug_info      0x000828       0x1312 build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
+ .debug_info      0x001b3a       0x1616 build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
+ .debug_info      0x003150        0x59b build/default/debug/mcc_generated_files/usb/usb_device_events.o
+ .debug_info      0x0036eb       0x28a0 build/default/debug/mcc_generated_files/usb/usb_device.o
+ .debug_info      0x005f8b        0x389 build/default/debug/mcc_generated_files/traps.o
+ .debug_info      0x006314       0x1026 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_info      0x00733a        0x479 build/default/debug/mcc_generated_files/clock.o
+ .debug_info      0x0077b3        0xea7 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x00865a        0x348 build/default/debug/mcc_generated_files/system.o
+ .debug_info      0x0089a2       0x1148 build/default/debug/mcc_generated_files/i2c2.o
+ .debug_info      0x009aea       0x394b build/default/debug/mcc_generated_files/uart.o
+ .debug_info      0x00d435        0x216 build/default/debug/main.o
+ .debug_info      0x00d64b        0x1cd build/default/debug/max14830.o
+ .debug_info      0x00d818        0x1db build/default/debug/timer.o
+ .debug_info      0x00d9f3        0x438 build/default/debug/FCB-H11-dvr.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000       0x1239
+.debug_abbrev     0x000000       0x137e
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x102 build/default/production/mcc_generated_files/usb/usb_descriptors.o
- .debug_abbrev    0x000102        0x1c6 build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
- .debug_abbrev    0x0002c8        0x25f build/default/production/mcc_generated_files/usb/usb_device_cdc.o
- .debug_abbrev    0x000527         0x91 build/default/production/mcc_generated_files/usb/usb_device_events.o
- .debug_abbrev    0x0005b8        0x2a7 build/default/production/mcc_generated_files/usb/usb_device.o
- .debug_abbrev    0x00085f          0x1 build/default/production/mcc_generated_files/mcc.o
- .debug_abbrev    0x000860        0x10d build/default/production/mcc_generated_files/traps.o
- .debug_abbrev    0x00096d         0xd6 build/default/production/mcc_generated_files/pin_manager.o
- .debug_abbrev    0x000a43         0xc5 build/default/production/mcc_generated_files/clock.o
- .debug_abbrev    0x000b08         0xb4 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_abbrev    0x000bbc         0xb4 build/default/production/mcc_generated_files/system.o
- .debug_abbrev    0x000c70        0x212 build/default/production/mcc_generated_files/i2c2.o
- .debug_abbrev    0x000e82        0x229 build/default/production/mcc_generated_files/uart.o
- .debug_abbrev    0x0010ab         0x9d build/default/production/main.o
- .debug_abbrev    0x001148         0x65 build/default/production/max14830.o
- .debug_abbrev    0x0011ad         0x8c build/default/production/timer.o
+ .debug_abbrev    0x000000        0x102 build/default/debug/mcc_generated_files/usb/usb_descriptors.o
+ .debug_abbrev    0x000102        0x1c6 build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
+ .debug_abbrev    0x0002c8        0x25f build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
+ .debug_abbrev    0x000527         0x91 build/default/debug/mcc_generated_files/usb/usb_device_events.o
+ .debug_abbrev    0x0005b8        0x2a7 build/default/debug/mcc_generated_files/usb/usb_device.o
+ .debug_abbrev    0x00085f          0x1 build/default/debug/mcc_generated_files/mcc.o
+ .debug_abbrev    0x000860        0x10d build/default/debug/mcc_generated_files/traps.o
+ .debug_abbrev    0x00096d         0xd6 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_abbrev    0x000a43         0xc5 build/default/debug/mcc_generated_files/clock.o
+ .debug_abbrev    0x000b08         0xb4 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_abbrev    0x000bbc         0xb4 build/default/debug/mcc_generated_files/system.o
+ .debug_abbrev    0x000c70        0x212 build/default/debug/mcc_generated_files/i2c2.o
+ .debug_abbrev    0x000e82        0x229 build/default/debug/mcc_generated_files/uart.o
+ .debug_abbrev    0x0010ab         0xae build/default/debug/main.o
+ .debug_abbrev    0x001159         0x65 build/default/debug/max14830.o
+ .debug_abbrev    0x0011be         0x8c build/default/debug/timer.o
+ .debug_abbrev    0x00124a        0x133 build/default/debug/FCB-H11-dvr.o
+ .debug_abbrev    0x00137d          0x1 build/default/debug/camera.o
 
-.debug_line       0x000000       0x1966
+.debug_line       0x000000       0x1958
  *(.debug_line)
- .debug_line      0x000000         0xc7 build/default/production/mcc_generated_files/usb/usb_descriptors.o
- .debug_line      0x0000c7        0x1b8 build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
- .debug_line      0x00027f        0x244 build/default/production/mcc_generated_files/usb/usb_device_cdc.o
- .debug_line      0x0004c3        0x101 build/default/production/mcc_generated_files/usb/usb_device_events.o
- .debug_line      0x0005c4        0x454 build/default/production/mcc_generated_files/usb/usb_device.o
- .debug_line      0x000a18         0x1a build/default/production/mcc_generated_files/mcc.o
- .debug_line      0x000a32        0x14c build/default/production/mcc_generated_files/traps.o
- .debug_line      0x000b7e        0x13d build/default/production/mcc_generated_files/pin_manager.o
- .debug_line      0x000cbb        0x129 build/default/production/mcc_generated_files/clock.o
- .debug_line      0x000de4        0x134 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_line      0x000f18        0x125 build/default/production/mcc_generated_files/system.o
- .debug_line      0x00103d        0x22e build/default/production/mcc_generated_files/i2c2.o
- .debug_line      0x00126b        0x4b1 build/default/production/mcc_generated_files/uart.o
- .debug_line      0x00171c         0x94 build/default/production/main.o
- .debug_line      0x0017b0         0xa9 build/default/production/max14830.o
- .debug_line      0x001859        0x10d build/default/production/timer.o
+ .debug_line      0x000000         0xbb build/default/debug/mcc_generated_files/usb/usb_descriptors.o
+ .debug_line      0x0000bb        0x1a0 build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
+ .debug_line      0x00025b        0x22c build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
+ .debug_line      0x000487         0xf5 build/default/debug/mcc_generated_files/usb/usb_device_events.o
+ .debug_line      0x00057c        0x43c build/default/debug/mcc_generated_files/usb/usb_device.o
+ .debug_line      0x0009b8         0x1a build/default/debug/mcc_generated_files/mcc.o
+ .debug_line      0x0009d2        0x134 build/default/debug/mcc_generated_files/traps.o
+ .debug_line      0x000b06        0x125 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_line      0x000c2b        0x111 build/default/debug/mcc_generated_files/clock.o
+ .debug_line      0x000d3c        0x11c build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_line      0x000e58        0x10d build/default/debug/mcc_generated_files/system.o
+ .debug_line      0x000f65        0x216 build/default/debug/mcc_generated_files/i2c2.o
+ .debug_line      0x00117b        0x499 build/default/debug/mcc_generated_files/uart.o
+ .debug_line      0x001614         0x8f build/default/debug/main.o
+ .debug_line      0x0016a3         0x9d build/default/debug/max14830.o
+ .debug_line      0x001740         0xf5 build/default/debug/timer.o
+ .debug_line      0x001835        0x109 build/default/debug/FCB-H11-dvr.o
+ .debug_line      0x00193e         0x1a build/default/debug/camera.o
 
-.debug_frame      0x000000       0x15c6
+.debug_frame      0x000000       0x160e
  *(.debug_frame)
- .debug_frame     0x000000         0xca build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
- .debug_frame     0x0000ca         0xe4 build/default/production/mcc_generated_files/usb/usb_device_cdc.o
- .debug_frame     0x0001ae         0x74 build/default/production/mcc_generated_files/usb/usb_device_events.o
- .debug_frame     0x000222        0x2ec build/default/production/mcc_generated_files/usb/usb_device.o
- .debug_frame     0x00050e        0x140 build/default/production/mcc_generated_files/traps.o
- .debug_frame     0x00064e         0x2e build/default/production/mcc_generated_files/pin_manager.o
- .debug_frame     0x00067c         0x2e build/default/production/mcc_generated_files/clock.o
- .debug_frame     0x0006aa         0x2e build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_frame     0x0006d8         0x2e build/default/production/mcc_generated_files/system.o
- .debug_frame     0x000706        0x1be build/default/production/mcc_generated_files/i2c2.o
- .debug_frame     0x0008c4        0xbec build/default/production/mcc_generated_files/uart.o
- .debug_frame     0x0014b0         0x48 build/default/production/main.o
- .debug_frame     0x0014f8         0x7c build/default/production/max14830.o
- .debug_frame     0x001574         0x52 build/default/production/timer.o
+ .debug_frame     0x000000         0xca build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
+ .debug_frame     0x0000ca         0xe4 build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
+ .debug_frame     0x0001ae         0x74 build/default/debug/mcc_generated_files/usb/usb_device_events.o
+ .debug_frame     0x000222        0x2ec build/default/debug/mcc_generated_files/usb/usb_device.o
+ .debug_frame     0x00050e        0x140 build/default/debug/mcc_generated_files/traps.o
+ .debug_frame     0x00064e         0x2e build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_frame     0x00067c         0x2e build/default/debug/mcc_generated_files/clock.o
+ .debug_frame     0x0006aa         0x2e build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_frame     0x0006d8         0x2e build/default/debug/mcc_generated_files/system.o
+ .debug_frame     0x000706        0x1be build/default/debug/mcc_generated_files/i2c2.o
+ .debug_frame     0x0008c4        0xbec build/default/debug/mcc_generated_files/uart.o
+ .debug_frame     0x0014b0         0x48 build/default/debug/main.o
+ .debug_frame     0x0014f8         0x7c build/default/debug/max14830.o
+ .debug_frame     0x001574         0x52 build/default/debug/timer.o
+ .debug_frame     0x0015c6         0x48 build/default/debug/FCB-H11-dvr.o
 
-.debug_str        0x000000        0x883
+.debug_str        0x000000        0x88d
  *(.debug_str)
- .debug_str       0x000000         0x2a build/default/production/mcc_generated_files/usb/usb_descriptors.o
- .debug_str       0x00002a         0xa1 build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
- .debug_str       0x0000cb         0xde build/default/production/mcc_generated_files/usb/usb_device_cdc.o
- .debug_str       0x0001a9        0x2ae build/default/production/mcc_generated_files/usb/usb_device.o
- .debug_str       0x000457          0xc build/default/production/mcc_generated_files/traps.o
- .debug_str       0x000463         0x58 build/default/production/mcc_generated_files/pin_manager.o
- .debug_str       0x0004bb         0x27 build/default/production/mcc_generated_files/clock.o
- .debug_str       0x0004e2         0x4d build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_str       0x00052f          0xc build/default/production/mcc_generated_files/system.o
- .debug_str       0x00053b         0x74 build/default/production/mcc_generated_files/i2c2.o
- .debug_str       0x0005af        0x2c8 build/default/production/mcc_generated_files/uart.o
- .debug_str       0x000877          0xc build/default/production/main.o
+ .debug_str       0x000000         0x2a build/default/debug/mcc_generated_files/usb/usb_descriptors.o
+ .debug_str       0x00002a         0xa1 build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
+ .debug_str       0x0000cb         0xde build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
+ .debug_str       0x0001a9        0x2ae build/default/debug/mcc_generated_files/usb/usb_device.o
+ .debug_str       0x000457          0xc build/default/debug/mcc_generated_files/traps.o
+ .debug_str       0x000463         0x58 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_str       0x0004bb         0x27 build/default/debug/mcc_generated_files/clock.o
+ .debug_str       0x0004e2         0x4d build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_str       0x00052f          0xc build/default/debug/mcc_generated_files/system.o
+ .debug_str       0x00053b         0x74 build/default/debug/mcc_generated_files/i2c2.o
+ .debug_str       0x0005af        0x2c8 build/default/debug/mcc_generated_files/uart.o
+ .debug_str       0x000877          0xc build/default/debug/main.o
+ .debug_str       0x000883          0xa build/default/debug/FCB-H11-dvr.o
 
 .debug_loc
  *(.debug_loc)
@@ -851,72 +929,76 @@ __CONFIG1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000       0x157c
+                  0x000000       0x15c2
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x73 build/default/production/mcc_generated_files/usb/usb_descriptors.o
+                  0x000000         0x73 build/default/debug/mcc_generated_files/usb/usb_descriptors.o
  .debug_pubnames
-                  0x000073         0xa2 build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
+                  0x000073         0xa2 build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
  .debug_pubnames
-                  0x000115        0x1b2 build/default/production/mcc_generated_files/usb/usb_device_cdc.o
+                  0x000115        0x1b2 build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
  .debug_pubnames
-                  0x0002c7         0x49 build/default/production/mcc_generated_files/usb/usb_device_events.o
+                  0x0002c7         0x49 build/default/debug/mcc_generated_files/usb/usb_device_events.o
  .debug_pubnames
-                  0x000310        0x3a3 build/default/production/mcc_generated_files/usb/usb_device.o
+                  0x000310        0x3a3 build/default/debug/mcc_generated_files/usb/usb_device.o
  .debug_pubnames
-                  0x0006b3         0x6f build/default/production/mcc_generated_files/traps.o
+                  0x0006b3         0x6f build/default/debug/mcc_generated_files/traps.o
  .debug_pubnames
-                  0x000722         0x2d build/default/production/mcc_generated_files/pin_manager.o
+                  0x000722         0x2d build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubnames
-                  0x00074f         0x27 build/default/production/mcc_generated_files/clock.o
+                  0x00074f         0x27 build/default/debug/mcc_generated_files/clock.o
  .debug_pubnames
-                  0x000776         0x2b build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000776         0x2b build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_pubnames
-                  0x0007a1         0x28 build/default/production/mcc_generated_files/system.o
+                  0x0007a1         0x28 build/default/debug/mcc_generated_files/system.o
  .debug_pubnames
-                  0x0007c9        0x137 build/default/production/mcc_generated_files/i2c2.o
+                  0x0007c9        0x137 build/default/debug/mcc_generated_files/i2c2.o
  .debug_pubnames
-                  0x000900        0xbbd build/default/production/mcc_generated_files/uart.o
+                  0x000900        0xbbd build/default/debug/mcc_generated_files/uart.o
  .debug_pubnames
-                  0x0014bd         0x3d build/default/production/main.o
+                  0x0014bd         0x3d build/default/debug/main.o
  .debug_pubnames
-                  0x0014fa         0x55 build/default/production/max14830.o
+                  0x0014fa         0x55 build/default/debug/max14830.o
  .debug_pubnames
-                  0x00154f         0x2d build/default/production/timer.o
+                  0x00154f         0x2d build/default/debug/timer.o
+ .debug_pubnames
+                  0x00157c         0x46 build/default/debug/FCB-H11-dvr.o
 
 .debug_ranges
  *(.debug_ranges)
 
-.debug_aranges    0x000000        0x150
+.debug_aranges    0x000000        0x168
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
+                  0x000000         0x18 build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
  .debug_aranges
-                  0x000018         0x18 build/default/production/mcc_generated_files/usb/usb_device_cdc.o
+                  0x000018         0x18 build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
  .debug_aranges
-                  0x000030         0x18 build/default/production/mcc_generated_files/usb/usb_device_events.o
+                  0x000030         0x18 build/default/debug/mcc_generated_files/usb/usb_device_events.o
  .debug_aranges
-                  0x000048         0x18 build/default/production/mcc_generated_files/usb/usb_device.o
+                  0x000048         0x18 build/default/debug/mcc_generated_files/usb/usb_device.o
  .debug_aranges
-                  0x000060         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x000060         0x18 build/default/debug/mcc_generated_files/traps.o
  .debug_aranges
-                  0x000078         0x18 build/default/production/mcc_generated_files/pin_manager.o
+                  0x000078         0x18 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_aranges
-                  0x000090         0x18 build/default/production/mcc_generated_files/clock.o
+                  0x000090         0x18 build/default/debug/mcc_generated_files/clock.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x0000a8         0x18 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_aranges
-                  0x0000c0         0x18 build/default/production/mcc_generated_files/system.o
+                  0x0000c0         0x18 build/default/debug/mcc_generated_files/system.o
  .debug_aranges
-                  0x0000d8         0x18 build/default/production/mcc_generated_files/i2c2.o
+                  0x0000d8         0x18 build/default/debug/mcc_generated_files/i2c2.o
  .debug_aranges
-                  0x0000f0         0x18 build/default/production/mcc_generated_files/uart.o
+                  0x0000f0         0x18 build/default/debug/mcc_generated_files/uart.o
  .debug_aranges
-                  0x000108         0x18 build/default/production/main.o
+                  0x000108         0x18 build/default/debug/main.o
  .debug_aranges
-                  0x000120         0x18 build/default/production/max14830.o
+                  0x000120         0x18 build/default/debug/max14830.o
  .debug_aranges
-                  0x000138         0x18 build/default/production/timer.o
+                  0x000138         0x18 build/default/debug/timer.o
+ .debug_aranges
+                  0x000150         0x18 build/default/debug/FCB-H11-dvr.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -2367,456 +2449,468 @@ __CONFIG1
                     0x0516                  UART2 = 0x516
                     0x0516                  _UART2 = 0x516
 START GROUP
-LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a
-LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a
-LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a
+LOAD /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a
+LOAD /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a
+LOAD /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a
 END GROUP
-OUTPUT(dist/default/production/4K.production.elf elf32-pic30)
+OUTPUT(dist/default/debug/4K_Peripheral_Setup.X.debug.elf elf32-pic30)
 LOAD jump_table
 LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000150        0xcf2
+                  0x000168        0xd3c
  .debug_pubtypes
-                  0x000150         0x60 build/default/production/mcc_generated_files/usb/usb_descriptors.o
+                  0x000168         0x60 build/default/debug/mcc_generated_files/usb/usb_descriptors.o
  .debug_pubtypes
-                  0x0001b0        0x172 build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
+                  0x0001c8        0x172 build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
  .debug_pubtypes
-                  0x000322        0x15f build/default/production/mcc_generated_files/usb/usb_device_cdc.o
+                  0x00033a        0x15f build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
  .debug_pubtypes
-                  0x000481         0x2d build/default/production/mcc_generated_files/usb/usb_device_events.o
+                  0x000499         0x2d build/default/debug/mcc_generated_files/usb/usb_device_events.o
  .debug_pubtypes
-                  0x0004ae        0x267 build/default/production/mcc_generated_files/usb/usb_device.o
+                  0x0004c6        0x267 build/default/debug/mcc_generated_files/usb/usb_device.o
  .debug_pubtypes
-                  0x000715         0x4e build/default/production/mcc_generated_files/traps.o
+                  0x00072d         0x4e build/default/debug/mcc_generated_files/traps.o
  .debug_pubtypes
-                  0x000763        0x127 build/default/production/mcc_generated_files/pin_manager.o
+                  0x00077b        0x127 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubtypes
-                  0x00088a         0x4c build/default/production/mcc_generated_files/clock.o
+                  0x0008a2         0x4c build/default/debug/mcc_generated_files/clock.o
  .debug_pubtypes
-                  0x0008d6        0x111 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x0008ee        0x111 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_pubtypes
-                  0x0009e7         0x42 build/default/production/mcc_generated_files/system.o
+                  0x0009ff         0x42 build/default/debug/mcc_generated_files/system.o
  .debug_pubtypes
-                  0x000a29        0x13e build/default/production/mcc_generated_files/i2c2.o
+                  0x000a41        0x13e build/default/debug/mcc_generated_files/i2c2.o
  .debug_pubtypes
-                  0x000b67        0x273 build/default/production/mcc_generated_files/uart.o
+                  0x000b7f        0x273 build/default/debug/mcc_generated_files/uart.o
  .debug_pubtypes
-                  0x000dda         0x2b build/default/production/main.o
+                  0x000df2         0x2b build/default/debug/main.o
  .debug_pubtypes
-                  0x000e05         0x1e build/default/production/max14830.o
+                  0x000e1d         0x1e build/default/debug/max14830.o
  .debug_pubtypes
-                  0x000e23         0x1f build/default/production/timer.o
+                  0x000e3b         0x1f build/default/debug/timer.o
+ .debug_pubtypes
+                  0x000e5a         0x4a build/default/debug/FCB-H11-dvr.o
 
 __c30_signature
-                  0x000e42         0xb4
+                  0x000ea4         0xc6
  __c30_signature
-                  0x000e42          0x6 build/default/production/mcc_generated_files/usb/usb_descriptors.o
+                  0x000ea4          0x6 build/default/debug/mcc_generated_files/usb/usb_descriptors.o
  __c30_signature
-                  0x000e48          0x6 build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
+                  0x000eaa          0x6 build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
  __c30_signature
-                  0x000e4e          0x6 build/default/production/mcc_generated_files/usb/usb_device_cdc.o
+                  0x000eb0          0x6 build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
  __c30_signature
-                  0x000e54          0x6 build/default/production/mcc_generated_files/usb/usb_device_events.o
+                  0x000eb6          0x6 build/default/debug/mcc_generated_files/usb/usb_device_events.o
  __c30_signature
-                  0x000e5a          0x6 build/default/production/mcc_generated_files/usb/usb_device.o
+                  0x000ebc          0x6 build/default/debug/mcc_generated_files/usb/usb_device.o
  __c30_signature
-                  0x000e60          0x6 build/default/production/mcc_generated_files/mcc.o
+                  0x000ec2          0x6 build/default/debug/mcc_generated_files/mcc.o
  __c30_signature
-                  0x000e66          0x6 build/default/production/mcc_generated_files/traps.o
+                  0x000ec8          0x6 build/default/debug/mcc_generated_files/traps.o
  __c30_signature
-                  0x000e6c          0x6 build/default/production/mcc_generated_files/pin_manager.o
+                  0x000ece          0x6 build/default/debug/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x000e72          0x6 build/default/production/mcc_generated_files/clock.o
+                  0x000ed4          0x6 build/default/debug/mcc_generated_files/clock.o
  __c30_signature
-                  0x000e78          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000eda          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x000e7e          0x6 build/default/production/mcc_generated_files/system.o
+                  0x000ee0          0x6 build/default/debug/mcc_generated_files/system.o
  __c30_signature
-                  0x000e84          0x6 build/default/production/mcc_generated_files/i2c2.o
+                  0x000ee6          0x6 build/default/debug/mcc_generated_files/i2c2.o
  __c30_signature
-                  0x000e8a          0x6 build/default/production/mcc_generated_files/uart.o
+                  0x000eec          0x6 build/default/debug/mcc_generated_files/uart.o
  __c30_signature
-                  0x000e90          0x6 build/default/production/main.o
+                  0x000ef2          0x6 build/default/debug/main.o
  __c30_signature
-                  0x000e96          0x6 build/default/production/max14830.o
+                  0x000ef8          0x6 build/default/debug/max14830.o
  __c30_signature
-                  0x000e9c          0x6 build/default/production/timer.o
+                  0x000efe          0x6 build/default/debug/timer.o
  __c30_signature
-                  0x000ea2          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(crt0_extended24.o)
+                  0x000f04          0x6 build/default/debug/FCB-H11-dvr.o
  __c30_signature
-                  0x000ea8          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(data_init_24.o)
+                  0x000f0a          0x6 build/default/debug/camera.o
  __c30_signature
-                  0x000eae          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(divsf3.daeo)
+                  0x000f10          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
  __c30_signature
-                  0x000eb4          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(feqltle.daeo)
+                  0x000f16          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
  __c30_signature
-                  0x000eba          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(floatunsisf.daeo)
+                  0x000f1c          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(feqltle.daeo)
  __c30_signature
-                  0x000ec0          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(fpack.daeo)
+                  0x000f22          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatsisf.daeo)
  __c30_signature
-                  0x000ec6          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(funpack2.daeo)
+                  0x000f28          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatunsisf.daeo)
  __c30_signature
-                  0x000ecc          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(futil.daeo)
+                  0x000f2e          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(mulsf3.daeo)
  __c30_signature
-                  0x000ed2          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(mulsf3.daeo)
+                  0x000f34          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(fcompare.daeo)
  __c30_signature
-                  0x000ed8          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(fcompare.daeo)
+                  0x000f3a          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatdisf.daeo)
  __c30_signature
-                  0x000ede          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(floatundisf.daeo)
+                  0x000f40          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(floatundisf.daeo)
  __c30_signature
-                  0x000ee4          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(funpack.daeo)
+                  0x000f46          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(fpack.daeo)
  __c30_signature
-                  0x000eea          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a(memcpy.DA_eo)
+                  0x000f4c          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(funpack2.daeo)
  __c30_signature
-                  0x000ef0          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a(memset.DA_eo)
+                  0x000f52          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(futil.daeo)
+ __c30_signature
+                  0x000f58          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/libm-elf.a(funpack.daeo)
+ __c30_signature
+                  0x000f5e          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a(memcpy.DA_eo)
+ __c30_signature
+                  0x000f64          0x6 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a(memset.DA_eo)
 
-.nbss               0x0800         0x6c
- .nbss              0x0800         0x1e build/default/production/mcc_generated_files/usb/usb_device.o
-                    0x0800                  _USBDeviceState
-                    0x0802                  _USBActiveConfiguration
-                    0x0804                  _pBDTEntryEP0OutCurrent
-                    0x0806                  _pBDTEntryEP0OutNext
-                    0x0808                  _shortPacketStatus
-                    0x0809                  _controlTransferState
-                    0x080a                  _pDst
-                    0x080c                  _RemoteWakeup
-                    0x080d                  _USBBusIsSuspended
-                    0x080e                  _USTATcopy
-                    0x080f                  _endpoint_number
-                    0x0810                  _BothEP0OutUOWNsSet
-                    0x0811                  _USBStatusStageTimeoutCounter
-                    0x0812                  _USBDeferStatusStagePacket
-                    0x0813                  _USBStatusStageEnabledFlag1
-                    0x0814                  _USBStatusStageEnabledFlag2
-                    0x0815                  _USBDeferINDataStagePackets
-                    0x0816                  _USBDeferOUTDataStagePackets
-                    0x0818                  _USB1msTickCount
-                    0x081c                  _USBTicksSinceSuspendEnd
- .nbss              0x081e         0x1a build/default/production/mcc_generated_files/uart.o
-                    0x0828                  _CamUART_TxDefaultInterruptHandler
-                    0x082a                  _CamUART_RxDefaultInterruptHandler
-                    0x082c                  _RingLightUART_TxDefaultInterruptHandler
-                    0x082e                  _RingLightUART_RxDefaultInterruptHandler
-                    0x0830                  _FrontFaceUART_TxDefaultInterruptHandler
-                    0x0832                  _FrontFaceUART_RxDefaultInterruptHandler
-                    0x0834                  _FTDIUART_TxDefaultInterruptHandler
-                    0x0836                  _FTDIUART_RxDefaultInterruptHandler
- .nbss              0x0838         0x18 build/default/production/mcc_generated_files/i2c2.o
- .nbss              0x0850         0x12 build/default/production/mcc_generated_files/usb/usb_device_cdc.o
-                    0x0850                  _cdc_rx_len
-                    0x0851                  _cdc_trf_state
-                    0x0852                  _pCDCSrc
-                    0x0854                  _pCDCDst
-                    0x0856                  _cdc_tx_len
-                    0x0857                  _cdc_mem_type
-                    0x0858                  _CDCDataOutHandle
-                    0x085a                  _CDCDataInHandle
-                    0x085c                  _control_signal_bitmap
-                    0x085e                  _BaudRateGen
- .nbss              0x0862          0xa build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
+.nbss               0x0850         0x6c
+ .nbss              0x0850         0x1e build/default/debug/mcc_generated_files/usb/usb_device.o
+                    0x0850                  _USBDeviceState
+                    0x0852                  _USBActiveConfiguration
+                    0x0854                  _pBDTEntryEP0OutCurrent
+                    0x0856                  _pBDTEntryEP0OutNext
+                    0x0858                  _shortPacketStatus
+                    0x0859                  _controlTransferState
+                    0x085a                  _pDst
+                    0x085c                  _RemoteWakeup
+                    0x085d                  _USBBusIsSuspended
+                    0x085e                  _USTATcopy
+                    0x085f                  _endpoint_number
+                    0x0860                  _BothEP0OutUOWNsSet
+                    0x0861                  _USBStatusStageTimeoutCounter
+                    0x0862                  _USBDeferStatusStagePacket
+                    0x0863                  _USBStatusStageEnabledFlag1
+                    0x0864                  _USBStatusStageEnabledFlag2
+                    0x0865                  _USBDeferINDataStagePackets
+                    0x0866                  _USBDeferOUTDataStagePackets
+                    0x0868                  _USB1msTickCount
+                    0x086c                  _USBTicksSinceSuspendEnd
+ .nbss              0x086e         0x1a build/default/debug/mcc_generated_files/uart.o
+                    0x0878                  _CamUART_TxDefaultInterruptHandler
+                    0x087a                  _CamUART_RxDefaultInterruptHandler
+                    0x087c                  _RingLightUART_TxDefaultInterruptHandler
+                    0x087e                  _RingLightUART_RxDefaultInterruptHandler
+                    0x0880                  _FrontFaceUART_TxDefaultInterruptHandler
+                    0x0882                  _FrontFaceUART_RxDefaultInterruptHandler
+                    0x0884                  _FTDIUART_TxDefaultInterruptHandler
+                    0x0886                  _FTDIUART_RxDefaultInterruptHandler
+ .nbss              0x0888         0x18 build/default/debug/mcc_generated_files/i2c2.o
+ .nbss              0x08a0         0x12 build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
+                    0x08a0                  _cdc_rx_len
+                    0x08a1                  _cdc_trf_state
+                    0x08a2                  _pCDCSrc
+                    0x08a4                  _pCDCDst
+                    0x08a6                  _cdc_tx_len
+                    0x08a7                  _cdc_mem_type
+                    0x08a8                  _CDCDataOutHandle
+                    0x08aa                  _CDCDataInHandle
+                    0x08ac                  _control_signal_bitmap
+                    0x08ae                  _BaudRateGen
+ .nbss              0x08b2          0xa build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
 
-.ndata              0x086c          0x2
- .ndata             0x086c          0x2 build/default/production/mcc_generated_files/traps.o
+.ndata              0x0828          0x2
+ .ndata             0x0828          0x2 build/default/debug/mcc_generated_files/traps.o
 
-_0000000005D76B40612befcd
+_0x7f1a87742b4061432805
                     0x0a00         0x30
- _0000000005D76B40612befcd
-                    0x0a00         0x30 build/default/production/mcc_generated_files/usb/usb_device.o
+ _0x7f1a87742b4061432805
+                    0x0a00         0x30 build/default/debug/mcc_generated_files/usb/usb_device.o
                     0x0a00                  _BDT
 
-.bss                0x086e        0x122
- .bss               0x086e         0x9a build/default/production/mcc_generated_files/usb/usb_device_cdc.o
-                    0x086e                  _cdc_data_tx
-                    0x08ae                  _cdc_data_rx
-                    0x08ee                  _line_coding
-                    0x08f6                  _cdc_notice
-                    0x0900                  _dummy_encapsulated_cmd_response
- .bss               0x0908         0x32 build/default/production/mcc_generated_files/usb/usb_device.o
-                    0x0908                  _USBAlternateInterface
-                    0x090a                  _pBDTEntryOut
-                    0x0910                  _pBDTEntryIn
-                    0x0916                  _inPipes
-                    0x091c                  _outPipes
-                    0x0923                  _ep_data_in
-                    0x0926                  _ep_data_out
-                    0x0929                  _SetupPkt
-                    0x0931                  _CtrlTrfData
- .bss               0x093a         0x20 build/default/production/mcc_generated_files/traps.o
- .bss               0x095a         0x12 build/default/production/mcc_generated_files/i2c2.o
- .bss               0x096c         0x12 build/default/production/mcc_generated_files/uart.o
- .bss               0x097e          0xe build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
- .bss               0x098c          0x4 build/default/production/main.o
-                    0x098c                  _writeBuffer
+.bss                0x08bc        0x122
+ .bss               0x08bc         0x9a build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
+                    0x08bc                  _cdc_data_tx
+                    0x08fc                  _cdc_data_rx
+                    0x093c                  _line_coding
+                    0x0944                  _cdc_notice
+                    0x094e                  _dummy_encapsulated_cmd_response
+ .bss               0x0956         0x32 build/default/debug/mcc_generated_files/usb/usb_device.o
+                    0x0956                  _USBAlternateInterface
+                    0x0958                  _pBDTEntryOut
+                    0x095e                  _pBDTEntryIn
+                    0x0964                  _inPipes
+                    0x096a                  _outPipes
+                    0x0971                  _ep_data_in
+                    0x0974                  _ep_data_out
+                    0x0977                  _SetupPkt
+                    0x097f                  _CtrlTrfData
+ .bss               0x0988         0x20 build/default/debug/mcc_generated_files/traps.o
+ .bss               0x09a8         0x12 build/default/debug/mcc_generated_files/i2c2.o
+ .bss               0x09ba         0x12 build/default/debug/mcc_generated_files/uart.o
+ .bss               0x09cc          0xe build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
+ .bss               0x09da          0x4 build/default/debug/main.o
+                    0x09da                  _writeBuffer
 
 .ivt._USB1Interrupt
                   0x0000c0          0x2
  .ivt._USB1Interrupt
-                  0x0000c0          0x2 build/default/production/mcc_generated_files/usb/usb_device_events.o
+                  0x0000c0          0x2 build/default/debug/mcc_generated_files/usb/usb_device_events.o
 
 .ivt._OscillatorFail
                   0x000006          0x2
  .ivt._OscillatorFail
-                  0x000006          0x2 build/default/production/mcc_generated_files/traps.o
+                  0x000006          0x2 build/default/debug/mcc_generated_files/traps.o
 
 .ivt._StackError
                   0x00000a          0x2
  .ivt._StackError
-                  0x00000a          0x2 build/default/production/mcc_generated_files/traps.o
+                  0x00000a          0x2 build/default/debug/mcc_generated_files/traps.o
 
 .ivt._AddressError
                   0x000008          0x2
  .ivt._AddressError
-                  0x000008          0x2 build/default/production/mcc_generated_files/traps.o
+                  0x000008          0x2 build/default/debug/mcc_generated_files/traps.o
 
 .ivt._MathError
                   0x00000c          0x2
  .ivt._MathError
-                  0x00000c          0x2 build/default/production/mcc_generated_files/traps.o
+                  0x00000c          0x2 build/default/debug/mcc_generated_files/traps.o
 
 .config_JTAGEN    0x0157fe          0x2
  .config_JTAGEN
-                  0x0157fe          0x2 build/default/production/mcc_generated_files/system.o
+                  0x0157fe          0x2 build/default/debug/mcc_generated_files/system.o
 
 .config_IESO      0x0157fc          0x2
- .config_IESO     0x0157fc          0x2 build/default/production/mcc_generated_files/system.o
+ .config_IESO     0x0157fc          0x2 build/default/debug/mcc_generated_files/system.o
 
 .config_WPEND     0x0157fa          0x2
- .config_WPEND    0x0157fa          0x2 build/default/production/mcc_generated_files/system.o
+ .config_WPEND    0x0157fa          0x2 build/default/debug/mcc_generated_files/system.o
 
 .config_IOL1WAY
                   0x0157f8          0x2
  .config_IOL1WAY
-                  0x0157f8          0x2 build/default/production/mcc_generated_files/system.o
+                  0x0157f8          0x2 build/default/debug/mcc_generated_files/system.o
 
 .ivt._MI2C2Interrupt
                   0x000078          0x2
  .ivt._MI2C2Interrupt
-                  0x000078          0x2 build/default/production/mcc_generated_files/i2c2.o
+                  0x000078          0x2 build/default/debug/mcc_generated_files/i2c2.o
 
 .ivt._U1TXInterrupt
                   0x00002c          0x2
  .ivt._U1TXInterrupt
-                  0x00002c          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x00002c          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U1RXInterrupt
                   0x00002a          0x2
  .ivt._U1RXInterrupt
-                  0x00002a          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x00002a          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U1ErrInterrupt
                   0x000096          0x2
  .ivt._U1ErrInterrupt
-                  0x000096          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x000096          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U2TXInterrupt
                   0x000052          0x2
  .ivt._U2TXInterrupt
-                  0x000052          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x000052          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U2RXInterrupt
                   0x000050          0x2
  .ivt._U2RXInterrupt
-                  0x000050          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x000050          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U2ErrInterrupt
                   0x000098          0x2
  .ivt._U2ErrInterrupt
-                  0x000098          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x000098          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U3TXInterrupt
                   0x0000ba          0x2
  .ivt._U3TXInterrupt
-                  0x0000ba          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x0000ba          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U3RXInterrupt
                   0x0000b8          0x2
  .ivt._U3RXInterrupt
-                  0x0000b8          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x0000b8          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U3ErrInterrupt
                   0x0000b6          0x2
  .ivt._U3ErrInterrupt
-                  0x0000b6          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x0000b6          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U4TXInterrupt
                   0x0000c6          0x2
  .ivt._U4TXInterrupt
-                  0x0000c6          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x0000c6          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U4RXInterrupt
                   0x0000c4          0x2
  .ivt._U4RXInterrupt
-                  0x0000c4          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x0000c4          0x2 build/default/debug/mcc_generated_files/uart.o
 
 .ivt._U4ErrInterrupt
                   0x0000c2          0x2
  .ivt._U4ErrInterrupt
-                  0x0000c2          0x2 build/default/production/mcc_generated_files/uart.o
+                  0x0000c2          0x2 build/default/debug/mcc_generated_files/uart.o
 
-.const              0x8bd2         0xb0 load address 0x000bd2  
- .const             0x8bd2         0xb0 build/default/production/mcc_generated_files/usb/usb_descriptors.o
-                    0x8bd2                  _device_dsc
-                    0x8be4                  _configDescriptor1
-                    0x8c28                  _sd000
-                    0x8c2c                  _sd001
-                    0x8c60                  _sd002
-                    0x8c7a                  _USB_CD_Ptr
-                    0x8c7c                  _USB_SD_Ptr
+.const              0x8b74         0xbc load address 0x000b74  
+ .const             0x8b74         0xb0 build/default/debug/mcc_generated_files/usb/usb_descriptors.o
+                    0x8b74                  _device_dsc
+                    0x8b86                  _configDescriptor1
+                    0x8bca                  _sd000
+                    0x8bce                  _sd001
+                    0x8c02                  _sd002
+                    0x8c1c                  _USB_CD_Ptr
+                    0x8c1e                  _USB_SD_Ptr
+ .const             0x8c24          0xc build/default/debug/main.o
 
-.text             0x000c82       0x2716
- .text            0x000c82        0xf8e build/default/production/mcc_generated_files/usb/usb_device.o
-                  0x000c82                  _USBDeviceInit
-                  0x000d72                  _USBDeviceTasks
-                  0x000ef8                  _USBEnableEndpoint
-                  0x000f32                  _USBTransferOnePacket
-                  0x000fd8                  _USBStallEndpoint
-                  0x001072                  _USBCancelIO
-                  0x001126                  _USBDeviceDetach
-                  0x001132                  _USBDeviceAttach
-                  0x001166                  _USBCtrlEPAllowStatusStage
-                  0x0011dc                  _USBCtrlEPAllowDataStage
-                  0x001bcc                  _USBIncrement1msInternalTimers
-                  0x001bf6                  _USBGet1msTickCount
- .text            0x001c10        0xc5c build/default/production/mcc_generated_files/uart.o
-                  0x001c10                  _CamUART_Initialize
-                  0x001c50                  _CamUART_SetTxInterruptHandler
-                  0x001c68                  _CamUART_Transmit_CallBack
-                  0x001c6e                  _CamUART_SetRxInterruptHandler
-                  0x001c86                  _CamUART_Receive_CallBack
-                  0x001c8c                  _CamUART_Read
-                  0x001cb8                  _CamUART_Write
-                  0x001ce2                  _CamUART_IsRxReady
-                  0x001cf8                  _CamUART_IsTxReady
-                  0x001d2c                  _CamUART_IsTxDone
-                  0x001dbc                  _CamUART_ReadBuffer
-                  0x001df6                  _CamUART_WriteBuffer
-                  0x001e30                  _CamUART_TransferStatusGet
-                  0x001e74                  _CamUART_Peek
-                  0x001e94                  _CamUART_ReceiveBufferIsEmpty
-                  0x001ea4                  _CamUART_TransmitBufferIsFull
-                  0x001eb4                  _CamUART_StatusGet
-                  0x001ebc                  _CamUART_TransmitBufferSizeGet
-                  0x001eea                  _CamUART_ReceiveBufferSizeGet
-                  0x001f18                  _CamUART_Enable
-                  0x001f22                  _CamUART_Disable
-                  0x001f2c                  _RingLightUART_Initialize
-                  0x001f6c                  _RingLightUART_SetTxInterruptHandler
-                  0x001f84                  _RingLightUART_Transmit_CallBack
-                  0x001f8a                  _RingLightUART_SetRxInterruptHandler
-                  0x001fa2                  _RingLightUART_Receive_CallBack
-                  0x001fa8                  _RingLightUART_Read
-                  0x001fd4                  _RingLightUART_Write
-                  0x001ffe                  _RingLightUART_IsRxReady
-                  0x002014                  _RingLightUART_IsTxReady
-                  0x002048                  _RingLightUART_IsTxDone
-                  0x0020d8                  _RingLightUART_ReadBuffer
-                  0x002112                  _RingLightUART_WriteBuffer
-                  0x00214c                  _RingLightUART_TransferStatusGet
-                  0x002190                  _RingLightUART_Peek
-                  0x0021b0                  _RingLightUART_ReceiveBufferIsEmpty
-                  0x0021c0                  _RingLightUART_TransmitBufferIsFull
-                  0x0021d0                  _RingLightUART_StatusGet
-                  0x0021d8                  _RingLightUART_TransmitBufferSizeGet
-                  0x002206                  _RingLightUART_ReceiveBufferSizeGet
-                  0x002234                  _RingLightUART_Enable
-                  0x00223e                  _RingLightUART_Disable
-                  0x002248                  _FrontFaceUART_Initialize
-                  0x00227e                  _FrontFaceUART_SetTxInterruptHandler
-                  0x002296                  _FrontFaceUART_Transmit_CallBack
-                  0x00229c                  _FrontFaceUART_SetRxInterruptHandler
-                  0x0022b4                  _FrontFaceUART_Receive_CallBack
-                  0x0022ba                  _FrontFaceUART_Read
-                  0x0022e6                  _FrontFaceUART_Write
-                  0x002310                  _FrontFaceUART_IsRxReady
-                  0x002326                  _FrontFaceUART_IsTxReady
-                  0x00235a                  _FrontFaceUART_IsTxDone
-                  0x0023ea                  _FrontFaceUART_ReadBuffer
-                  0x002424                  _FrontFaceUART_WriteBuffer
-                  0x00245e                  _FrontFaceUART_TransferStatusGet
-                  0x0024a2                  _FrontFaceUART_Peek
-                  0x0024c2                  _FrontFaceUART_ReceiveBufferIsEmpty
-                  0x0024d2                  _FrontFaceUART_TransmitBufferIsFull
-                  0x0024e2                  _FrontFaceUART_StatusGet
-                  0x0024ea                  _FrontFaceUART_TransmitBufferSizeGet
-                  0x002518                  _FrontFaceUART_ReceiveBufferSizeGet
-                  0x002546                  _FrontFaceUART_Enable
-                  0x002550                  _FrontFaceUART_Disable
-                  0x00255a                  _FTDIUART_Initialize
-                  0x002590                  _FTDIUART_SetTxInterruptHandler
-                  0x0025a8                  _FTDIUART_Transmit_CallBack
-                  0x0025ae                  _FTDIUART_SetRxInterruptHandler
-                  0x0025c6                  _FTDIUART_Receive_CallBack
-                  0x0025cc                  _FTDIUART_Read
-                  0x0025f8                  _FTDIUART_Write
-                  0x002622                  _FTDIUART_IsRxReady
-                  0x002638                  _FTDIUART_IsTxReady
-                  0x00266c                  _FTDIUART_IsTxDone
-                  0x0026fc                  _FTDIUART_ReadBuffer
-                  0x002736                  _FTDIUART_WriteBuffer
-                  0x002770                  _FTDIUART_TransferStatusGet
-                  0x0027b4                  _FTDIUART_Peek
-                  0x0027d4                  _FTDIUART_ReceiveBufferIsEmpty
-                  0x0027e4                  _FTDIUART_TransmitBufferIsFull
-                  0x0027f4                  _FTDIUART_StatusGet
-                  0x0027fc                  _FTDIUART_TransmitBufferSizeGet
-                  0x00282a                  _FTDIUART_ReceiveBufferSizeGet
-                  0x002858                  _FTDIUART_Enable
-                  0x002862                  _FTDIUART_Disable
- .text            0x00286c        0x38c build/default/production/mcc_generated_files/usb/usb_device_cdc.o
-                  0x00286c                  _USBCheckCDCRequest
-                  0x002976                  _CDCInitEP
-                  0x0029b4                  _USBCDCEventHandler
-                  0x0029ec                  _getsUSBUSART
-                  0x002a4e                  _putUSBUSART
-                  0x002a74                  _putsUSBUSART
-                  0x002ac6                  _putrsUSBUSART
-                  0x002b16                  _CDCTxService
- .text            0x002bf8        0x2fc build/default/production/mcc_generated_files/i2c2.o
-                  0x002bf8                  _I2C2_Initialize
-                  0x002c2e                  _I2C2_ErrorCountGet
-                  0x002c78                  _I2C2_MasterWrite
-                  0x002caa                  _I2C2_MasterRead
-                  0x002cdc                  _I2C2_MasterTRBInsert
-                  0x002d54                  _I2C2_MasterReadTRBBuild
-                  0x002d84                  _I2C2_MasterWriteTRBBuild
-                  0x002da8                  _I2C2_MasterQueueIsEmpty
-                  0x002dbe                  _I2C2_MasterQueueIsFull
-                  0x002dd4                  _maxWriteByte
-                  0x002e22                  _epromWriteByte
-                  0x002e80                  _maxReadByte
- .text            0x002ef4        0x21c build/default/production/mcc_generated_files/usb/usb_hal_16bit.o
-                  0x002ef4                  _USBSleepOnSuspend
-                  0x002f18                  _USBRemoteWakeupAssertBlocking
-                  0x002f92                  _USBVBUSSessionValidStateGet
-                  0x00301c                  _USBMaskAllUSBInterrupts
-                  0x003036                  _USBRestoreUSBInterrupts
- .text            0x003110         0xd0 build/default/production/max14830.o
-                  0x003110                  _MAX_Init
-                  0x00313e                  _CLK_CONFIG_Init
-                  0x00318c                  _UARTS_Mode_Init
-                  0x0031b0                  _GPIO_Init
- .text            0x0031e0         0xb0 build/default/production/mcc_generated_files/pin_manager.o
-                  0x0031e0                  _PIN_MANAGER_Initialize
- .text            0x003290         0x9c build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x003290                  _INTERRUPT_Initialize
- .text            0x00332c         0x6c build/default/production/main.o
-                  0x00332c                  _main
-                  0x003376                  _CREATE_BUFFER
+.text             0x000c30       0x2770
+ .text            0x000c30        0xf8e build/default/debug/mcc_generated_files/usb/usb_device.o
+                  0x000c30                  _USBDeviceInit
+                  0x000d20                  _USBDeviceTasks
+                  0x000ea6                  _USBEnableEndpoint
+                  0x000ee0                  _USBTransferOnePacket
+                  0x000f86                  _USBStallEndpoint
+                  0x001020                  _USBCancelIO
+                  0x0010d4                  _USBDeviceDetach
+                  0x0010e0                  _USBDeviceAttach
+                  0x001114                  _USBCtrlEPAllowStatusStage
+                  0x00118a                  _USBCtrlEPAllowDataStage
+                  0x001b7a                  _USBIncrement1msInternalTimers
+                  0x001ba4                  _USBGet1msTickCount
+ .text            0x001bbe        0xc5c build/default/debug/mcc_generated_files/uart.o
+                  0x001bbe                  _CamUART_Initialize
+                  0x001bfe                  _CamUART_SetTxInterruptHandler
+                  0x001c16                  _CamUART_Transmit_CallBack
+                  0x001c1c                  _CamUART_SetRxInterruptHandler
+                  0x001c34                  _CamUART_Receive_CallBack
+                  0x001c3a                  _CamUART_Read
+                  0x001c66                  _CamUART_Write
+                  0x001c90                  _CamUART_IsRxReady
+                  0x001ca6                  _CamUART_IsTxReady
+                  0x001cda                  _CamUART_IsTxDone
+                  0x001d6a                  _CamUART_ReadBuffer
+                  0x001da4                  _CamUART_WriteBuffer
+                  0x001dde                  _CamUART_TransferStatusGet
+                  0x001e22                  _CamUART_Peek
+                  0x001e42                  _CamUART_ReceiveBufferIsEmpty
+                  0x001e52                  _CamUART_TransmitBufferIsFull
+                  0x001e62                  _CamUART_StatusGet
+                  0x001e6a                  _CamUART_TransmitBufferSizeGet
+                  0x001e98                  _CamUART_ReceiveBufferSizeGet
+                  0x001ec6                  _CamUART_Enable
+                  0x001ed0                  _CamUART_Disable
+                  0x001eda                  _RingLightUART_Initialize
+                  0x001f1a                  _RingLightUART_SetTxInterruptHandler
+                  0x001f32                  _RingLightUART_Transmit_CallBack
+                  0x001f38                  _RingLightUART_SetRxInterruptHandler
+                  0x001f50                  _RingLightUART_Receive_CallBack
+                  0x001f56                  _RingLightUART_Read
+                  0x001f82                  _RingLightUART_Write
+                  0x001fac                  _RingLightUART_IsRxReady
+                  0x001fc2                  _RingLightUART_IsTxReady
+                  0x001ff6                  _RingLightUART_IsTxDone
+                  0x002086                  _RingLightUART_ReadBuffer
+                  0x0020c0                  _RingLightUART_WriteBuffer
+                  0x0020fa                  _RingLightUART_TransferStatusGet
+                  0x00213e                  _RingLightUART_Peek
+                  0x00215e                  _RingLightUART_ReceiveBufferIsEmpty
+                  0x00216e                  _RingLightUART_TransmitBufferIsFull
+                  0x00217e                  _RingLightUART_StatusGet
+                  0x002186                  _RingLightUART_TransmitBufferSizeGet
+                  0x0021b4                  _RingLightUART_ReceiveBufferSizeGet
+                  0x0021e2                  _RingLightUART_Enable
+                  0x0021ec                  _RingLightUART_Disable
+                  0x0021f6                  _FrontFaceUART_Initialize
+                  0x00222c                  _FrontFaceUART_SetTxInterruptHandler
+                  0x002244                  _FrontFaceUART_Transmit_CallBack
+                  0x00224a                  _FrontFaceUART_SetRxInterruptHandler
+                  0x002262                  _FrontFaceUART_Receive_CallBack
+                  0x002268                  _FrontFaceUART_Read
+                  0x002294                  _FrontFaceUART_Write
+                  0x0022be                  _FrontFaceUART_IsRxReady
+                  0x0022d4                  _FrontFaceUART_IsTxReady
+                  0x002308                  _FrontFaceUART_IsTxDone
+                  0x002398                  _FrontFaceUART_ReadBuffer
+                  0x0023d2                  _FrontFaceUART_WriteBuffer
+                  0x00240c                  _FrontFaceUART_TransferStatusGet
+                  0x002450                  _FrontFaceUART_Peek
+                  0x002470                  _FrontFaceUART_ReceiveBufferIsEmpty
+                  0x002480                  _FrontFaceUART_TransmitBufferIsFull
+                  0x002490                  _FrontFaceUART_StatusGet
+                  0x002498                  _FrontFaceUART_TransmitBufferSizeGet
+                  0x0024c6                  _FrontFaceUART_ReceiveBufferSizeGet
+                  0x0024f4                  _FrontFaceUART_Enable
+                  0x0024fe                  _FrontFaceUART_Disable
+                  0x002508                  _FTDIUART_Initialize
+                  0x00253e                  _FTDIUART_SetTxInterruptHandler
+                  0x002556                  _FTDIUART_Transmit_CallBack
+                  0x00255c                  _FTDIUART_SetRxInterruptHandler
+                  0x002574                  _FTDIUART_Receive_CallBack
+                  0x00257a                  _FTDIUART_Read
+                  0x0025a6                  _FTDIUART_Write
+                  0x0025d0                  _FTDIUART_IsRxReady
+                  0x0025e6                  _FTDIUART_IsTxReady
+                  0x00261a                  _FTDIUART_IsTxDone
+                  0x0026aa                  _FTDIUART_ReadBuffer
+                  0x0026e4                  _FTDIUART_WriteBuffer
+                  0x00271e                  _FTDIUART_TransferStatusGet
+                  0x002762                  _FTDIUART_Peek
+                  0x002782                  _FTDIUART_ReceiveBufferIsEmpty
+                  0x002792                  _FTDIUART_TransmitBufferIsFull
+                  0x0027a2                  _FTDIUART_StatusGet
+                  0x0027aa                  _FTDIUART_TransmitBufferSizeGet
+                  0x0027d8                  _FTDIUART_ReceiveBufferSizeGet
+                  0x002806                  _FTDIUART_Enable
+                  0x002810                  _FTDIUART_Disable
+ .text            0x00281a        0x38c build/default/debug/mcc_generated_files/usb/usb_device_cdc.o
+                  0x00281a                  _USBCheckCDCRequest
+                  0x002924                  _CDCInitEP
+                  0x002962                  _USBCDCEventHandler
+                  0x00299a                  _getsUSBUSART
+                  0x0029fc                  _putUSBUSART
+                  0x002a22                  _putsUSBUSART
+                  0x002a74                  _putrsUSBUSART
+                  0x002ac4                  _CDCTxService
+ .text            0x002ba6        0x2fc build/default/debug/mcc_generated_files/i2c2.o
+                  0x002ba6                  _I2C2_Initialize
+                  0x002bdc                  _I2C2_ErrorCountGet
+                  0x002c26                  _I2C2_MasterWrite
+                  0x002c58                  _I2C2_MasterRead
+                  0x002c8a                  _I2C2_MasterTRBInsert
+                  0x002d02                  _I2C2_MasterReadTRBBuild
+                  0x002d32                  _I2C2_MasterWriteTRBBuild
+                  0x002d56                  _I2C2_MasterQueueIsEmpty
+                  0x002d6c                  _I2C2_MasterQueueIsFull
+                  0x002d82                  _maxWriteByte
+                  0x002dd0                  _epromWriteByte
+                  0x002e2e                  _maxReadByte
+ .text            0x002ea2        0x21c build/default/debug/mcc_generated_files/usb/usb_hal_16bit.o
+                  0x002ea2                  _USBSleepOnSuspend
+                  0x002ec6                  _USBRemoteWakeupAssertBlocking
+                  0x002f40                  _USBVBUSSessionValidStateGet
+                  0x002fca                  _USBMaskAllUSBInterrupts
+                  0x002fe4                  _USBRestoreUSBInterrupts
+ .text            0x0030be         0xba build/default/debug/max14830.o
+                  0x0030be                  _MAX_Init
+                  0x0030ea                  _CLK_CONFIG_Init
+                  0x00312e                  _UARTS_Mode_Init
+                  0x00314e                  _GPIO_Init
+ .text            0x003178         0xb0 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x003178                  _PIN_MANAGER_Initialize
+ .text            0x003228         0x9c build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x003228                  _INTERRUPT_Initialize
+ .text            0x0032c4         0x80 build/default/debug/main.o
+                  0x0032c4                  _main
+                  0x003322                  _CREATE_BUFFER
+ .text            0x003344         0x5c build/default/debug/FCB-H11-dvr.o
+                  0x003344                  _CamUART_Write_String
+                  0x003378                  _un8CameraStartTeleZoom
 
-.dinit            0x003398         0x58
- .dinit           0x003398         0x58 data_init
+.dinit            0x0033a0         0x58
+ .dinit           0x0033a0         0x58 data_init
 
-.text             0x0033f0        0x12c
- .text            0x0033f0         0x54 build/default/production/mcc_generated_files/usb/usb_device_events.o
-                  0x0033f0                  _USER_USB_CALLBACK_EVENT_HANDLER
- .text            0x003444         0x54 build/default/production/timer.o
-                  0x003444                  _TMR1_Init
-                  0x003454                  _delay_ms
- .text            0x003498         0x52 build/default/production/mcc_generated_files/clock.o
-                  0x003498                  _CLOCK_Initialize
- .text            0x0034ea         0x1a build/default/production/mcc_generated_files/system.o
-                  0x0034ea                  _SYSTEM_Initialize
- .text            0x003504         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x003504                  _TRAPS_halt_on_error
+.text             0x0033f8        0x130
+ .text            0x0033f8         0x56 build/default/debug/timer.o
+                  0x0033f8                  _TMR1_Init
+                  0x003408                  _delay_ms
+ .text            0x00344e         0x54 build/default/debug/mcc_generated_files/usb/usb_device_events.o
+                  0x00344e                  _USER_USB_CALLBACK_EVENT_HANDLER
+ .text            0x0034a2         0x52 build/default/debug/mcc_generated_files/clock.o
+                  0x0034a2                  _CLOCK_Initialize
+ .text            0x0034f4         0x1a build/default/debug/mcc_generated_files/traps.o
+                  0x0034f4                  _TRAPS_halt_on_error
+ .text            0x00350e         0x1a build/default/debug/mcc_generated_files/system.o
+                  0x00350e                  _SYSTEM_Initialize
