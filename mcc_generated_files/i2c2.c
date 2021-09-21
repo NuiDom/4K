@@ -729,6 +729,7 @@ void maxWriteByte(uint8_t slaveAddressW, uint8_t reg, uint8_t dataByte)
     while(I2C2STATbits.TRSTAT){}
     
     I2C2_STOP_CONDITION_ENABLE_BIT = 1;
+    while(I2C2_STOP_CONDITION_ENABLE_BIT){}
 
 }
 
@@ -750,6 +751,7 @@ void epromWriteByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte)
     while(I2C2STATbits.TRSTAT){}
     
     I2C2_STOP_CONDITION_ENABLE_BIT = 1;
+    while(I2C2_STOP_CONDITION_ENABLE_BIT){}
 
 }
 
@@ -767,7 +769,7 @@ void maxReadByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t reg)
     I2C2_REPEAT_START_CONDITION_ENABLE_BIT = 1;          //generates restart bit
     while(I2C2_REPEAT_START_CONDITION_ENABLE_BIT){}
     
-    I2C2_TRANSMIT_REG = slaveAddressR;           //fills transmit reg with eeprom address and read bit
+    I2C2_TRANSMIT_REG = slaveAddressR;           //fills transmit reg with slave address and read bit
     while(I2C2STATbits.TRSTAT){}
     
     I2C2_RECEIVE_ENABLE_BIT = 1;          //sets receive enable bit
@@ -778,6 +780,7 @@ void maxReadByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t reg)
     while(I2C2_ACKNOWLEDGE_ENABLE_BIT);
     
     I2C2_STOP_CONDITION_ENABLE_BIT = 1;       //generates stop bit
+    while(I2C2_STOP_CONDITION_ENABLE_BIT){}
 
 }
 /**
