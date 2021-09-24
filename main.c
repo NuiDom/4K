@@ -50,8 +50,10 @@
 #include "max14830.h"
 #include "timer.h"
 #include "FCB-H11-dvr.h"
+#include "mcc_generated_files/i2c2.h"
 void CREATE_BUFFER(uint16_t dataAddress, uint8_t data);
 
+uint8_t readData;
 uint8_t writeBuffer[3];
 /*
                          Main application
@@ -61,8 +63,12 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     TMR1_Init();
-    if(PORTBbits.RB13 ==1){
-        MAX_Init();}
+    delay_ms(1000);
+    if(PORTBbits.RB13 ==1)
+    {
+        MAX_Init();
+    }
+    delay_ms(1000);
     
     
     
@@ -76,15 +82,32 @@ int main(void)
 //    delay_ms(200);
 //    maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIODATA, 0x00);
 //    char arr0[] = {0x81, 0x01, 0x04, 0x07, 0x36, 0xFF};
-//    char arr1[] = {0x81, 0x01, 0x04, 0x07, 0x00, 0xFF};
+//    char arr1[] = {0x81, 0x01, 0x04, 0x07, 0x00, 0xFF, 0x81 ,0x81};
 //    un8CameraStartTeleZoom(7);
-////    CamUARTWriteString(arr0);
+//    CamUARTWriteString(arr0);
 //    delay_ms(1000);
-//    CamUARTWriteString(arr1);
-
     while (1)
     {
-
+//        CamUART_Write(0x45);
+//        CamUARTWriteString(arr1);
+//        delay_ms(1000);
+        if(PORTBbits.RB13 == 0)
+        {
+            readData = maxReadByte(MAX_UART0_WRITE, MAX_UART2_READ, MAX14830_GLOBALIRQ);
+            if(readData & 0x0B)
+            {
+                readData = maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_ISR);
+                if(readData & 0x04)
+                {
+                    readData = maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_STSINT);
+                    if(readData & 0x01)
+                    {
+                        CamUART_Write(0x4B);
+                        delay_ms(1000);
+                    }
+                }
+            }
+        }
     }
     
     return 1;

@@ -114,7 +114,7 @@ typedef struct
     uint8_t   length;           // the # of bytes in the buffer
     uint8_t   *pbuffer;         // a pointer to a buffer of length bytes
 } I2C2_TRANSACTION_REQUEST_BLOCK;
-        
+  
 /**
   Section: Interface Routines
 */
@@ -738,7 +738,7 @@ bool I2C2_MasterQueueIsEmpty(void);
 bool I2C2_MasterQueueIsFull(void);             
 
 void maxWriteByte(uint8_t slaveAddressW, uint8_t reg, uint8_t dataByte);
-void maxReadByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t reg);
+uint8_t maxReadByte(uint8_t slaveAddressW, uint8_t slaveAddressR, uint8_t reg);
 void epromWriteByte(uint8_t highByte, uint8_t lowByte, uint8_t dataByte);
 #ifdef __cplusplus  // Provide C++ Compatibility
 

@@ -5,6 +5,7 @@ void CLK_CONFIG_Init(uint8_t UART);
 void UARTS_Mode_Init(uint8_t UART);
 void GPIO_Init();
 void INTERRUPT_Init();
+void FIFO_CONTROL_Init(uint8_t UART);
 
 void MAX_Init()
 {
@@ -21,6 +22,8 @@ void MAX_Init()
     GPIO_Init();
     
     INTERRUPT_Init();
+    
+//    FIFO_CONTROL_Init(MAX_UART0_WRITE);
 }
 
 void CLK_CONFIG_Init(uint8_t UART)
@@ -46,12 +49,19 @@ void UARTS_Mode_Init(uint8_t UART)
 void GPIO_Init()
 {
     maxWriteByte(MAX_UART1_WRITE, MAX14830_GPIOCONFG, 0x08);        //GPIO7-OUT
-    maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIOCONFG, 0x0B);        //GPIO8-O, GPIO9-O, GPIO10-I, GPIO11-O
+//    maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIOCONFG, 0x0B);        //GPIO8-O, GPIO9-O, GPIO10-I, GPIO11-O
+    maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIOCONFG, 0x00);
     maxWriteByte(MAX_UART3_WRITE, MAX14830_GPIOCONFG, 0x0E);        //GPIO13-0, GPIO14-O, GPIO15-O
 }
 
 void INTERRUPT_Init()
 {
+//    maxWriteByte(MAX_UART0_WRITE, MAX14830_IRQEN, 0x08);
     maxWriteByte(MAX_UART2_WRITE, MAX14830_IRQEN, 0x04);
-    maxWriteByte(MAX_UART2_WRITE, MAX14830_STSINTEN, 0x04);     //enable interrupt for POWER_BUTTON_STAT GPIO
+    maxWriteByte(MAX_UART2_WRITE, MAX14830_STSINTEN, 0x01);     //enable interrupt for POWER_BUTTON_STAT GPIO
+}
+
+void FIFO_CONTROL_Init(uint8_t UART)
+{
+    maxWriteByte(UART, MAX14830_FIFOTRGLVL, 0x11);
 }

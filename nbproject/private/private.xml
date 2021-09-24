@@ -4,16 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/timer.c</file>
-            <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/mcc_generated_files/system.h</file>
-            <file>file:/home/dnutt/Source/InspexHDC/Source/FCB-H11-dvr.h</file>
-            <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/mcc_generated_files/uart.c</file>
             <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/main.c</file>
-            <file>file:/home/dnutt/Source/InspexHDC/Source/FCB-H11-dvr.c</file>
-            <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/mcc_generated_files/uart.h</file>
-            <file>file:/home/dnutt/Source/InspexHDC/Source/camera.c</file>
-            <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/mcc_generated_files/i2c2.c</file>
-            <file>file:/home/dnutt/Source/InspexHDC/Source/camera.h</file>
-            <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/mcc_generated_files/system.c</file>
+            <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/max14830.h</file>
+            <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/FCB-H11-dvr.c</file>
             <file>file:/root/MPLABXProjects/4K_Peripheral_Setup.X/max14830.c</file>
         </group>
     </open-files>
