@@ -69,17 +69,10 @@ int main(void)
         MAX_Init();
     }
     delay_ms(1000);
-    
-    
-    
-//    maxWriteByte(MAX_UART3_WRITE, MAX14830_THR, 0x41);
-//    delay_ms(200);
-//    maxWriteByte(MAX_UART3_WRITE, MAX14830_THR, 0x41);
-//    delay_ms(200);
+ 
+
 //    maxReadByte(MAX_UART3_WRITE, MAX_UART3_READ, MAX14830_RHR);
-//    delay_ms(200);
-//    maxWriteByte(MAX_UART1_WRITE, MAX14830_GPIODATA, 0x08);
-//    delay_ms(200);
+//    maxWriteByte(MAX_UART1_WRITE, MAX14830_GPIODATA, 0x08);       //Test write to Max GPIO
 //    maxWriteByte(MAX_UART2_WRITE, MAX14830_GPIODATA, 0x00);
 //    char arr0[] = {0x81, 0x01, 0x04, 0x07, 0x36, 0xFF};
 //    char arr1[] = {0x81, 0x01, 0x04, 0x07, 0x00, 0xFF, 0x81 ,0x81};
@@ -88,26 +81,32 @@ int main(void)
 //    delay_ms(1000);
     while (1)
     {
-//        CamUART_Write(0x45);
-//        CamUARTWriteString(arr1);
+        
+      maxWriteByte(MAX_UART0_WRITE, MAX14830_THR, 0x41);    // Successful test MAX TX                                        
+      delay_ms(200);
+//        maxReadByte(MAX_UART0_WRITE, MAX_UART0_READ, MAX14830_RHR);
 //        delay_ms(1000);
-        if(PORTBbits.RB13 == 0)
-        {
-            readData = maxReadByte(MAX_UART0_WRITE, MAX_UART2_READ, MAX14830_GLOBALIRQ);
-            if(readData & 0x0B)
-            {
-                readData = maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_ISR);
-                if(readData & 0x04)
-                {
-                    readData = maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_STSINT);
-                    if(readData & 0x01)
-                    {
-                        CamUART_Write(0x4B);
-                        delay_ms(1000);
-                    }
-                }
-            }
-        }
+//      CamUART_Write(0x45);
+//      CamUARTWriteString(arr1);
+//      delay_ms(1000);
+        
+//      if(PORTBbits.RB13 == 0)
+//      {
+//          readData = maxReadByte(MAX_UART0_WRITE, MAX_UART0_READ, MAX14830_GLOBALIRQ);
+//          if(readData & 0x0E)
+//          {
+//              readData = maxReadByte(MAX_UART0_WRITE, MAX_UART0_READ, MAX14830_ISR);                //Max Interrupt testing
+//              if(readData & 0x08)
+//              {
+////                readData = maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_STSINT);
+////                if(readData & 0x01)
+////                {
+//                      CamUART_Write(0x4B);
+//                      delay_ms(1000);
+////                }
+//              }
+//          }
+//      }
     }
     
     return 1;
