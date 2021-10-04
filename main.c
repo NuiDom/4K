@@ -79,34 +79,43 @@ int main(void)
 //    un8CameraStartTeleZoom(7);
 //    CamUARTWriteString(arr0);
 //    delay_ms(1000);
+    uint8_t count = 0x00;
     while (1)
     {
         
-      maxWriteByte(MAX_UART0_WRITE, MAX14830_THR, 0x41);    // Successful test MAX TX                                        
-      delay_ms(200);
+//      maxWriteByte(MAX_UART0_WRITE, MAX14830_THR, 0x41);    // Successful test MAX TX                                        
+//      delay_ms(200);
 //        maxReadByte(MAX_UART0_WRITE, MAX_UART0_READ, MAX14830_RHR);
 //        delay_ms(1000);
 //      CamUART_Write(0x45);
 //      CamUARTWriteString(arr1);
 //      delay_ms(1000);
         
-//      if(PORTBbits.RB13 == 0)
-//      {
-//          readData = maxReadByte(MAX_UART0_WRITE, MAX_UART0_READ, MAX14830_GLOBALIRQ);
-//          if(readData & 0x0E)
+//    RingLightUART_Write(0x4B);
+//    delay_ms(1000);
+//    RingLightUART_Write(0x4B);
+//    delay_ms(1000);
+        
+      if(PORTBbits.RB13 == 0)
+      {
+          count++;
+          RingLightUART_Write(count);
+//          maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_ISR);
+//          readData = maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_GLOBALIRQ);
+//          if(readData & 0x0B)
 //          {
-//              readData = maxReadByte(MAX_UART0_WRITE, MAX_UART0_READ, MAX14830_ISR);                //Max Interrupt testing
-//              if(readData & 0x08)
+//              readData = maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_ISR);                //Max Interrupt testing
+//              if(readData & 0x04)
 //              {
-////                readData = maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_STSINT);
-////                if(readData & 0x01)
-////                {
-//                      CamUART_Write(0x4B);
-//                      delay_ms(1000);
-////                }
+//                readData = maxReadByte(MAX_UART2_WRITE, MAX_UART2_READ, MAX14830_STSINT);
+//                if(readData & 0x04)
+//                {
+//                      RingLightUART_Write(0x4B);
+//                      delay_ms(1500);
+//                }
 //              }
 //          }
-//      }
+      }
     }
     
     return 1;
